@@ -6,6 +6,14 @@ from time import mktime
 import csv
 
 
+
+def main():
+    pass
+
+
+
+
+
 def _get_crumbs_and_cookies(stock):
     """
     get crumb and cookies for historical data csv download from yahoo finance
@@ -43,7 +51,7 @@ def convert_to_unix(date):
 
 
 
-def load_csv_data(stock, interval='1d', day_begin='01-03-2018', day_end='28-03-2018'):
+def load_csv_data(stock, interval='1d', day_begin='01-01-2016', day_end='01-09-2018'):
     """
     queries yahoo finance api to receive historical data in csv file format
 
@@ -55,6 +63,7 @@ def load_csv_data(stock, interval='1d', day_begin='01-03-2018', day_end='28-03-2
 
     returns a list of comma seperated value lines
     """
+
     day_begin_unix = convert_to_unix(day_begin)
     day_end_unix = convert_to_unix(day_end)
 
@@ -67,7 +76,7 @@ def load_csv_data(stock, interval='1d', day_begin='01-03-2018', day_end='28-03-2
 
         website = requests.get(url, headers=header, cookies=cookies)
 
-        file = open(r"history_of_stock.csv", 'w')
+        file = open(str(stock)+".csv", 'w')
         file.write(website.text)
         file.close()
 
@@ -76,3 +85,6 @@ def load_csv_data(stock, interval='1d', day_begin='01-03-2018', day_end='28-03-2
 
 test = load_csv_data("ECYT")
 print((test))
+
+if __name__ == "__main__":
+    main()
