@@ -4,12 +4,15 @@ import re
 from datetime import datetime
 from time import mktime
 import csv
+import os
+import sys
+
 
 
 
 def main():
-    pass
-
+    test = load_csv_data("MRTX")
+    print((test))
 
 
 
@@ -48,9 +51,6 @@ def convert_to_unix(date):
     return int(mktime(datum.timetuple()))
 
 
-
-
-
 def load_csv_data(stock, interval='1d', day_begin='01-01-2016', day_end='01-09-2018'):
     """
     queries yahoo finance api to receive historical data in csv file format
@@ -66,8 +66,10 @@ def load_csv_data(stock, interval='1d', day_begin='01-01-2016', day_end='01-09-2
 
     day_begin_unix = convert_to_unix(day_begin)
     day_end_unix = convert_to_unix(day_end)
-
     header, crumb, cookies = _get_crumbs_and_cookies(stock)
+
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    print(dir_path)
 
     with requests.session():
         url = 'https://query1.finance.yahoo.com/v7/finance/download/' \
@@ -75,16 +77,13 @@ def load_csv_data(stock, interval='1d', day_begin='01-01-2016', day_end='01-09-2
             .format(stock=stock, day_begin=day_begin_unix, day_end=day_end_unix, interval=interval, crumb=crumb)
 
         website = requests.get(url, headers=header, cookies=cookies)
-
-        file = open(str(stock)+".csv", 'w')
+        file = open(dir_path + "/data/" + str(stock)+".csv", 'w')
         file.write(website.text)
         file.close()
-
         return website.text.split('\n')[:-1]
 
 
-test = load_csv_data("ECYT")
-print((test))
+
 
 if __name__ == "__main__":
     main()
