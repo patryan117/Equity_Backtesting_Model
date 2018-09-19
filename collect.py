@@ -4,13 +4,16 @@ import re
 from datetime import datetime
 from time import mktime
 import os
+import time
 
 # Cookie/crum workaround for yahoo fiannce developed by MAIK ROSENHEINRICH at https://maikros.github.io/yahoo-finance-python/
 # Micro cap biotech stock listings found at http://investsnips.com/list-of-publicly-traded-micro-cap-diversified-biotechnology-and-pharmaceutical-companies/
 
 
 def main():
+    start_time = time.time()
     get_mid_cap_data()
+    print("\n--- %s seconds ---" % (time.time() - start_time))
 
 
 
@@ -24,7 +27,10 @@ def get_mid_cap_data():
                        "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "CLSD", "IMMY", "NBY", "OCUL", "OHRP", "OPHT", \
                        "OVAS", "RDHL", "PLX", "GNMX", "CAPR", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
                        "SGMO", "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "ARWR", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
-                       "CBAY", "SYN", "BCLI", "EDGE", "MNOV", "OVID", "FLKS"]
+                       "CBAY", "SYN", "BCLI", "EDGE", "MNOV", "OVID", "FLKS", "DRRX", "ABEO", "AKTX", "LIFE", "CATB", \
+                       "CPRX", "CHMA", "EIGR", "FATE", "NVLN", "RGLS", "RCKT", "SBBP", "QURE", "XENE", "ATHX", "PRQR",\
+                       "PTI", "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA", "VBIV", "SBPH", "VVUS", \
+                       "ZFGN", "OBSV", "PTN", "MDWD", ]
 
     print("Retrieving CSV files of Micro-Cap Biotech Stocks...")
 
@@ -32,7 +38,7 @@ def get_mid_cap_data():
         load_csv_data(x)
         print(x, " Retrieved Successfully.")
 
-    print("\nAll Mid-Cap Biotech Datasets Retrieved Successfully\n")
+    print("\nAll Mid-Cap Biotech Datasets Retrieved Successfully")
     print(len(micro_cap_list), " Datasets Retrieved")
 
 

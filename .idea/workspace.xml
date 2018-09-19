@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collect.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ALDX.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BLRX.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CDTX.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CRMD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/KALV.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/KDMN.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/KMDA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MDGL.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MGEN.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MTNB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NBRV.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/PTGX.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/RETA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/TRVN.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,15 +12,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$collect.coverage" NAME="collect Coverage Results" MODIFIED="1537391281997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$collect.coverage" NAME="collect Coverage Results" MODIFIED="1537392151786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="collect.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/collect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+            <state relative-caret-position="289">
+              <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -78,7 +63,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-15" />
-    <option name="width" value="2525" />
+    <option name="width" value="2368" />
     <option name="height" value="2075" />
   </component>
   <component name="ProjectView">
@@ -158,17 +143,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1010" height="830" extended-state="0" />
+    <frame x="-6" y="0" width="947" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33189654" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33189654" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21533613" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28432733" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32859176" />
@@ -220,8 +205,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/collect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        <state relative-caret-position="289">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
