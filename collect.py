@@ -3,17 +3,23 @@ from bs4 import BeautifulSoup
 import re
 from datetime import datetime
 from time import mktime
-import csv
 import os
-import sys
 
 
 
 
 
 def main():
-    test = load_csv_data("MRTX")
-    print((test))
+
+
+
+
+
+    micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "MGEN", "PTGX", "RETA", "TRVN", "CDTX", "MTNB", "NBRV"]
+
+    for x in micro_cap_list:
+        load_csv_data(x)
+
 
 
 
@@ -52,7 +58,7 @@ def convert_to_unix(date):
     return int(mktime(datum.timetuple()))
 
 
-def load_csv_data(stock, interval='1d', day_begin='01-01-2016', day_end='01-09-2018'):
+def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-09-2018'):
     """
     queries yahoo finance api to receive historical data in csv file format
 
