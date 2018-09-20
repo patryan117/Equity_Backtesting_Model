@@ -5,7 +5,9 @@ from datetime import datetime
 from time import mktime
 import os
 import time
+import pandas as pd
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
 # Cookie/crum workaround for yahoo fiannce developed by MAIK ROSENHEINRICH at https://maikros.github.io/yahoo-finance-python/
@@ -14,12 +16,24 @@ import time
 
 def main():
     start_time = time.time()
-    get_mid_cap_data()
+    # get_mid_cap_stock_data()
     print("\n--- %s seconds ---" % (time.time() - start_time))
+    # convert_csv_files_to_dfs()
 
 
 
-def get_mid_cap_data():
+# def convert_csv_files_to_dfs():
+#     for filename in os.listdir(dir_path + "/data/"):
+#         if filename.endswith(".csv"):
+#             file_loc = os.path.join(dir_path, 'relative/path/to/file/you/want')
+#             print(filename)
+#             df = pd.read_csv(dir_path + "/data/" + filename)
+#             print("df sucessfuly converted")
+#             # df.to_pickle('testpickle.pkl')
+#             # print("pickle saved!")
+
+
+def get_mid_cap_stock_data():
     micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "MGEN", "PTGX", "RETA", "TRVN", "CDTX", \
                        "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
                        "ALRN", "AVEO", "BPTH", "BTAI", "CASI", "CBMG", "CGEN", "CTIC", "DFFN", "ECYT", "FBIO", "GALT", \
@@ -89,6 +103,9 @@ def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-09-2
         file = open(dir_path + "/data/" + str(stock)+".csv", 'w')
         file.write(website.text)
         file.close()
+
+
+
         return website.text.split('\n')[:-1]
 
 

@@ -2,8 +2,157 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collect.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ABEO.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ABUS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ADMA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ADVM.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AFMD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AGLE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AGTC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AKTX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ALDX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ALNA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ALRN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AMPE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ARCT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ARWR.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ASNS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AST.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ATHX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ATNM.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AVEO.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AVXL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AXSM.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BCLI.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BLRX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BPTH.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BTAI.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CALA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CAPR.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CASI.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CATB.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CBAY.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CBMG.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CDTX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CDXS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CFRX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CGEN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CHMA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CLSD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CMRX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CNAT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CPRX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CRMD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CTIC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CTRV.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CUR.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CYAD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/DFFN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/DRNA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/DRRX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/DVAX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ECYT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/EDGE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/EIGR.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/FATE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/FBIO.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/FLKS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GALT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GEMP.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GLMD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GLYC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GNCA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GNMX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GNPX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GTXI.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/IMDZ.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/IMGN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/IMMP.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/IMMY.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/INFI.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/KALV.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/KDMN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/KIN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/KMDA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/KRYS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/KURA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/LIFE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/LPTX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MDGL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MDWD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MEIP.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MGEN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MNKD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MNOV.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MRTX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MTFB.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MTNB.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/NBRV.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/NBY.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/NEPT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/NERV.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/NK.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/NNVC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/NTEC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/NVLN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/NYMX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/OBSV.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/OCUL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/OHRP.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ONS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/OPHT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/OVAS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/OVID.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PFNX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PIRS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PLX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PRQR.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PSTI.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PTGX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PTI.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PTN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PULM.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/QURE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/RCKT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/RDHL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/RETA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/RGLS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/RNN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SBBP.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SBPH.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SELB.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SGMO.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SLS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SMMT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SNDX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SNSS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SPHS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SPRO.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SRNE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/STML.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SYN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TCON.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TENX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TOCA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TRIL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TRVN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TTNP.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/URGN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/VBIV.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/VBLT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/VCEL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/VRNA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/VSTM.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/VTL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/VVUS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/XENE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/XOMA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ZFGN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ZYME.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ZYNE.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,15 +162,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$collect.coverage" NAME="collect Coverage Results" MODIFIED="1537394299915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$test.coverage" NAME="test Coverage Results" MODIFIED="1537455105248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$collect.coverage" NAME="collect Coverage Results" MODIFIED="1537455110513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="collect.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/collect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+            <state relative-caret-position="-323">
+              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -41,6 +200,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>AFMD</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -49,6 +209,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/data/CATB.csv" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/collect.py" />
       </list>
     </option>
@@ -105,7 +267,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.collect">
     <configuration name="collect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,9 +287,33 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Analysis_of_Biotech_Disclosures" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.collect" />
+      <item itemvalue="Python.test" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.collect" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -151,11 +337,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2290185" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3371266" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16901408" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16901408" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32859176" />
@@ -193,18 +379,6 @@
     <entry file="file://$PROJECT_DIR$/data/CRMD.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/CDTX.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CBMG.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/FATE.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -215,10 +389,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/KMDA.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/MDGL.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/MGEN.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/PTGX.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/RETA.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ATHX.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/AST.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ASNS.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ARWR.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/AVEO.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/AVXL.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CASI.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CATB.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CBAY.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CBMG.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CDTX.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CDXS.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CFRX.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CGEN.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CHMA.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CLSD.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CMRX.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CNAT.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CPRX.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/collect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        <state relative-caret-position="-323">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
