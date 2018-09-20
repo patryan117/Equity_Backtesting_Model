@@ -6,6 +6,8 @@ from time import mktime
 import os
 import time
 
+
+
 # Cookie/crum workaround for yahoo fiannce developed by MAIK ROSENHEINRICH at https://maikros.github.io/yahoo-finance-python/
 # Micro cap biotech stock listings found at http://investsnips.com/list-of-publicly-traded-micro-cap-diversified-biotechnology-and-pharmaceutical-companies/
 
@@ -18,7 +20,7 @@ def main():
 
 
 def get_mid_cap_data():
-    micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "MGEN", "PTGX", "RETA", "TRVN", "CDTX",\
+    micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "MGEN", "PTGX", "RETA", "TRVN", "CDTX", \
                        "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
                        "ALRN", "AVEO", "BPTH", "BTAI", "CASI", "CBMG", "CGEN", "CTIC", "DFFN", "ECYT", "FBIO", "GALT", \
                        "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP", "INFI", "KURA", "LPTX", "MEIP", "MRTX", "NK", "ONS", \
@@ -32,6 +34,7 @@ def get_mid_cap_data():
                        "PTI", "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA", "VBIV", "SBPH", "VVUS", \
                        "ZFGN", "OBSV", "PTN", "MDWD", ]
 
+    print(micro_cap_list)
     print("Retrieving CSV files of Micro-Cap Biotech Stocks...")
 
     for x in micro_cap_list:
@@ -93,3 +96,4 @@ def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-09-2
 
 if __name__ == "__main__":
     main()
+
