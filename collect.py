@@ -16,7 +16,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 def main():
     start_time = time.time()
-    # get_mid_cap_stock_data()
+    get_mid_cap_stock_data()
     print("\n--- %s seconds ---" % (time.time() - start_time))
     # convert_csv_files_to_dfs()
 
@@ -34,26 +34,20 @@ def main():
 
 
 def get_mid_cap_stock_data():
-    micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "MGEN", "PTGX", "RETA", "TRVN", "CDTX", \
-                       "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
-                       "ALRN", "AVEO", "BPTH", "BTAI", "CASI", "CBMG", "CGEN", "CTIC", "DFFN", "ECYT", "FBIO", "GALT", \
-                       "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP", "INFI", "KURA", "LPTX", "MEIP", "MRTX", "NK", "ONS", \
-                       "PIRS", "RNN", "SLS", "SRNE", "STML", "SNSS", "SNDX", "TOCA", "TCON", "TRIL", "VBLT", "VSTM",  \
-                       "ZYME", "ZYNE", "AST", "CYAD", "CUR", "PSTI", "VCEL", "AVXL", "AXSM", "NTEC", "NERV", "TTNP", \
-                       "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "CLSD", "IMMY", "NBY", "OCUL", "OHRP", "OPHT", \
-                       "OVAS", "RDHL", "PLX", "GNMX", "CAPR", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
-                       "SGMO", "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "ARWR", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
-                       "CBAY", "SYN", "BCLI", "EDGE", "MNOV", "OVID", "FLKS", "DRRX", "ABEO", "AKTX", "LIFE", "CATB", \
-                       "CPRX", "CHMA", "EIGR", "FATE", "NVLN", "RGLS", "RCKT", "SBBP", "QURE", "XENE", "ATHX", "PRQR",\
-                       "PTI", "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA", "VBIV", "SBPH", "VVUS", \
-                       "ZFGN", "OBSV", "PTN", "MDWD", ]
 
-    print(micro_cap_list)
     print("Retrieving CSV files of Micro-Cap Biotech Stocks...")
 
-    for x in micro_cap_list:
-        load_csv_data(x)
-        print(x, " Retrieved Successfully.")
+    x = (len(micro_cap_list)-1)
+    while x > 0:
+        if load_csv_data(micro_cap_list[x]) == False:
+            print(micro_cap_list[x], " retrieval failed... re-trying (", len(micro_cap_list)-x, ") remaining.")
+            x = x
+
+        if load_csv_data(micro_cap_list[x]) == True:
+            print(micro_cap_list[x], " retrieval successful: (",len(micro_cap_list)-x, ") remaining.")
+            x = x-1
+
+
 
     print("\nAll Mid-Cap Biotech Datasets Retrieved Successfully")
     print(len(micro_cap_list), " Datasets Retrieved")
@@ -105,10 +99,29 @@ def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-09-2
         file.close()
 
 
+        if "Invalid cookie" in website.text:
+            return False
 
-        return website.text.split('\n')[:-1]
+        else:
+            return True
 
 
+
+global  micro_cap_list
+
+micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "MGEN", "PTGX", "RETA", "TRVN", "CDTX", \
+                       "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
+                       "ALRN", "AVEO", "BPTH", "BTAI", "CASI", "CBMG", "CGEN", "CTIC", "DFFN", "ECYT", "FBIO", "GALT", \
+                       "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP", "INFI", "KURA", "LPTX", "MEIP", "MRTX", "NK", "ONS", \
+                       "PIRS", "RNN", "SLS", "SRNE", "STML", "SNSS", "SNDX", "TOCA", "TCON", "TRIL", "VBLT", "VSTM",  \
+                       "ZYME", "ZYNE", "AST", "CYAD", "CUR", "PSTI", "VCEL", "AVXL", "AXSM", "NTEC", "NERV", "TTNP", \
+                       "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "CLSD", "IMMY", "NBY", "OCUL", "OHRP", "OPHT", \
+                       "OVAS", "RDHL", "PLX", "GNMX", "CAPR", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
+                       "SGMO", "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "ARWR", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
+                       "CBAY", "SYN", "BCLI", "EDGE", "MNOV", "OVID", "FLKS", "DRRX", "ABEO", "AKTX", "LIFE", "CATB", \
+                       "CPRX", "CHMA", "EIGR", "FATE", "NVLN", "RGLS", "RCKT", "SBBP", "QURE", "XENE", "ATHX", "PRQR",\
+                       "PTI", "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA", "VBIV", "SBPH", "VVUS", \
+                       "ZFGN", "OBSV", "PTN", "MDWD"]
 
 
 if __name__ == "__main__":
