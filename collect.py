@@ -17,6 +17,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 def main():
     start_time = time.time()
     get_mid_cap_stock_data()
+
     print("\n--- %s seconds ---" % (time.time() - start_time))
     # convert_csv_files_to_dfs()
 
