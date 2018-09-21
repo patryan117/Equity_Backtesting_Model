@@ -38,15 +38,15 @@ def get_mid_cap_stock_data():
 
     print("Retrieving CSV files of Micro-Cap Biotech Stocks...")
 
-    x = (len(micro_cap_list)-1)
-    while x > 0:
+    x = 0
+    while x != len(micro_cap_list):
         if load_csv_data(micro_cap_list[x]) == False:
             print(micro_cap_list[x], " retrieval failed... re-trying (", len(micro_cap_list)-x, ") remaining.")
             x = x
 
         if load_csv_data(micro_cap_list[x]) == True:
             print(micro_cap_list[x], " retrieval successful: (",len(micro_cap_list)-x, ") remaining.")
-            x = x-1
+            x = x + 1
 
 
 
@@ -109,7 +109,6 @@ def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-09-2
 
 
 global  micro_cap_list
-
 micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "MGEN", "PTGX", "RETA", "TRVN", "CDTX", \
                        "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
                        "ALRN", "AVEO", "BPTH", "BTAI", "CASI", "CBMG", "CGEN", "CTIC", "DFFN", "ECYT", "FBIO", "GALT", \
