@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import os
+import time
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -8,16 +9,19 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 def main():
 
+    start_time = time.time()
     investment_amt = 100
     cart_tup = (cartesian_product_loop())
     create_close_delta_feature()
+    print("\n--- %s seconds ---" % (time.time() - start_time))
+
 
 def create_close_delta_feature():
     for x in micro_cap_list:
         df = pd.read_csv(dir_path + "\\data\\" + x +".csv")
-        # df[7] = float(df[5]) / float(df[5].shift)(1) - 1
-        print(df[7])
-
+        df["close_pc"] = (df["Close"]) / (df["Close"].shift)(1) - 1
+        print(x)
+        print(df.head())
 
 
 
