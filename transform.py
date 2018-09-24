@@ -6,6 +6,9 @@ import time
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 #TODO set so that the creating loop doesnt take from the hard coded list, but parses from the /data/ folder
+#TODO add segment to collect data that creates an interger feature for stock splits (holding the split ratio), and does one of two options:
+    # manipulates the investment in accordance with the split
+    # does not allow the algorithm to trade the date before or after the stock split
 
 def main():
 
