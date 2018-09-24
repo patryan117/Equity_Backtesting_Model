@@ -111,18 +111,19 @@ def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-09-2
 global  micro_cap_list
 micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "MGEN", "PTGX", "RETA", "TRVN", "CDTX", \
                        "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
-                       "ALRN", "AVEO", "BPTH", "BTAI", "CASI", "CBMG", "CGEN", "CTIC", "DFFN", "ECYT", "FBIO", "GALT", \
+                       "ALRN", "AVEO", "BPTH", "BTAI", "CBMG", "DFFN", "ECYT", "FBIO", "GALT", \
                        "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP", "INFI", "KURA", "LPTX", "MEIP", "MRTX", "NK", "ONS", \
-                       "PIRS", "RNN", "SLS", "SRNE", "STML", "SNSS", "SNDX", "TOCA", "TCON", "TRIL", "VBLT", "VSTM",  \
-                       "ZYME", "ZYNE", "AST", "CYAD", "CUR", "PSTI", "VCEL", "AVXL", "AXSM", "NTEC", "NERV", "TTNP", \
-                       "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "CLSD", "IMMY", "NBY", "OCUL", "OHRP", "OPHT", \
+                       "PIRS", "RNN", "SLS", "SRNE", "STML", "SNSS", "TCON", "TRIL", "VBLT", "VSTM",  \
+                       "ZYME", "ZYNE", "AVXL", "AXSM", "NTEC", "NERV", "TTNP", \
+                       "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "IMMY", "NBY", "OCUL", "OHRP", "OPHT", \
                        "OVAS", "RDHL", "PLX", "GNMX", "CAPR", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
                        "SGMO", "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "ARWR", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
                        "CBAY", "SYN", "BCLI", "EDGE", "MNOV", "OVID", "FLKS", "DRRX", "ABEO", "AKTX", "LIFE", "CATB", \
                        "CPRX", "CHMA", "EIGR", "FATE", "NVLN", "RGLS", "RCKT", "SBBP", "QURE", "XENE", "ATHX", "PRQR",\
-                       "PTI", "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA", "VBIV", "SBPH", "VVUS", \
-                       "ZFGN", "OBSV", "PTN", "MDWD"]
+                       "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA",  "SBPH", "VVUS", \
+                       "ZFGN", "OBSV", "PTN"]
 
+# Removed items: "PTI", "VBIV", TOCA, MDWD, CLSD, NERV, VCEL, PSTI, CTIC,  CUR, CGEN, CASI, CYAD, SNDX
 
 if __name__ == "__main__":
     main()
