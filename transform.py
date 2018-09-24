@@ -10,11 +10,18 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
     # manipulates the investment in accordance with the split
     # does not allow the algorithm to trade the date before or after the stock split
 
+# TODO create a major loop that runs through the cartesian product (all possible window and std_threshold combos) and stoes as tuples in a list (combo list)
+# TODO Create a plotly script that will take the "combo list" and create a plotly
+# note, the number of tuples in the list will be sd_options * window options.  color = scale (red = positive, green = negative) (size = magnitude)
+
+
+
 def main():
 
     start_time = time.time()
     investment_amount = 100
     cart_tup = (cartesian_product_loop())
+    # start for loop to create combo list...
     create_close_delta_feature(1, 10, 100)
     print("\n--- %s seconds ---" % (time.time() - start_time))
 
