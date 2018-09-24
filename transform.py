@@ -19,10 +19,19 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 def main():
 
     start_time = time.time()
-    investment_amount = 100
-    cart_tup = (cartesian_product_loop())
+
+    w_tup = (5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)   # trailing_sd window
+    k_tup = (.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5)  # standard_dev sampling window
+
+    base_investment = 100
+    combo_list = (generate_cartesian_product(w_tup, k_tup))
+
     # start for loop to create combo list...
-    create_close_delta_feature(1, 10, 100)
+    print(generate_cartesian_product(w_tup, k_tup))
+    # create_close_delta_feature(1, 10, base_investment)
+
+
+
     print("\n--- %s seconds ---" % (time.time() - start_time))
 
 
@@ -44,6 +53,8 @@ def create_close_delta_feature(k, w, p):
         df['event_flag'] = np.where(df['daily_k_stds'] <= -k, 1, 0)
         df["return"] = (p / (df["close"]) * (df["close"].shift)(-1))*df['event_flag']
         df["net_return"] = (df["return"] - p) * df['event_flag']
+
+
 
         cum_sum = cum_sum + (df["net_return"].sum())
         event_count += (df["event_flag"].sum())
@@ -70,17 +81,16 @@ def create_close_delta_feature(k, w, p):
 
 
 
-def cartesian_product_loop():
-    w_tup = (5,6,7,8,9,10,11,12,13,14,15, 16)  # standard_dev sampling window
-    k_typ = (.5, 1, 1.5, 2, 2.5, 3, 3.5)  #
+def generate_cartesian_product(a,b):
 
-    res = ()
 
-    for t1 in w_tup:
-        for t2 in k_typ:
-            res += ((t1, t2),)
+    temp = []
 
-    return res
+    for t1 in a:
+        for t2 in b:
+            temp += [(t1, t2),]
+
+    return temp
 
 
 global  micro_cap_list
