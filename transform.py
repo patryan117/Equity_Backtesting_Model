@@ -46,26 +46,50 @@ def create_heated_scatterplot(return_list):
     std_threshold = return_list[1]
     net_returns = return_list[2]
 
+    scaled_net_returns = []  # scale down return
+    for x in net_returns:
+        scaled_net_returns.append(x / 500)
+
     print(std_trailing_window)
     print(std_threshold)
     print(net_returns)
 
-    trace1 = go.Scatter(
-        y=std_threshold,
+    import plotly.plotly as py
+    import plotly.graph_objs as go
+
+    trace0 = go.Scatter(
         x=std_trailing_window,
-        mode='markers',
+        y=std_threshold,
         text=net_returns,
+        mode='markers',
         marker=dict(
-            color = 20,
-            colorscale='Viridis',
-            showscale=True
-        )
+            color=net_returns,
+            size=scaled_net_returns,
+            showscale = True
+
+    )
     )
 
-    data = [trace1]
+    data = [trace0]
+
+
+    # trace1 = go.Scatter(
+    #     y=std_threshold,
+    #     x=std_trailing_window,
+    #     mode='markers',
+    #     text=net_returns,
+    #     marker=dict(
+    #         size=20,
+    #         color = net_returns,
+    #         colorscale='Viridis',
+    #         showscale=True
+    #     )
+    # )
+    #
+    # data = [trace1]
+
+
     layout = go.Layout(title="Net-Return Spread")
-
-
     plotly.offline.plot({"data": data, "layout": layout})
 
 
@@ -87,7 +111,9 @@ def generate_net_return_list( w_tup, k_tup, investment):
 
         w_list.append(w); k_list.append(k); net_return_list.append(net_return)
 
-        print("\n**************************************", len(combo_list) - counter, "Calculations Remaining ****************************************")
+        print(net_return)
+        print("****************************************", len(combo_list) - counter, "Calculations Remaining ****************************************\n")
+
         # print(w_list)
         # print(k_list)
         # print(net_return_list)
@@ -120,7 +146,6 @@ def calc_return(w, k, p):
         df["net_return"] = (df["return"] - p) * df['event_flag']
 
 
-
         cum_sum = cum_sum + (df["net_return"].sum())
         event_count += (df["event_flag"].sum())
 
@@ -133,6 +158,7 @@ def calc_return(w, k, p):
 
         # print(i, " : ", (df["net_return"].sum()))
         # print(df)
+
 
     # print("\n")
     # print("Max Sum: ", max_sum)
