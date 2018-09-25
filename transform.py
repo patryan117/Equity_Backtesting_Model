@@ -26,7 +26,7 @@ def main():
     start_time = time.time()
 
     std_trailing_window_inputs = (5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)   # trailing_sd window
-    std_threshold = (.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5)  # standard_dev sampling window
+    std_threshold = (.5, 1, 1.5, 2, 2.5, 3, 3.5)  # standard_dev sampling window
     investment = 100
 
     return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment)
