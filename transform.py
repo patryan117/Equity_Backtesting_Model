@@ -12,7 +12,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 #TODO set so that the creating loop doesnt take from the hard coded list, but parses from the /data/ folder
 #TODO add segment to collect data that creates an interger feature for stock splits (holding the split ratio), and does one of two options:
-    # manipulates the investment in accordance with the split
+    # manipulates the investment in accordance with the split (probably best feature)
     # does not allow the algorithm to trade the date before or after the stock split
 
 
@@ -23,11 +23,12 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 def main():
 
+    print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " mid cap companies")
     start_time = time.time()
 
     std_trailing_window_inputs = (5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)   # trailing_sd window
     std_threshold = (.5, 1, 1.5, 2, 2.5, 3, 3.5)  # standard_dev sampling window
-    investment = 100
+    investment = 100  # investment level per arbitrage event
 
     return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment)
     create_heated_scatterplot(return_list)
@@ -45,28 +46,27 @@ def create_heated_scatterplot(return_list):
     std_threshold = return_list[1]
     net_returns = return_list[2]
 
+    print(std_trailing_window)
+    print(std_threshold)
+    print(net_returns)
+
     trace1 = go.Scatter(
-        y = std_threshold,
-        x = std_trailing_window,
+        y=std_threshold,
+        x=std_trailing_window,
         mode='markers',
-        text=str(net_returns),
+        text=net_returns,
         marker=dict(
-            size=16,
-            color = net_returns,
+            color = 20,
             colorscale='Viridis',
             showscale=True
         )
     )
 
     data = [trace1]
-    layout = go.Layout(title="Return Spread")
+    layout = go.Layout(title="Net-Return Spread")
 
 
     plotly.offline.plot({"data": data, "layout": layout})
-
-
-
-
 
 
 
@@ -119,6 +119,8 @@ def calc_return(w, k, p):
         df["return"] = (p / (df["close"]) * (df["close"].shift)(-1))*df['event_flag']
         df["net_return"] = (df["return"] - p) * df['event_flag']
 
+
+
         cum_sum = cum_sum + (df["net_return"].sum())
         event_count += (df["event_flag"].sum())
 
@@ -126,8 +128,8 @@ def calc_return(w, k, p):
             max_sum = (df["net_return"].sum())
 
 
-        if i == "MDWD":
-            df.to_csv("trouble.csv")
+        # if i == "DFFN":
+        #     df.to_csv(i + "trouble.csv")
 
         # print(i, " : ", (df["net_return"].sum()))
         # print(df)
@@ -157,18 +159,19 @@ def generate_cartesian_product(a,b):
 
 
 global  micro_cap_list
-micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "MGEN", "PTGX", "RETA", "TRVN", "CDTX", \
-                   "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
-                   "ALRN", "AVEO", "BPTH", "BTAI",  "CBMG", "DFFN", "ECYT", "FBIO", "GALT", \
-                   "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP", "INFI", "KURA", "LPTX", "MEIP", "MRTX", "NK", "ONS", \
-                   "PIRS", "RNN", "SLS", "SRNE", "STML", "SNSS",  "TCON", "TRIL", "VBLT", "VSTM",  \
-                   "ZYME", "ZYNE", "AVXL", "AXSM", "NTEC", \
-                   "OVAS", "RDHL", "PLX", "GNMX", "CAPR", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
-                   "SGMO", "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "ARWR", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
-                   "CBAY", "SYN", "BCLI", "EDGE", "MNOV", "OVID", "FLKS", "DRRX", "ABEO", "AKTX", "LIFE", "CATB", \
-                   "CPRX", "CHMA", "EIGR", "FATE", "NVLN", "RGLS", "RCKT", "SBBP", "QURE", "XENE", "ATHX", "PRQR",\
-                   "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA", "SBPH", "VVUS", \
-                   "ZFGN", "OBSV", "PTN"]
+micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "PTGX", "RETA", "TRVN", "CDTX", \
+                       "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
+                       "ALRN", "AVEO", "BTAI",  "ECYT", "FBIO", "GALT", \
+                       "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP", "INFI", "KURA", "LPTX", "MEIP", "MRTX", "NK", "ONS", \
+                       "PIRS", "RNN", "SLS", "SRNE", "STML", "SNSS", "TRIL", "VBLT", "VSTM",  \
+                       "ZYME", "ZYNE", "AXSM", "NTEC", "NERV", "TTNP", \
+                       "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "IMMY", "NBY", "OCUL", "OHRP", "OPHT", \
+                       "OVAS", "RDHL", "PLX", "GNMX", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
+                       "SGMO", "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "ARWR", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
+                       "CBAY", "SYN", "BCLI", "EDGE", "MNOV", "OVID", "FLKS", "DRRX", "ABEO", "AKTX", "LIFE", "CATB", \
+                       "CPRX", "CHMA", "EIGR", "FATE", "NVLN", "RGLS", "RCKT", "SBBP", "QURE", "XENE", "ATHX", "PRQR",\
+                       "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA",  "SBPH", "VVUS", \
+                       "ZFGN", "OBSV"]
 
 
 
