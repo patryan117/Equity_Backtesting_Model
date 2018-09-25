@@ -20,22 +20,52 @@ def main():
 
     start_time = time.time()
 
-    w_tup = (5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)   # trailing_sd window
+    std_trailing_window_inputs = (5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)   # trailing_sd window
     k_tup = (.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5)  # standard_dev sampling window
 
-    base_investment = 100
-    combo_list = (generate_cartesian_product(w_tup, k_tup))
+    investment = 100
 
-    # start for loop to create combo list...
-    print(generate_cartesian_product(w_tup, k_tup))
-    # create_close_delta_feature(1, 10, base_investment)
+    combo_list = (generate_cartesian_product(std_trailing_window_inputs, k_tup))
+    return_list = generate_net_return_list(std_trailing_window_inputs, k_tup, investment)
+    print(return_list)
+
 
 
 
     print("\n--- %s seconds ---" % (time.time() - start_time))
 
 
-def create_close_delta_feature(k, w, p):
+def generate_net_return_list( w_tup, k_tup, investment):
+
+    combo_list = (generate_cartesian_product(w_tup, k_tup))
+    item_list = []
+    counter = 0
+
+    w_list = []; k_list = [];   net_return_list = []
+
+    for i in combo_list:
+        counter += 1
+        w = i[0]
+        k = i[1]
+        net_return = calc_return(w, k, investment)
+
+        w_list.append(w); k_list.append(k); net_return_list.append(net_return)
+
+        print("\n**************************************", len(combo_list) - counter, "Calculations Remaining ****************************************")
+        print(w_list)
+        print(k_list)
+        print(net_return_list)
+
+
+    return[tuple(w_list), tuple(k_list), tuple(net_return_list)]
+
+
+
+        #TODO need to resend as a tuple containing [w_list, k_list, return_list]
+
+
+
+def calc_return(w, k, p):
 
     cum_sum = 0
     event_count = 0
@@ -54,8 +84,6 @@ def create_close_delta_feature(k, w, p):
         df["return"] = (p / (df["close"]) * (df["close"].shift)(-1))*df['event_flag']
         df["net_return"] = (df["return"] - p) * df['event_flag']
 
-
-
         cum_sum = cum_sum + (df["net_return"].sum())
         event_count += (df["event_flag"].sum())
 
@@ -66,17 +94,17 @@ def create_close_delta_feature(k, w, p):
         if i == "MDWD":
             df.to_csv("trouble.csv")
 
-        print(i, " : ", (df["net_return"].sum()))
+        # print(i, " : ", (df["net_return"].sum()))
         # print(df)
 
-    print("\n")
-    print("Max Sum: ", max_sum)
-    print("Event_Count: ", event_count)
-    print("Total Vested (Pre-Return): ", event_count  * p )
-    print("Total portfolio return: ", cum_sum)
-    print("Average portfolio return: ", cum_sum/event_count)
+    # print("\n")
+    # print("Max Sum: ", max_sum)
+    # print("Event_Count: ", event_count)
+    # print("Total Vested (Pre-Return): ", event_count  * p )
+    # print("Total portfolio return: ", cum_sum)
+    # print("Average portfolio return: ", cum_sum/event_count)
 
-
+    return cum_sum
 
 
 
