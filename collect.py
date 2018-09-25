@@ -114,7 +114,7 @@ micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "PTGX
                        "ALRN", "AVEO", "BTAI",  "ECYT", "FBIO", "GALT", \
                        "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP", "INFI", "KURA", "LPTX", "MEIP", "MRTX", "NK", "ONS", \
                        "PIRS", "RNN", "SLS", "SRNE", "STML", "SNSS", "TRIL", "VBLT", "VSTM",  \
-                       "ZYME", "ZYNE", "AXSM", "NTEC", "NERV", "TTNP", \
+                       "ZYME", "ZYNE", "AXSM", "NTEC", "NERV", \
                        "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "IMMY", "NBY", "OCUL", "OHRP", "OPHT", \
                        "OVAS", "RDHL", "PLX", "GNMX", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
                        "SGMO", "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "ARWR", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
@@ -123,7 +123,7 @@ micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "PTGX
                        "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA",  "SBPH", "VVUS", \
                        "ZFGN", "OBSV"]
 
-# Removed items: "PTI", "VBIV", TOCA, MDWD, CLSD, NERV, VCEL, PSTI, CTIC,  CUR, CGEN, CASI, CYAD, SNDX, DFFN, AVXL, TCON, CBMG, BPTH, MGEN, CAPR, PTN
+# Removed items: "PTI", "VBIV", TOCA, MDWD, CLSD, NERV, VCEL, PSTI, CTIC,  CUR, CGEN, CASI, CYAD, SNDX, DFFN, AVXL, TCON, CBMG, BPTH, MGEN, CAPR, PTN, TTNP
 
 if __name__ == "__main__":
     main()

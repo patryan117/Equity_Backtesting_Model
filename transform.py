@@ -26,7 +26,7 @@ def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " mid cap companies")
     start_time = time.time()
 
-    std_trailing_window_inputs = (5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)   # trailing_sd window
+    std_trailing_window_inputs = (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)   # trailing_sd window
     std_threshold = (.5, 1, 1.5, 2, 2.5, 3, 3.5)  # standard_dev sampling window
     investment = 100  # investment level per arbitrage event
 
@@ -48,7 +48,7 @@ def create_heated_scatterplot(return_list):
 
     scaled_net_returns = []  # scale down return
     for x in net_returns:
-        scaled_net_returns.append(x / 500)
+        scaled_net_returns.append(x / 150)
 
     print(std_trailing_window)
     print(std_threshold)
@@ -71,24 +71,6 @@ def create_heated_scatterplot(return_list):
     )
 
     data = [trace0]
-
-
-    # trace1 = go.Scatter(
-    #     y=std_threshold,
-    #     x=std_trailing_window,
-    #     mode='markers',
-    #     text=net_returns,
-    #     marker=dict(
-    #         size=20,
-    #         color = net_returns,
-    #         colorscale='Viridis',
-    #         showscale=True
-    #     )
-    # )
-    #
-    # data = [trace1]
-
-
     layout = go.Layout(title="Net-Return Spread")
     plotly.offline.plot({"data": data, "layout": layout})
 
@@ -144,19 +126,20 @@ def calc_return(w, k, p):
         df['event_flag'] = np.where(df['daily_k_stds'] <= -k, 1, 0)
         df["return"] = (p / (df["close"]) * (df["close"].shift)(-1))*df['event_flag']
         df["net_return"] = (df["return"] - p) * df['event_flag']
+        # df["net_return"] = (df["return"] - p) * df['event_flag']
 
 
         cum_sum = cum_sum + (df["net_return"].sum())
         event_count += (df["event_flag"].sum())
 
-        if (df["net_return"].sum()) > max_sum:
-            max_sum = (df["net_return"].sum())
+        # if (df["net_return"].sum()) > max_sum:
+        #     max_sum = (df["net_return"].sum())
 
 
-        # if i == "DFFN":
-        #     df.to_csv(i + "trouble.csv")
+        if i == "ALNA":
+            df.to_csv(i + "trouble.csv")
 
-        # print(i, " : ", (df["net_return"].sum()))
+        print(i, " : ", (df["net_return"].sum()))
         # print(df)
 
 
@@ -164,7 +147,7 @@ def calc_return(w, k, p):
     # print("Max Sum: ", max_sum)
     # print("Event_Count: ", event_count)
     # print("Total Vested (Pre-Return): ", event_count  * p )
-    # print("Total portfolio return: ", cum_sum)
+    print("Total portfolio return: ", cum_sum)
     # print("Average portfolio return: ", cum_sum/event_count)
 
     return cum_sum
@@ -190,7 +173,7 @@ micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "PTGX
                        "ALRN", "AVEO", "BTAI",  "ECYT", "FBIO", "GALT", \
                        "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP", "INFI", "KURA", "LPTX", "MEIP", "MRTX", "NK", "ONS", \
                        "PIRS", "RNN", "SLS", "SRNE", "STML", "SNSS", "TRIL", "VBLT", "VSTM",  \
-                       "ZYME", "ZYNE", "AXSM", "NTEC", "NERV", "TTNP", \
+                       "ZYME", "ZYNE", "AXSM", "NTEC", "NERV", \
                        "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "IMMY", "NBY", "OCUL", "OHRP", "OPHT", \
                        "OVAS", "RDHL", "PLX", "GNMX", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
                        "SGMO", "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "ARWR", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
