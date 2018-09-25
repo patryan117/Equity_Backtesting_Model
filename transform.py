@@ -2,6 +2,11 @@ import numpy as np
 import pandas as pd
 import os
 import time
+import plotly
+import plotly.offline
+import plotly.graph_objs as go
+
+
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -10,9 +15,9 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
     # manipulates the investment in accordance with the split
     # does not allow the algorithm to trade the date before or after the stock split
 
-# TODO create a major loop that runs through the cartesian product (all possible window and std_threshold combos) and stoes as tuples in a list (combo list)
-# TODO Create a plotly script that will take the "combo list" and create a plotly
-# note, the number of tuples in the list will be sd_options * window options.  color = scale (red = positive, green = negative) (size = magnitude)
+
+
+
 
 
 
@@ -21,18 +26,52 @@ def main():
     start_time = time.time()
 
     std_trailing_window_inputs = (5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)   # trailing_sd window
-    k_tup = (.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5)  # standard_dev sampling window
-
+    std_threshold = (.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5)  # standard_dev sampling window
     investment = 100
 
-    combo_list = (generate_cartesian_product(std_trailing_window_inputs, k_tup))
-    return_list = generate_net_return_list(std_trailing_window_inputs, k_tup, investment)
+    return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment)
+    create_heated_scatterplot(return_list)
+
     print(return_list)
-
-
-
-
     print("\n--- %s seconds ---" % (time.time() - start_time))
+    print("\n--- %s minutes ---" % (((time.time() - start_time))/60))
+
+
+
+
+def create_heated_scatterplot(return_list):
+
+    std_trailing_window = return_list[0]
+    std_threshold = return_list[1]
+    net_returns = return_list[2]
+
+    trace1 = go.Scatter(
+        y = std_threshold,
+        x = std_trailing_window,
+        mode='markers',
+        text=net_returns,
+        marker=dict(
+            size=16,
+            color = net_returns, #set color equal to a variable
+            colorscale='Viridis',
+            showscale=True
+        )
+    )
+
+    data = [trace1]
+
+
+    plotly.offline.plot({"data": data,
+                         "layout": go.Layout(title="hello world",
+
+                          )},
+                         image_filename='test')
+
+
+
+
+
+
 
 
 def generate_net_return_list( w_tup, k_tup, investment):
@@ -52,16 +91,15 @@ def generate_net_return_list( w_tup, k_tup, investment):
         w_list.append(w); k_list.append(k); net_return_list.append(net_return)
 
         print("\n**************************************", len(combo_list) - counter, "Calculations Remaining ****************************************")
-        print(w_list)
-        print(k_list)
-        print(net_return_list)
+        # print(w_list)
+        # print(k_list)
+        # print(net_return_list)
 
 
     return[tuple(w_list), tuple(k_list), tuple(net_return_list)]
 
 
 
-        #TODO need to resend as a tuple containing [w_list, k_list, return_list]
 
 
 
