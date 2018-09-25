@@ -49,23 +49,20 @@ def create_heated_scatterplot(return_list):
         y = std_threshold,
         x = std_trailing_window,
         mode='markers',
-        text=net_returns,
+        text=str(net_returns),
         marker=dict(
             size=16,
-            color = net_returns, #set color equal to a variable
+            color = net_returns,
             colorscale='Viridis',
             showscale=True
         )
     )
 
     data = [trace1]
+    layout = go.Layout(title="Return Spread")
 
 
-    plotly.offline.plot({"data": data,
-                         "layout": go.Layout(title="hello world",
-
-                          )},
-                         image_filename='test')
+    plotly.offline.plot({"data": data, "layout": layout})
 
 
 
