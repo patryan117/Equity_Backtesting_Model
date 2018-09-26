@@ -27,7 +27,7 @@ def main():
     start_time = time.time()
 
     std_trailing_window_inputs = (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)   # trailing_sd window
-    std_threshold = (.5, 1, 1.5, 2, 2.5, 3, 3.5)  # standard_dev sampling window
+    std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
     investment = 100  # investment level per arbitrage event
 
     return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment)
@@ -48,7 +48,7 @@ def create_heated_scatterplot(return_list):
 
     scaled_net_returns = []  # scale down return
     for x in net_returns:
-        scaled_net_returns.append(x / 150)
+        scaled_net_returns.append(x / 200)
 
     print(std_trailing_window)
     print(std_threshold)
@@ -71,8 +71,8 @@ def create_heated_scatterplot(return_list):
     )
 
     data = [trace0]
-    layout = go.Layout(title="Net-Return Spread")
-    plotly.offline.plot({"data": data, "layout": layout})
+    layout = go.Layout(title="Net-Return Spread",  xaxis= dict(title = 'Rolling σ Window Length'), yaxis = dict(title='σ Threshold'))
+    plotly.offline.plot({"data": data, "layout": layout })
 
 
 
@@ -139,7 +139,7 @@ def calc_return(w, k, p):
         if i == "ALNA":
             df.to_csv(i + "trouble.csv")
 
-        print(i, " : ", (df["net_return"].sum()))
+        # print(i, " : ", (df["net_return"].sum()))
         # print(df)
 
 
@@ -177,7 +177,7 @@ micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "PTGX
                        "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "IMMY", "NBY", "OCUL", "OHRP", "OPHT", \
                        "OVAS", "RDHL", "PLX", "GNMX", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
                        "SGMO", "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "ARWR", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
-                       "CBAY", "SYN", "BCLI", "EDGE", "MNOV", "OVID", "FLKS", "DRRX", "ABEO", "AKTX", "LIFE", "CATB", \
+                       "CBAY",  "BCLI", "EDGE", "MNOV", "OVID", "FLKS", "DRRX", "ABEO", "AKTX", "LIFE", "CATB", \
                        "CPRX", "CHMA", "EIGR", "FATE", "NVLN", "RGLS", "RCKT", "SBBP", "QURE", "XENE", "ATHX", "PRQR",\
                        "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA",  "SBPH", "VVUS", \
                        "ZFGN", "OBSV"]
