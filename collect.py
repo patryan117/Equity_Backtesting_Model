@@ -55,8 +55,6 @@ def get_mid_cap_stock_data():
 
 
 
-
-
 def _get_crumbs_and_cookies(stock):
 
     url = 'https://finance.yahoo.com/quote/{}/history'.format(stock)
