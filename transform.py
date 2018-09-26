@@ -6,11 +6,10 @@ import plotly
 import plotly.offline
 import plotly.graph_objs as go
 
-
-
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 #TODO set so that the creating loop doesnt take from the hard coded list, but parses from the /data/ folder
+
 #TODO add segment to collect data that creates an interger feature for stock splits (holding the split ratio), and does one of two options:
     # manipulates the investment in accordance with the split (probably best feature)
     # does not allow the algorithm to trade the date before or after the stock split
@@ -54,8 +53,6 @@ def create_heated_scatterplot(return_list):
     print(std_threshold)
     print(net_returns)
 
-    import plotly.plotly as py
-    import plotly.graph_objs as go
 
     trace0 = go.Scatter(
         x=std_trailing_window,
@@ -65,14 +62,19 @@ def create_heated_scatterplot(return_list):
         marker=dict(
             color=net_returns,
             size=scaled_net_returns,
-            showscale = True
+            showscale=True
 
     )
     )
 
     data = [trace0]
-    layout = go.Layout(title="Net-Return Spread",  xaxis= dict(title = 'Rolling σ Window Length'), yaxis = dict(title='σ Threshold'))
-    plotly.offline.plot({"data": data, "layout": layout })
+
+    layout = go.Layout(title="Net-Return Spread",
+                       xaxis=dict(title='Rolling σ Window Length'),
+                       yaxis=dict(title='σ Threshold'),
+                       hovermode='closest'
+                       )
+    plotly.offline.plot({"data": data, "layout": layout})
 
 
 
@@ -139,7 +141,7 @@ def calc_return(w, k, p):
         if i == "ALNA":
             df.to_csv(i + "trouble.csv")
 
-        # print(i, " : ", (df["net_return"].sum()))
+        print(i, " : ", (df["net_return"].sum()))
         # print(df)
 
 
@@ -169,16 +171,16 @@ def generate_cartesian_product(a,b):
 
 
 global  micro_cap_list
-micro_cap_list = [ "ALDX", "BLRX", "CRMD", "KDMN", "KALV", "KMDA", "MDGL", "PTGX", "RETA", "TRVN", "CDTX", \
+micro_cap_list = [ "ALDX", "BLRX", "KDMN", "KALV", "KMDA", "MDGL", "PTGX", "RETA", "TRVN", "CDTX", \
                        "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
                        "ALRN", "AVEO", "BTAI",  "ECYT", "FBIO", "GALT", \
                        "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP", "INFI", "KURA", "LPTX", "MEIP", "MRTX", "NK", "ONS", \
                        "PIRS", "RNN", "SLS", "SRNE", "STML", "SNSS", "TRIL", "VBLT", "VSTM",  \
                        "ZYME", "ZYNE", "AXSM", "NTEC", "NERV", \
-                       "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "IMMY", "NBY", "OCUL", "OHRP", "OPHT", \
+                       "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "IMMY",  "OCUL", "OHRP", "OPHT", \
                        "OVAS", "RDHL", "PLX", "GNMX", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
                        "SGMO", "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "ARWR", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
-                       "CBAY",  "BCLI", "EDGE", "MNOV", "OVID", "FLKS", "DRRX", "ABEO", "AKTX", "LIFE", "CATB", \
+                       "CBAY",   "EDGE", "MNOV", "OVID", "FLKS", "DRRX", "ABEO", "AKTX", "LIFE", "CATB", \
                        "CPRX", "CHMA", "EIGR", "FATE", "NVLN", "RGLS", "RCKT", "SBBP", "QURE", "XENE", "ATHX", "PRQR",\
                        "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA",  "SBPH", "VVUS", \
                        "ZFGN", "OBSV"]
