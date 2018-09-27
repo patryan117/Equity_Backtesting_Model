@@ -79,7 +79,7 @@ def convert_to_unix(date):
     return int(mktime(datum.timetuple()))
 
 
-def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-09-2018'):
+def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-9-2018'):
 
     day_begin_unix = convert_to_unix(day_begin)
     day_end_unix = convert_to_unix(day_end)
