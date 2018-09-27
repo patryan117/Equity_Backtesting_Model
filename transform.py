@@ -47,7 +47,7 @@ def create_heated_scatterplot(return_list):
 
     scaled_net_returns = []  # scale down return
     for x in net_returns:
-        scaled_net_returns.append(x / 200)
+        scaled_net_returns.append(abs(x)/ 200)
 
     print(std_trailing_window)
     print(std_threshold)
