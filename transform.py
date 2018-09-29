@@ -146,6 +146,7 @@ def calc_return(w, k, p):
         # df["net_return"] = (df["return"] - p) * df['event_flag']
 
 
+
         cum_sum = cum_sum + (df["net_return"].sum())
         event_count += (df["event_flag"].sum())
 
