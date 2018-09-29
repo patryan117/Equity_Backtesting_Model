@@ -15,6 +15,20 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
     # does not allow the algorithm to trade the date before or after the stock split
 
 
+# •	Center color scale on scatterplot and add time_window to title (pass start_date and end_date as a string)
+#
+# •	Add a separate script in transform.py that calculates and visualizes an index based on the close date of each stock.
+#
+# •	Add script to take produce lineplots of events.  (i.e. save the +- 20 rows around a detected event and visualize)
+#
+# •	Add one of two options to prevent empty .csv errors:
+# i.	Add try-except structure to main feature engineering block (so empty datasets, caused by a early start_date error, are not processed.
+# ii.	Or have .csv list populate from the folder, and not follow inputs, and only have the dataset include non-errored sets)
+#
+# •	Add two new features to each Pandas dataframe :
+# i.	ROI column (return/ risked investment)
+# ii.	Roi_flag column (indicating when an event has taken place)
+
 
 
 
@@ -124,8 +138,9 @@ def calc_return(w, k, p):
 
         df["close_delta"] = (df["close"]) / (df["close"].shift)(1) - 1
         df["rolling_std"] = df["close_delta"].rolling(w).std()
+        df["rolling_mean"] = df["close_delta"].rolling(w).std()
         df["daily_k_stds"] = df["close_delta"] / df["rolling_std"]
-        df['event_flag'] = np.where(df['daily_k_stds'] <= -k, 1, 0)
+        df['event_flag'] = np.where(df['close_delta'] <= df["rolling_mean"] - k*df["rolling_std"], 1, 0)
         df["return"] = (p / (df["close"]) * (df["close"].shift)(-1))*df['event_flag']
         df["net_return"] = (df["return"] - p) * df['event_flag']
         # df["net_return"] = (df["return"] - p) * df['event_flag']
@@ -138,7 +153,7 @@ def calc_return(w, k, p):
         #     max_sum = (df["net_return"].sum())
 
 
-        if i == "ALNA":
+        if i == "ABEO":
             df.to_csv(i + "trouble.csv")
 
         print(i, " : ", (df["net_return"].sum()))

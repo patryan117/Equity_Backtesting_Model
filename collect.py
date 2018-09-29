@@ -49,9 +49,9 @@ def get_mid_cap_stock_data():
             x = x + 1
 
 
-
     print("\nAll Mid-Cap Biotech Datasets Retrieved Successfully")
     print(len(micro_cap_list), " Datasets Retrieved")
+
 
 
 
@@ -73,10 +73,13 @@ def _get_crumbs_and_cookies(stock):
         return (header, crumb[0], website.cookies)
 
 
+
+
 def convert_to_unix(date):
 
     datum = datetime.strptime(date, '%d-%m-%Y')
     return int(mktime(datum.timetuple()))
+
 
 
 def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-9-2018'):
@@ -96,7 +99,6 @@ def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-9-20
         file = open(dir_path + "/data/" + str(stock)+".csv", 'w')
         file.write(website.text)
         file.close()
-
 
         if "Invalid cookie" in website.text:
             return False
