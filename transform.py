@@ -16,7 +16,11 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 # TODO add index (weighted by price / volitility)
 
-#TODO Create tracking error correction based on weighted index
+# TODO Create tracking error correction based on weighted index
+
+# TODO: COnfirm that plotly scatterplot is displaying negtaive values in blue colorscale.  (centred on single trace, or split w/ 1 red 1 blue traces)
+
+# TODO Add 4 different trading strategies (probs as different transform.py files)
 
 
 # •	Center color scale on scatterplot and add time_window to title (pass start_date and end_date as a string)
