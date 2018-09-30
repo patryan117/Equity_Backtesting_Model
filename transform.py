@@ -14,6 +14,10 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
     # manipulates the investment in accordance with the split (probably best feature)
     # does not allow the algorithm to trade the date before or after the stock split
 
+# TODO add index (weighted by price / volitility)
+
+#TODO Create tracking error correction based on weighted index
+
 
 # •	Center color scale on scatterplot and add time_window to title (pass start_date and end_date as a string)
 #
