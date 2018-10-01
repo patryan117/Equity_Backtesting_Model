@@ -23,17 +23,13 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 # TODO Add 4 different trading strategies (probs as different transform.py files)
 
 
-# •	Center color scale on scatterplot and add time_window to title (pass start_date and end_date as a string)
+
+# TODO: DAdd a separate script in transform.py that calculates and visualizes an index based on the close date of each stock.
+
+# TODO: Add script to isolate and visualize recognized events.  (i.e. save the +- 20 rows around a detected event and visualize)
+
 #
-# •	Add a separate script in transform.py that calculates and visualizes an index based on the close date of each stock.
-#
-# •	Add script to take produce lineplots of events.  (i.e. save the +- 20 rows around a detected event and visualize)
-#
-# •	Add one of two options to prevent empty .csv errors:
-# i.	Add try-except structure to main feature engineering block (so empty datasets, caused by a early start_date error, are not processed.
-# ii.	Or have .csv list populate from the folder, and not follow inputs, and only have the dataset include non-errored sets)
-#
-# •	Add two new features to each Pandas dataframe :
+# TODO: Add two new features to each Pandas dataframe :
 # i.	ROI column (return/ risked investment)
 # ii.	Roi_flag column (indicating when an event has taken place)
 
