@@ -108,6 +108,7 @@ def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-9-20
 
 
 
+
 global  micro_cap_list
 micro_cap_list = [ "ALDX", "BLRX",  "KDMN", "KALV", "KMDA", "MDGL", "PTGX", "RETA", "TRVN", "CDTX", \
                        "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
