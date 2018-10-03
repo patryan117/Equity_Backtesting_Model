@@ -104,7 +104,7 @@ def generate_net_return_list( w_tup, k_tup, investment):
     k_list = []
     net_return_list = []
 
-    get_index_data(index_name = "IBB")
+    get_transformed_index_data(index_name = "IBB")
 
     for i in combo_list:
         counter += 1
@@ -124,15 +124,17 @@ def generate_net_return_list( w_tup, k_tup, investment):
 
     return[tuple(w_list), tuple(k_list), tuple(net_return_list)]
 
-def get_index_data(index_name = "IBB"):
+
+def get_transformed_index_data(index_name = "IBB"):
 
     df = pd.read_csv(dir_path + "\\index_csvs\\" + index_name + ".csv")
     print("index_name: ", index_name)
     df.columns = map(str.lower, df.columns)
     df = df.dropna()
     df["close_delta"] = (df["close"]) / (df["close"].shift)(1) - 1
-    print(df)
+    df = df.dropna()
 
+    return(df)
 
 
 
