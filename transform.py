@@ -36,8 +36,6 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
 
-
-
 def main():
 
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " mid cap companies")
