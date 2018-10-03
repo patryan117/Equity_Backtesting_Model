@@ -148,21 +148,25 @@ def calc_return(w, k, p):
 
     for i in micro_cap_list:
 
-        df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")
-        df.columns = map(str.lower, df.columns)
-        df = df.dropna()
+        index_df = get_transformed_index_data()
 
-        df["close_delta"] = (df["close"]) / (df["close"].shift)(1) - 1
-        df["rolling_std"] = df["close_delta"].rolling(w).std()
-        df["rolling_mean"] = df["close_delta"].rolling(w).std()
-        df["daily_k_stds"] = df["close_delta"] / df["rolling_std"]
-        df['event_flag'] = np.where(df['close_delta'] <= df["rolling_mean"] - k*df["rolling_std"], 1, 0)
-        df["return"] = (p / (df["close"]) * (df["close"].shift)(-1))*df['event_flag']
-        df["net_return"] = (df["return"] - p) * df['event_flag']
+        stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")
+        stock_df.columns = map(str.lower, stock_df.columns)
+        stock_df = stock_df.dropna()
 
+        stock_df["close_delta"] = (stock_df["close"]) / (stock_df["close"].shift)(1) - 1
+        
+        
+        stock_df["rolling_std"] = stock_df["close_delta"].rolling(w).std()
+        stock_df["rolling_mean"] = stock_df["close_delta"].rolling(w).std()
+        stock_df["daily_k_stds"] = stock_df["close_delta"] / stock_df["rolling_std"]
+        stock_df['event_flag'] = np.where(stock_df['close_delta'] <= stock_df["rolling_mean"] - k*stock_df["rolling_std"], 1, 0)
+        stock_df["return"] = (p / (stock_df["close"]) * (stock_df["close"].shift)(-1))*stock_df['event_flag']
+        stock_df["net_return"] = (stock_df["return"] - p) * stock_df['event_flag']
+        print(stock_df)
 
-        cum_sum = cum_sum + (df["net_return"].sum())
-        event_count += (df["event_flag"].sum())
+        cum_sum = cum_sum + (stock_df["net_return"].sum())
+        event_count += (stock_df["event_flag"].sum())
 
         # if (df["net_return"].sum()) > max_sum:
         #     max_sum = (df["net_return"].sum())
