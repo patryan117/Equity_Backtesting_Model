@@ -103,6 +103,7 @@ def generate_net_return_list( w_tup, k_tup, investment):
 
     w_list = []; k_list = [];   net_return_list = []
 
+
     for i in combo_list:
         counter += 1
         w = i[0]
@@ -159,10 +160,10 @@ def calc_return(w, k, p):
         #     max_sum = (df["net_return"].sum())
 
 
-        if i == "ABEO":
-            df.to_csv(i + "trouble.csv")
+        # if i == "ABEO":
+        #     df.to_csv(i + "trouble.csv")
 
-        print(i, " : ", (df["net_return"].sum()))
+        # print(i, " : ", (df["net_return"].sum()))
         # print(df)
 
 
@@ -207,6 +208,8 @@ micro_cap_list = [ "ALDX", "BLRX", "KDMN", "KALV", "KMDA", "MDGL", "PTGX", "RETA
                        "ZFGN", "OBSV"]
 
 
+global biotech_index
+biotech_index = "XBI"
 
 if __name__ == "__main__":
     main()
