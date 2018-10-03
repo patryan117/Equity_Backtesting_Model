@@ -19,8 +19,6 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 # TODO add index (weighted by price / volitility)
 
-# TODO Create tracking error correction based on weighted index
-
 # TODO: COnfirm that plotly scatterplot is displaying negtaive values in blue colorscale.  (centred on single trace, or split w/ 1 red 1 blue traces)
 
 # TODO Add 4 different trading strategies (probs as different transform.py files)
@@ -111,7 +109,9 @@ def generate_net_return_list( w_tup, k_tup, investment):
         k = i[1]
         net_return = calc_return(w, k, investment)
 
-        w_list.append(w); k_list.append(k); net_return_list.append(net_return)
+        w_list.append(w)
+        k_list.append(k)
+        net_return_list.append(net_return)
 
         print(net_return)
         print("****************************************", len(combo_list) - counter, "Calculations Remaining ****************************************\n")
