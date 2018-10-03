@@ -104,6 +104,7 @@ def generate_net_return_list( w_tup, k_tup, investment):
     k_list = []
     net_return_list = []
 
+    get_index_data(index_name = "IBB")
 
     for i in combo_list:
         counter += 1
@@ -118,14 +119,19 @@ def generate_net_return_list( w_tup, k_tup, investment):
         print(net_return)
         print("****************************************", len(combo_list) - counter, "Calculations Remaining ****************************************\n")
 
-        # print(w_list)
-        # print(k_list)
-        # print(net_return_list)
+        # print(w_list) ;print(k_list);  print(net_return_list)
 
 
     return[tuple(w_list), tuple(k_list), tuple(net_return_list)]
 
+def get_index_data(index_name = "IBB"):
 
+    df = pd.read_csv(dir_path + "\\index_csvs\\" + index_name + ".csv")
+    print("index_name: ", index_name)
+    df.columns = map(str.lower, df.columns)
+    df = df.dropna()
+    df["close_delta"] = (df["close"]) / (df["close"].shift)(1) - 1
+    print(df)
 
 
 
@@ -151,7 +157,6 @@ def calc_return(w, k, p):
         df['event_flag'] = np.where(df['close_delta'] <= df["rolling_mean"] - k*df["rolling_std"], 1, 0)
         df["return"] = (p / (df["close"]) * (df["close"].shift)(-1))*df['event_flag']
         df["net_return"] = (df["return"] - p) * df['event_flag']
-        # df["net_return"] = (df["return"] - p) * df['event_flag']
 
 
         cum_sum = cum_sum + (df["net_return"].sum())
