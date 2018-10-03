@@ -98,10 +98,11 @@ def create_scatterplot(return_list):
 def generate_net_return_list( w_tup, k_tup, investment):
 
     combo_list = (generate_cartesian_product(w_tup, k_tup))
-    item_list = []
     counter = 0
 
-    w_list = []; k_list = [];   net_return_list = []
+    w_list = []
+    k_list = []
+    net_return_list = []
 
 
     for i in combo_list:
