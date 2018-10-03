@@ -17,7 +17,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 def main():
     start_time = time.time()
     get_mid_cap_stock_data()
-
+    get_biotech_index_data()
     print("\n--- %s seconds ---" % (time.time() - start_time))
     # convert_csv_files_to_dfs()
 
@@ -110,7 +110,7 @@ def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-9-20
 
 
 global  micro_cap_list
-micro_cap_list = [ "ALDX", "BLRX",  "KDMN", "KALV", "KMDA", "MDGL", "PTGX", "RETA", "TRVN", "CDTX", \
+micro_cap_list = ["ALDX", "BLRX",  "KDMN", "KALV", "KMDA", "MDGL", "PTGX", "RETA", "TRVN", "CDTX", \
                        "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
                        "ALRN", "AVEO", "BTAI",  "ECYT", "FBIO", "GALT", \
                        "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP", "INFI", "KURA", "LPTX", "MEIP", "MRTX", "NK", "ONS", \
@@ -127,6 +127,11 @@ micro_cap_list = [ "ALDX", "BLRX",  "KDMN", "KALV", "KMDA", "MDGL", "PTGX", "RET
 # Removed items:
 # "PTI", "VBIV", TOCA, MDWD, CLSD, NERV, VCEL, PSTI, CTIC, CRMD, NBY, BCLI
 # CUR, CGEN, CASI, CYAD, SNDX, DFFN, AVXL, TCON, CBMG, BPTH, MGEN, CAPR, PTN, TTNP, SYN
+
+
+global biotech_index_list
+biotech_index_list = ["XBI", "IBB"]
+
 
 
 if __name__ == "__main__":
