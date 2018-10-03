@@ -8,9 +8,9 @@ import plotly.graph_objs as go
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-#TODO set so that the creating loop doesnt take from the hard coded list, but populates from the /data/ folder
+#TODO set so that the creating loop doesnt take from the hard coded list, but populates from the /stock_csvs/ folder
 
-#TODO add segment to collect data that creates an interger feature for stock splits (holding the split ratio), and does one of two options:
+#TODO add segment to collect stock_csvs that creates an interger feature for stock splits (holding the split ratio), and does one of two options:
     # manipulates the investment in accordance with the split (probably best feature)
     # does not allow the algorithm to trade the date before or after the stock split
 
@@ -90,7 +90,7 @@ def create_heated_scatterplot(return_list):
                        yaxis=dict(title='σ Threshold'),
                        hovermode='closest'
                        )
-    plotly.offline.plot({"data": data, "layout": layout})
+    plotly.offline.plot({"stock_csvs": data, "layout": layout})
 
 
 
@@ -134,7 +134,7 @@ def calc_return(w, k, p):
 
     for i in micro_cap_list:
 
-        df = pd.read_csv(dir_path + "\\data\\" + i +".csv")
+        df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")
         df.columns = map(str.lower, df.columns)
         df = df.dropna()
 

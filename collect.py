@@ -16,7 +16,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 def main():
     start_time = time.time()
-    get_mid_cap_stock_data()
+    # get_mid_cap_stock_data()
     get_biotech_index_data()
     print("\n--- %s seconds ---" % (time.time() - start_time))
     # convert_csv_files_to_dfs()
@@ -24,11 +24,11 @@ def main():
 
 
 # def convert_csv_files_to_dfs():
-#     for filename in os.listdir(dir_path + "/data/"):
+#     for filename in os.listdir(dir_path + "/stock_csvs/"):
 #         if filename.endswith(".csv"):
 #             file_loc = os.path.join(dir_path, 'relative/path/to/file/you/want')
 #             print(filename)
-#             df = pd.read_csv(dir_path + "/data/" + filename)
+#             df = pd.read_csv(dir_path + "/stock_csvs/" + filename)
 #             print("df sucessfuly converted")
 #             # df.to_pickle('testpickle.pkl')
 #             # print("pickle saved!")
@@ -40,11 +40,11 @@ def get_mid_cap_stock_data():
 
     x = 0
     while x != len(micro_cap_list):
-        if load_csv_data(micro_cap_list[x]) == False:
+        if load_csv_data(stock = micro_cap_list[x], folder_name= "stock_csvs") == False:
             print(micro_cap_list[x], " retrieval failed... re-trying (", len(micro_cap_list)-x, ") remaining.")
             x = x
 
-        if load_csv_data(micro_cap_list[x]) == True:
+        if load_csv_data(stock = micro_cap_list[x], folder_name= "stock_csvs") == True:
             print(micro_cap_list[x], " retrieval successful: (",len(micro_cap_list)-x, ") remaining.")
             x = x + 1
 
@@ -52,6 +52,26 @@ def get_mid_cap_stock_data():
     print("\nAll Mid-Cap Biotech Datasets Retrieved Successfully")
     print(len(micro_cap_list), " Datasets Retrieved")
 
+
+
+
+def get_biotech_index_data():
+
+    print("Retrieving CSV files of Micro-Cap Biotech Indexes...")
+
+    x = 0
+    while x != len(biotech_index_list):
+        if load_csv_data(stock = biotech_index_list[x], folder_name= "index_csvs") == False:
+            print(biotech_index_list[x], " retrieval failed... re-trying (", len(biotech_index_list)-x, ") remaining.")
+            x = x
+
+        if load_csv_data(stock = biotech_index_list[x], folder_name= "index_csvs") == True:
+            print(biotech_index_list[x], " retrieval successful: (",len(biotech_index_list)-x, ") remaining.")
+            x = x + 1
+
+
+    print("\nAll Mid-Cap Biotech Datasets Retrieved Successfully")
+    print(len(biotech_index_list), " Datasets Retrieved")
 
 
 
@@ -82,13 +102,14 @@ def convert_to_unix(date):
 
 
 
-def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-9-2018'):
+def load_csv_data(stock, folder_name, interval='1d', day_begin='01-01-2010', day_end='01-9-2018'):
 
     day_begin_unix = convert_to_unix(day_begin)
     day_end_unix = convert_to_unix(day_end)
     header, crumb, cookies = _get_crumbs_and_cookies(stock)
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
+    # os.mkdir(dir_path + "\\" + folder_name + "\\")  # will throw error if folder already exists, add try-except
 
     with requests.session():
         url = 'https://query1.finance.yahoo.com/v7/finance/download/' \
@@ -96,7 +117,7 @@ def load_csv_data(stock, interval='1d', day_begin='01-01-2010', day_end='01-9-20
             .format(stock=stock, day_begin=day_begin_unix, day_end=day_end_unix, interval=interval, crumb=crumb)
 
         website = requests.get(url, headers=header, cookies=cookies)
-        file = open(dir_path + "/data/" + str(stock)+".csv", 'w')
+        file = open(dir_path + "\\" + folder_name + "\\" + str(stock)+".csv", 'w')
         file.write(website.text)
         file.close()
 
