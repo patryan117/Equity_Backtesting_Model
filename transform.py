@@ -5,6 +5,9 @@ import time
 import plotly
 import plotly.offline
 import plotly.graph_objs as go
+import os
+
+
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -22,8 +25,6 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 # TODO Add 4 different trading strategies (probs as different transform.py files)
 
-
-
 # TODO: DAdd a separate script in transform.py that calculates and visualizes an index based on the close date of each stock.
 
 # TODO: Add script to isolate and visualize recognized events.  (i.e. save the +- 20 rows around a detected event and visualize)
@@ -37,7 +38,6 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
 def main():
-
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " mid cap companies")
     start_time = time.time()
 
@@ -45,8 +45,10 @@ def main():
     std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
     investment = 100  # investment level per arbitrage event
 
+
+
     return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment)
-    create_heated_scatterplot(return_list)
+    create_scatterplot(return_list)
 
     print(return_list)
     print("\n--- %s seconds ---" % (time.time() - start_time))
@@ -55,7 +57,7 @@ def main():
 
 
 
-def create_heated_scatterplot(return_list):
+def create_scatterplot(return_list):
 
     std_trailing_window = return_list[0]
     std_threshold = return_list[1]
@@ -131,6 +133,8 @@ def calc_return(w, k, p):
     cum_sum = 0
     event_count = 0
     max_sum = 0
+
+
 
     for i in micro_cap_list:
 

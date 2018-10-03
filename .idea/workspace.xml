@@ -3,153 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collect.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ABEO.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ABEO.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ABUS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ABUS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ADMA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ADMA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ADVM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ADVM.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AFMD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/AFMD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AGLE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/AGLE.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AGTC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/AGTC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AKTX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/AKTX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ALDX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ALDX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ALNA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ALNA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ALRN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ALRN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AMPE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/AMPE.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ARCT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ARCT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ARWR.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ARWR.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ASNS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ASNS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AST.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/AST.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ATHX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ATHX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ATNM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ATNM.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AVEO.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/AVEO.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AVXL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/AVXL.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AXSM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/AXSM.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BCLI.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/BCLI.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BLRX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/BLRX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BPTH.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/BPTH.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BTAI.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/BTAI.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CALA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CALA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CAPR.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CAPR.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CASI.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CASI.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CATB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CATB.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CBAY.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CBAY.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CBMG.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CBMG.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CDTX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CDTX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CDXS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CDXS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CFRX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CFRX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CGEN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CGEN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CHMA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CHMA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CLSD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CLSD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CMRX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CMRX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CNAT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CNAT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CPRX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CPRX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CRMD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CRMD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CTIC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CTIC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CTRV.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CTRV.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CUR.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CUR.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CYAD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/CYAD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DFFN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/DFFN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DRNA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/DRNA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DRRX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/DRRX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DVAX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/DVAX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ECYT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ECYT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/EDGE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/EDGE.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/EIGR.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/EIGR.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/FATE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/FATE.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/FBIO.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/FBIO.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/FLKS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/FLKS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/GALT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/GALT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/GEMP.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/GEMP.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/GLMD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/GLMD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/GLYC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/GLYC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/GNCA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/GNCA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/GNMX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/GNMX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/GNPX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/GNPX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/GTXI.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/GTXI.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/IMDZ.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/IMDZ.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/IMGN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/IMGN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/IMMP.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/IMMP.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/IMMY.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/IMMY.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/INFI.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/INFI.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/KALV.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/KALV.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/KDMN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/KDMN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/KIN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/KIN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/KMDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/KMDA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/KRYS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/KRYS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/KURA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/KURA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/LIFE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/LIFE.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/LPTX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/LPTX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MDGL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/MDGL.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MDWD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/MDWD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MEIP.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/MEIP.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MGEN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/MGEN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MNKD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/MNKD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MNOV.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/MNOV.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MRTX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/MRTX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MTFB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/MTFB.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MTNB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/MTNB.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NBRV.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/NBRV.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NBY.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/NBY.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NEPT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/NEPT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NERV.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/NERV.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NK.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/NK.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NNVC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/NNVC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NTEC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/NTEC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NVLN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/NVLN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NYMX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/NYMX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/OBSV.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/OBSV.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/OCUL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/OCUL.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/OHRP.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/OHRP.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ONS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ONS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/OPHT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/OPHT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/OVAS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/OVAS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/OVID.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/OVID.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/PFNX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/PFNX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/PIRS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/PIRS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/PLX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/PLX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/PRQR.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/PRQR.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/PSTI.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/PSTI.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/PTGX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/PTGX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/PTN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/PTN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/PULM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/PULM.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/QURE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/QURE.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/RCKT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/RCKT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/RDHL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/RDHL.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/RETA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/RETA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/RGLS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/RGLS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/RNN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/RNN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SBBP.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SBBP.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SBPH.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SBPH.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SELB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SELB.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SGMO.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SGMO.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SLS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SLS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SMMT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SMMT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SNDX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SNDX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SNSS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SNSS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SPHS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SPHS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SPRO.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SPRO.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SRNE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SRNE.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/STML.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/STML.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SYN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SYN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/TCON.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/TCON.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/TENX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/TENX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/TOCA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/TOCA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/TRIL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/TRIL.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/TRVN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/TRVN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/TTNP.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/TTNP.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/URGN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/URGN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/VBLT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/VBLT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/VCEL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/VCEL.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/VRNA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/VRNA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/VSTM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/VSTM.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/VTL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/VTL.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/VVUS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/VVUS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/XENE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/XENE.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/XOMA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/XOMA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ZFGN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ZFGN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ZYME.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ZYME.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ZYNE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/ZYNE.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABEOtrouble.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALNAtrouble.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_csvs/SGMO.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stock_csvs/SGMO.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/transform.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -164,7 +20,7 @@
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_3.coverage" NAME="1_3 Coverage Results" MODIFIED="1538514077417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_1.coverage" NAME="1_1 Coverage Results" MODIFIED="1538514036111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$main_task1__1_.coverage" NAME="main_task1 (1) Coverage Results" MODIFIED="1538057350104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$transform.coverage" NAME="transform Coverage Results" MODIFIED="1538091125831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$transform.coverage" NAME="transform Coverage Results" MODIFIED="1538578303657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_5.coverage" NAME="1_5 Coverage Results" MODIFIED="1538514138105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_7.coverage" NAME="1_7 Coverage Results" MODIFIED="1538576910049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$test.coverage" NAME="test Coverage Results" MODIFIED="1537903023986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -172,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="collect.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="collect.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/collect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="72" column="19" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
+            <state relative-caret-position="1156">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#693#726#0" />
@@ -185,51 +41,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XBI.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index_csvs/XBI.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="IBB.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index_csvs/IBB.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="SNDX.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock_csvs/SNDX.csv">
+      <file leaf-file-name="transform.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/transform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-425" />
+            <state relative-caret-position="153">
+              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SMMT.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock_csvs/SMMT.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="SLS.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock_csvs/SLS.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="SGMO.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock_csvs/SGMO.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="SELB.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock_csvs/SELB.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="SBPH.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock_csvs/SBPH.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="SBBP.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock_csvs/SBBP.csv">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -243,7 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>clsd</find>
       <find>cur</find>
       <find>gen</find>
       <find>cgen</find>
@@ -273,6 +93,7 @@
       <find>sd</find>
       <find>daily</find>
       <find>nby</find>
+      <find>dir_path</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -287,8 +108,8 @@
         <option value="$USER_HOME$/Downloads/main_task1 (1).py" />
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao/1_5.py" />
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao/1_7.py" />
-        <option value="$PROJECT_DIR$/transform.py" />
         <option value="$PROJECT_DIR$/collect.py" />
+        <option value="$PROJECT_DIR$/transform.py" />
       </list>
     </option>
   </component>
@@ -348,26 +169,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.collect">
-    <configuration name="1_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Analysis_of_Biotech_Disclosures" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao/1_1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.transform">
     <configuration name="1_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -444,20 +246,39 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="transform" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Analysis_of_Biotech_Disclosures" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/transform.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
-      <item itemvalue="Python.1_1" />
       <item itemvalue="Python.1_3" />
       <item itemvalue="Python.1_5" />
       <item itemvalue="Python.1_7" />
       <item itemvalue="Python.collect" />
+      <item itemvalue="Python.transform" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.transform" />
         <item itemvalue="Python.collect" />
         <item itemvalue="Python.1_7" />
         <item itemvalue="Python.1_5" />
         <item itemvalue="Python.1_3" />
-        <item itemvalue="Python.1_1" />
       </list>
     </recent_temporary>
   </component>
@@ -492,9 +313,9 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32859176" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32859176" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49966466" visible="true" weight="0.24568966" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966466" visible="true" weight="0.42528737" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32859176" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15524194" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15524194" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3275862" />
@@ -510,27 +331,27 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49966466" visible="true" weight="0.2902299" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15322581" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.32859176" />
-      <window_info anchor="bottom" id="Version Control" order="1" weight="0.32859176" />
-      <window_info anchor="bottom" id="Python Console" order="5" weight="0.32859176" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32859176" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32859176" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50033534" side_tool="true" weight="0.371266" />
-      <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="1" weight="0.32997987" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.3997155" />
-      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32859176" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15524194" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49966466" visible="true" weight="0.24568966" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3275862" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32859176" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50033534" side_tool="true" weight="0.371266" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.32997987" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997155" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -744,16 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/transform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stock_csvs/STML.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -780,9 +591,6 @@
     <entry file="file://$PROJECT_DIR$/stock_csvs/SLS.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock_csvs/SGMO.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/stock_csvs/SELB.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -798,13 +606,26 @@
     <entry file="file://$PROJECT_DIR$/index_csvs/XBI.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/stock_csvs/SGMO.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/collect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="72" column="19" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
+        <state relative-caret-position="1156">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#693#726#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
