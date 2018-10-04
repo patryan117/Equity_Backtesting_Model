@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ABEOtrouble.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/transform.py" afterDir="false" />
-    </list>
+    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,9 +116,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-15" />
-    <option name="width" value="3865" />
-    <option name="height" value="2075" />
+    <option name="x" value="32767" />
+    <option name="y" value="32767" />
+    <option name="width" value="3875" />
+    <option name="height" value="2195" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -296,7 +294,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1546" height="830" extended-state="0" />
+    <frame x="13107" y="13107" width="1550" height="878" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
@@ -304,9 +302,9 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32859176" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32859176" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966466" visible="true" weight="0.38362068" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966466" visible="true" weight="0.35887095" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32859176" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15524194" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15482573" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3275862" />
