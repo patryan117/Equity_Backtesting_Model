@@ -90,7 +90,7 @@ def create_scatterplot(return_list):
                        yaxis=dict(title='σ Threshold'),
                        hovermode='closest'
                        )
-    plotly.offline.plot({"stock_csvs": data, "layout": layout})
+    plotly.offline.plot({"data": data, "layout": layout})
 
 
 
@@ -148,7 +148,7 @@ def calc_return(w, k, p):
 
     for i in micro_cap_list:
 
-        index_df = get_transformed_index_data()
+        # index_df = get_transformed_index_data()
 
         stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")
         stock_df.columns = map(str.lower, stock_df.columns)
