@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/transform.py" afterDir="false" />
-    </list>
+    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +14,7 @@
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_3.coverage" NAME="1_3 Coverage Results" MODIFIED="1538514077417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_1.coverage" NAME="1_1 Coverage Results" MODIFIED="1538514036111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$main_task1__1_.coverage" NAME="main_task1 (1) Coverage Results" MODIFIED="1538057350104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$transform.coverage" NAME="transform Coverage Results" MODIFIED="1538671130789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$transform.coverage" NAME="transform Coverage Results" MODIFIED="1538754402089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_5.coverage" NAME="1_5 Coverage Results" MODIFIED="1538514138105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_7.coverage" NAME="1_7 Coverage Results" MODIFIED="1538576910049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$test.coverage" NAME="test Coverage Results" MODIFIED="1538662296334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -47,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transform.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="transform.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/transform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="77">
+              <caret line="89" column="39" lean-forward="true" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -59,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_task1.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_task1.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Downloads/main_task1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="-78">
               <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
             </state>
           </provider>
@@ -93,8 +89,8 @@
       <file leaf-file-name="main_task3 (2).py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Downloads/main_task3 (2).py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="169" column="8" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="8" />
+            <state relative-caret-position="14">
+              <caret line="140" column="25" lean-forward="true" selection-start-line="140" selection-end-line="141" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -113,7 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cyad</find>
       <find>ast</find>
       <find>sndx</find>
       <find>tcon</find>
@@ -143,6 +138,7 @@
       <find>data</find>
       <find>item_list</find>
       <find>get</find>
+      <find>add</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -355,7 +351,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32859176" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32859176" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49966466" visible="true" weight="0.1545699" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49966466" visible="true" weight="0.516129" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32859176" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15683647" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -535,16 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/main_task3 (2).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="169" column="8" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/collect.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -555,20 +541,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/transform.py">
+    <entry file="file://$USER_HOME$/Downloads/main_task1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="-78">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/main_task3 (2).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="140" column="25" lean-forward="true" selection-start-line="140" selection-end-line="141" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/main_task1.py">
+    <entry file="file://$PROJECT_DIR$/transform.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state relative-caret-position="77">
+          <caret line="89" column="39" lean-forward="true" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
