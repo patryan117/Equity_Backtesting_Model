@@ -40,7 +40,7 @@ def main():
     start_time = time.time()
 
     # 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
-    
+
 
     std_trailing_window_inputs = (2, 3, 4, 5, 6, 7, 8, 9, 10, )   # trailing_sd window
     std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
