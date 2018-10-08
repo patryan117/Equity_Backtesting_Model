@@ -39,16 +39,17 @@ def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " mid cap companies")
     start_time = time.time()
 
-    # 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+    # std_trailing_window_inputs = (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)   # trailing_sd window
+    # std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
 
 
-    std_trailing_window_inputs = (2, 3, 4, 5, 6, 7, 8, 9, 10, )   # trailing_sd window
-    std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
+    std_trailing_window_inputs = (5, 6)   # trailing_sd window
+    std_threshold = (2, 2.5)  # standard_dev sampling window
     investment = 100  # investment level per arbitrage event
 
 
 
-    return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment)
+    return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment, "IBB")
     create_scatterplot(return_list)
 
     print(return_list)
@@ -98,7 +99,7 @@ def create_scatterplot(return_list):
 
 
 
-def generate_net_return_list( w_tup, k_tup, investment):
+def generate_net_return_list( w_tup, k_tup, investment, index_name):
 
     combo_list = (generate_cartesian_product(w_tup, k_tup))
     counter = 0
@@ -107,13 +108,16 @@ def generate_net_return_list( w_tup, k_tup, investment):
     k_list = []
     net_return_list = []
 
-    get_transformed_index_data(index_name = "IBB")
+    # index_df creation line should be here, so it doesnt need to be created for each investment trial
+    index_df = get_transformed_index_data(index_name = "IBB")
+
+
 
     for i in combo_list:
         counter += 1
         w = i[0]
         k = i[1]
-        net_return = calc_return(w, k, investment)
+        net_return = calc_return(w, k, investment, index_df)
 
         w_list.append(w)
         k_list.append(k)
@@ -128,44 +132,37 @@ def generate_net_return_list( w_tup, k_tup, investment):
     return[tuple(w_list), tuple(k_list), tuple(net_return_list)]
 
 
-def get_transformed_index_data(index_name = "IBB"):
-
-    df = pd.read_csv(dir_path + "\\index_csvs\\" + index_name + ".csv")
-    print("index_name: ", index_name)
-    df.columns = map(str.lower, df.columns)
-    df = df.dropna()
-    df["close_delta"] = (df["close"]) / (df["close"].shift)(1) - 1
-    df = df.dropna()
-
-    return(df)
 
 
-
-def calc_return(w, k, p):
+def calc_return(w, k, p, index_df):
 
     cum_sum = 0
     event_count = 0
     max_sum = 0
 
 
-
     for i in micro_cap_list:
 
-        # index_df = get_transformed_index_data()
-
-        stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")
+        print(index_df)
+        stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")  #TODO: Make dynamic (so it forms a list from the subdirectory names alone)
         stock_df.columns = map(str.lower, stock_df.columns)
         stock_df = stock_df.dropna()
 
-        stock_df["close_delta"] = (stock_df["close"]) / (stock_df["close"].shift)(1) - 1
-        
-        
-        stock_df["rolling_std"] = stock_df["close_delta"].rolling(w).std()
-        stock_df["rolling_mean"] = stock_df["close_delta"].rolling(w).std()
-        stock_df["daily_k_stds"] = stock_df["close_delta"] / stock_df["rolling_std"]
-        stock_df['event_flag'] = np.where(stock_df['close_delta'] <= stock_df["rolling_mean"] - k*stock_df["rolling_std"], 1, 0)
+        cake = add_index_close_delta(stock_df, index_df)
+        print(cake)
+
+        # stock_df["index_close_delta"] = np.where(stock_df["date"] == index_df["date"], index_df["index_close_delta"], None)
+
+        stock_df["stock_close_delta"] = (stock_df["close"]) / (stock_df["close"].shift)(1) - 1
+
+        stock_df["rolling_std"] = stock_df["stock_close_delta"].rolling(w).std()
+        stock_df["rolling_mean"] = stock_df["stock_close_delta"].rolling(w).std()
+        stock_df["daily_k_stds"] = stock_df["stock_close_delta"] / stock_df["rolling_std"]
+        stock_df['event_flag'] = np.where(stock_df['stock_close_delta'] <= stock_df["rolling_mean"] - k*stock_df["rolling_std"], 1, 0)
         stock_df["return"] = (p / (stock_df["close"]) * (stock_df["close"].shift)(-1))*stock_df['event_flag']
         stock_df["net_return"] = (stock_df["return"] - p) * stock_df['event_flag']
+
+        print(i)
         print(stock_df)
 
         cum_sum = cum_sum + (stock_df["net_return"].sum())
@@ -190,6 +187,23 @@ def calc_return(w, k, p):
     # print("Average portfolio return: ", cum_sum/event_count)
 
     return cum_sum
+
+
+def add_index_close_delta(stock_df, index_df):
+    out_df = stock_df.apply(lambda y : y["index_close_delta"] if y["date"] == stock_df["date"] else None)(index_df)
+    return out_df
+
+
+
+def get_transformed_index_data(index_name = "IBB"):
+
+    df = pd.read_csv(dir_path + "\\index_csvs\\" + index_name + ".csv")
+    print("index_name: ", index_name)
+    df.columns = map(str.lower, df.columns)
+    df = df.dropna()
+    df["index_close_delta"] = (df["close"]) / (df["close"].shift)(1) - 1
+    df = df.dropna()
+    return(df)
 
 
 
