@@ -13,10 +13,6 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 #TODO set so that the creating loop doesnt take from the hard coded list, but populates from the /stock_csvs/ folder
 
-#TODO add segment to collect stock_csvs that creates an interger feature for stock splits (holding the split ratio), and does one of two options:
-    # manipulates the investment in accordance with the split (probably best feature)
-    # does not allow the algorithm to trade the date before or after the stock split
-
 # TODO add index (weighted by price / volitility)
 
 # TODO: COnfirm that plotly scatterplot is displaying negtaive values in blue colorscale.  (centred on single trace, or split w/ 1 red 1 blue traces)
@@ -148,10 +144,16 @@ def calc_return(w, k, p, index_df):
         stock_df.columns = map(str.lower, stock_df.columns)
         stock_df = stock_df.dropna()
 
-        cake = add_index_close_delta(stock_df, index_df)
-        print(cake)
 
-        # stock_df["index_close_delta"] = np.where(stock_df["date"] == index_df["date"], index_df["index_close_delta"], None)
+        # stock_df["index_close_delta"] = stock_df.apply(add_index_close_delta(index_df))
+
+
+        # cake = add_index_close_delta(stock_df, index_df)
+        # print(cake)
+
+        stock_df["index_close_delta"] = np.where(stock_df["date"] == index_df["date"], index_df["index_close_delta"], None)
+
+        df.loc[df['column_name'] == some_value]
 
         stock_df["stock_close_delta"] = (stock_df["close"]) / (stock_df["close"].shift)(1) - 1
 
@@ -189,8 +191,8 @@ def calc_return(w, k, p, index_df):
     return cum_sum
 
 
-def add_index_close_delta(stock_df, index_df):
-    out_df = stock_df.apply(lambda y : y["index_close_delta"] if y["date"] == stock_df["date"] else None)(index_df)
+def add_index_close_delta(x):
+    out_df = x.apply(lambda y : y["index_close_delta"] if x["date"] == y["date"] else None)
     return out_df
 
 
