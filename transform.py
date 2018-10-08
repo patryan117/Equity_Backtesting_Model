@@ -135,27 +135,21 @@ def calc_return(w, k, p, index_df):
     cum_sum = 0
     event_count = 0
     max_sum = 0
-
+    index_delta_dict = index_df.set_index('date').to_dict()['index_close_delta']
 
     for i in micro_cap_list:
 
-        print(index_df)
         stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")  #TODO: Make dynamic (so it forms a list from the subdirectory names alone)
         stock_df.columns = map(str.lower, stock_df.columns)
         stock_df = stock_df.dropna()
 
+        stock_df['index_close_delta'] = stock_df['date'].map(index_delta_dict)
 
-        # stock_df["index_close_delta"] = stock_df.apply(add_index_close_delta(index_df))
-
-
-        # cake = add_index_close_delta(stock_df, index_df)
-        # print(cake)
-
-        stock_df["index_close_delta"] = np.where(stock_df["date"] == index_df["date"], index_df["index_close_delta"], None)
-
-        df.loc[df['column_name'] == some_value]
 
         stock_df["stock_close_delta"] = (stock_df["close"]) / (stock_df["close"].shift)(1) - 1
+
+        stock_df["net_close_delta"] = (stock_df["stock_close_delta"]) - stock_df["index_close_delta"]
+
 
         stock_df["rolling_std"] = stock_df["stock_close_delta"].rolling(w).std()
         stock_df["rolling_mean"] = stock_df["stock_close_delta"].rolling(w).std()
