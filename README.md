@@ -1,4 +1,4 @@
-# Analysis of Biotech Disclosures:
+# Equity Backtesting Model:
 
 - An exploratory analysis of the role that public disclosures plays in the share price of small and mid-cap biotech companies.  Analysis includes backtesting under a variety of independent inputs (sd-window, hold-period, etc.)
 
