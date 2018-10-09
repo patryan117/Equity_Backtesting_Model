@@ -28,20 +28,24 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 # i.	ROI column (return/ risked investment)
 # ii.	Roi_flag column (indicating when an event has taken place)
 
-
-
+# TODO: Round decimal on plotly overlay
 
 def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " mid cap companies")
     start_time = time.time()
 
+
+    #big trial
     # std_trailing_window_inputs = (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)   # trailing_sd window
     # std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
 
+    #small trial
+    std_trailing_window_inputs = (5, 7, 9, 11, 13, 15)   # trailing_sd window
+    std_threshold = (1, 2, 3)  # standard_dev sampling window
 
-    std_trailing_window_inputs = (5, 6)   # trailing_sd window
-    std_threshold = (2, 2.5)  # standard_dev sampling window
+
     investment = 100  # investment level per arbitrage event
+    transactional_cost = 0
 
 
 
@@ -134,7 +138,7 @@ def calc_return(w, k, p, index_df):
 
     cum_sum = 0
     event_count = 0
-    max_sum = 0
+    max_sum = 0  #for debugging printout
     index_delta_dict = index_df.set_index('date').to_dict()['index_close_delta']
 
     for i in micro_cap_list:
@@ -143,35 +147,36 @@ def calc_return(w, k, p, index_df):
         stock_df.columns = map(str.lower, stock_df.columns)
         stock_df = stock_df.dropna()
 
-        stock_df['index_close_delta'] = stock_df['date'].map(index_delta_dict)
+        stock_df['index_close_delta'] = stock_df['date'].map(index_delta_dict)  #map index dictionary (date: delta) to a new column on each stock's dataframe
 
 
         stock_df["stock_close_delta"] = (stock_df["close"]) / (stock_df["close"].shift)(1) - 1
-
         stock_df["net_close_delta"] = (stock_df["stock_close_delta"]) - stock_df["index_close_delta"]
 
 
-        stock_df["rolling_std"] = stock_df["stock_close_delta"].rolling(w).std()
-        stock_df["rolling_mean"] = stock_df["stock_close_delta"].rolling(w).std()
-        stock_df["daily_k_stds"] = stock_df["stock_close_delta"] / stock_df["rolling_std"]
-        stock_df['event_flag'] = np.where(stock_df['stock_close_delta'] <= stock_df["rolling_mean"] - k*stock_df["rolling_std"], 1, 0)
+        stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].rolling(w).std()
+        stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
+        stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
+        # stock_df['event_flag'] = np.where(stock_df['net_close_delta'] < stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]), 1, 0)
+        stock_df['event_flag'] = np.where(stock_df['ncd_daily_k_stds'] <= -k, 1, 0)
+
         stock_df["return"] = (p / (stock_df["close"]) * (stock_df["close"].shift)(-1))*stock_df['event_flag']
         stock_df["net_return"] = (stock_df["return"] - p) * stock_df['event_flag']
 
-        print(i)
+        print("Stock Name: ", i)
+        print("Trailing Window: ", w)
+        print("STD Threshold: ", k)
         print(stock_df)
 
         cum_sum = cum_sum + (stock_df["net_return"].sum())
         event_count += (stock_df["event_flag"].sum())
 
-        # if (df["net_return"].sum()) > max_sum:
-        #     max_sum = (df["net_return"].sum())
 
 
         # if i == "ABEO":
         #     df.to_csv(i + "trouble.csv")
 
-        # print(i, " : ", (df["net_return"].sum()))
+        print(i, " : ", (stock_df["net_return"].sum()))
         # print(df)
 
 
@@ -184,10 +189,6 @@ def calc_return(w, k, p, index_df):
 
     return cum_sum
 
-
-def add_index_close_delta(x):
-    out_df = x.apply(lambda y : y["index_close_delta"] if x["date"] == y["date"] else None)
-    return out_df
 
 
 
