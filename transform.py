@@ -37,12 +37,12 @@ def main():
 
 
     #big trial (20 - 30 min runtime)
-    # std_trailing_window_inputs = (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)   # trailing_sd window
-    # std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
+    std_trailing_window_inputs = (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)   # trailing_sd window
+    std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
 
     #small trial
-    std_trailing_window_inputs = (4, 6, 8, 10)   # trailing_sd window
-    std_threshold = (1.5, 2)  # standard_dev sampling window
+    # std_trailing_window_inputs = (4, 6, 8, 10)   # trailing_sd window
+    # std_threshold = (0.1, 1.5, 2)  # standard_dev sampling window
 
 
     investment = 100  # investment level per arbitrage event
@@ -174,11 +174,14 @@ def calc_return(w, k, p, index_df):
         stock_df["net_close_delta"] = ((stock_df["stock_close_delta"]) - stock_df["index_close_delta"])
 
         #ndc = net close delta
-        stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].shift(1).rolling(w).std()
+        stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].shift(1).rolling(w).std()  #added shift so it doesnt include the current day
         stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].shift(1).rolling(w).mean()
         stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
-        # stock_df['event_flag'] = np.where(stock_df['net_close_delta'] < stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]), 1, 0)
-        stock_df['event_flag'] = np.where(stock_df['ncd_daily_k_stds'] <= -k, 1, 0)
+        stock_df['event_flag'] = np.where(stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])), 1, 0)
+        # stock_df['event_flag'] = np.where(stock_df['ncd_daily_k_stds'] <= -k, 1, 0)
+
+        #TODO: SAVE THE (DATE: PRICE) VALUES FOR
+
 
         stock_df["return"] = (p / (stock_df["close"]) * (stock_df["close"].shift)(-1))*stock_df['event_flag']
         stock_df["net_return"] = (stock_df["return"] - p) * stock_df['event_flag']
@@ -190,6 +193,7 @@ def calc_return(w, k, p, index_df):
 
         cum_sum = cum_sum + (stock_df["net_return"].sum())
         event_count += (stock_df["event_flag"].sum())
+
 
 
         # if i == "ABEO":
