@@ -172,7 +172,6 @@ def calc_return(w, k, p, index_df):
         event_count += (stock_df["event_flag"].sum())
 
 
-
         # if i == "ABEO":
         #     df.to_csv(i + "trouble.csv")
 
