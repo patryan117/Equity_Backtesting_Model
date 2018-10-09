@@ -11,9 +11,7 @@ import os
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-#TODO set so that the creating loop doesnt take from the hard coded list, but populates from the /stock_csvs/ folder
 
-# TODO add index (weighted by price / volitility)
 
 # TODO: COnfirm that plotly scatterplot is displaying negtaive values in blue colorscale.  (centred on single trace, or split w/ 1 red 1 blue traces)
 
@@ -32,7 +30,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
 def main():
-    print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " mid cap biotech companies")
+    print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " id cap biotech companies")
     start_time = time.time()
 
 
@@ -41,22 +39,13 @@ def main():
     std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
 
     #small trial
-    # std_trailing_window_inputs = (4, 6, 8, 10)   # trailing_sd window
-    # std_threshold = (0.1, 1.5, 2)  # standard_dev sampling window
-
-
+    # std_trailing_window_inputs = (6, 8, 10, 12)   # trailing_sd window
+    # std_threshold = (0.5, 1, 1.5, 2, 2.5, 3)  # standard_dev sampling window
     investment = 100  # investment level per arbitrage event
     transactional_cost = 0
 
-
-
     return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment, "IBB")
     create_scatterplot(return_list)
-
-
-
-
-
 
 
     print(return_list)
@@ -74,7 +63,8 @@ def create_scatterplot(return_list):
 
     scaled_net_returns = []  # scale down return
     for x in net_returns:
-        scaled_net_returns.append(abs(x)/ 200)
+        y = x/ max(net_returns)
+        scaled_net_returns.append(abs(y) * 30)
 
     print(std_trailing_window)
     print(std_threshold)
@@ -109,6 +99,7 @@ def create_scatterplot(return_list):
 def generate_net_return_list( w_tup, k_tup, investment, index_name):
 
     combo_list = (generate_cartesian_product(w_tup, k_tup))
+    print(combo_list)
     counter = 0
 
     w_list = []
@@ -142,14 +133,12 @@ def generate_net_return_list( w_tup, k_tup, investment, index_name):
 
 
 
-def calc_return(w, k, p, index_df):
+def calc_return(w, k, investment, index_df):
 
     cum_sum = 0
     event_count = 0
     max_sum = 0  #for debugging printout
     index_delta_dict = index_df.set_index('date').to_dict()['close']
-
-
 
 
     for i in micro_cap_list:
@@ -162,34 +151,36 @@ def calc_return(w, k, p, index_df):
 
         # map index dictionary (date: delta) to a new column on each stock's dataframe
         stock_df['index_close'] = stock_df['date'].map(index_delta_dict)
-
-        stock_df["index_close_delta"] = (((stock_df["index_close"]) - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
-
+        stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open"})
 
 
-        #Calculate d/d percentage change
-        stock_df["stock_close_delta"] = (((stock_df["close"]) - (stock_df["close"].shift)(1)) / (stock_df["close"].shift)(1))
+        stock_df["index_close_delta"] = ((stock_df["index_close"] - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
+        stock_df["stock_close_delta"] = (((stock_df["stock_close"]) - (stock_df["stock_close"].shift)(1)) / (stock_df["stock_close"].shift)(1))
 
         # Remove Tracking Error
         stock_df["net_close_delta"] = ((stock_df["stock_close_delta"]) - stock_df["index_close_delta"])
 
         #ndc = net close delta
-        stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].shift(1).rolling(w).std()  #added shift so it doesnt include the current day
-        stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].shift(1).rolling(w).mean()
+        stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].rolling(w).std()  #add shift(1) before rolling to not include that rows day in the calculation
+        stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
         stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
+        stock_df['mu_-_k_*_sd'] = ( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
         stock_df['event_flag'] = np.where(stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])), 1, 0)
+
         # stock_df['event_flag'] = np.where(stock_df['ncd_daily_k_stds'] <= -k, 1, 0)
 
-        #TODO: SAVE THE (DATE: PRICE) VALUES FOR
+        #TODO: SAVE THE (DATE: PRICE) VALUES FOR EXTREME EVENTS
 
 
-        stock_df["return"] = (p / (stock_df["close"]) * (stock_df["close"].shift)(-1))*stock_df['event_flag']
-        stock_df["net_return"] = (stock_df["return"] - p) * stock_df['event_flag']
+        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_close"].shift)(-1))*stock_df['event_flag']
+        stock_df["net_return"] = (stock_df["return"] - investment - 0.2) * stock_df['event_flag']
+        stock_df["roi"] = (stock_df["net_return"] / investment)
 
-        print("Stock Name: ", i)
-        print("Trailing Window: ", w)
-        print("STD Threshold: ", k)
-        print(stock_df.tail(10))
+
+        # print("Stock Name: ", i)
+        # print("Trailing Window: ", w)
+        # print("STD Threshold: ", k)
+        # print(stock_df.tail(10))
 
         cum_sum = cum_sum + (stock_df["net_return"].sum())
         event_count += (stock_df["event_flag"].sum())
@@ -203,7 +194,11 @@ def calc_return(w, k, p, index_df):
         # print(df)
 
 
-    # print("\n")
+    print("\n")
+
+    print("Stock Name: ", i)
+    print("Trailing Window: ", w)
+    print("STD Threshold: ", k)
     # print("Max Sum: ", max_sum)
     # print("Event_Count: ", event_count)
     # print("Total Vested (Pre-Return): ", event_count  * p )
