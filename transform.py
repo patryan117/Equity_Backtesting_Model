@@ -88,7 +88,7 @@ def create_scatterplot(return_list):
 
     data = [trace0]
 
-    layout = go.Layout(title= str("Net-Return Spread (Benchmark Index = " + benchmark_index + ", Transaction Cost = " + str(transaction_cost) + ")"),
+    layout = go.Layout(title= str("Net-Return Spread (Benchmark Index = " + benchmark_index + ", Transaction Cost = $" + str(transaction_cost) + ")"),
                        xaxis=dict(title='Rolling σ Window Length'),
                        yaxis=dict(title='σ Threshold'),
                        hovermode='closest'

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/strategy_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategy_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp-plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/temp-plot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/transform.py" afterDir="false" />
     </list>
@@ -19,8 +18,9 @@
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_3.coverage" NAME="1_3 Coverage Results" MODIFIED="1538514077417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_1.coverage" NAME="1_1 Coverage Results" MODIFIED="1538514036111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_3.coverage" NAME="scratch_3 Coverage Results" MODIFIED="1539206054244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_1.coverage" NAME="strategy_1 Coverage Results" MODIFIED="1539208509231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$main_task1__1_.coverage" NAME="main_task1 (1) Coverage Results" MODIFIED="1538057350104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$transform.coverage" NAME="transform Coverage Results" MODIFIED="1539206060214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$transform.coverage" NAME="transform Coverage Results" MODIFIED="1539206871817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_5.coverage" NAME="1_5 Coverage Results" MODIFIED="1538514138105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_7.coverage" NAME="1_7 Coverage Results" MODIFIED="1538576910049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$test.coverage" NAME="test Coverage Results" MODIFIED="1538662296334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -52,8 +52,8 @@
       <file leaf-file-name="transform.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/transform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="71" column="24" lean-forward="true" selection-end-line="255" />
+            <state relative-caret-position="238">
+              <caret line="90" column="117" selection-start-line="90" selection-start-column="117" selection-end-line="90" selection-end-column="117" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -64,13 +64,18 @@
       <file leaf-file-name="strategy_1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/strategy_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="217" selection-start-line="210" selection-end-line="217" />
+            <state relative-caret-position="272">
+              <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ABEOtrouble.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ABEOtrouble.csv">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="IBB.csv" pinned="false" current-in-tab="false">
@@ -87,7 +92,7 @@
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -212,26 +217,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.transform">
-    <configuration name="1_7" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Analysis_of_Biotech_Disclosures" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao/1_7.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.strategy_1">
     <configuration name="collect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -265,6 +251,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="strategy_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Analysis_of_Biotech_Disclosures" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/strategy_1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -309,19 +314,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.1_7" />
       <item itemvalue="Python.collect" />
       <item itemvalue="Python.transform" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.scratch_3" />
+      <item itemvalue="Python.strategy_1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.strategy_1" />
         <item itemvalue="Python.transform" />
         <item itemvalue="Python.scratch_3" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.collect" />
-        <item itemvalue="Python.1_7" />
       </list>
     </recent_temporary>
   </component>
@@ -356,9 +361,9 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32859176" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32859176" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49966466" visible="true" weight="0.29302987" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966466" visible="true" weight="0.29302987" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32859176" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12474849" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12474849" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3275862" />
@@ -613,14 +618,17 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ABEOtrouble.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/transform.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="71" column="24" lean-forward="true" selection-end-line="255" />
+        <state relative-caret-position="238">
+          <caret line="90" column="117" selection-start-line="90" selection-start-column="117" selection-end-line="90" selection-end-column="117" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -629,8 +637,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/strategy_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="217" selection-start-line="210" selection-end-line="217" />
+        <state relative-caret-position="272">
+          <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
