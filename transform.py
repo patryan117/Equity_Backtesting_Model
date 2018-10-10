@@ -28,6 +28,13 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 # TODO: Round decimal on plotly overlay
 
+global transaction_cost
+transaction_cost = 0
+
+global benchmark_index
+benchmark_index = "XBI"
+
+
 
 def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " id cap biotech companies")
@@ -38,13 +45,14 @@ def main():
     std_trailing_window_inputs = (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)   # trailing_sd window
     std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
 
+
+
     #small trial
     # std_trailing_window_inputs = (6, 8, 10, 12)   # trailing_sd window
     # std_threshold = (0.5, 1, 1.5, 2, 2.5, 3)  # standard_dev sampling window
     investment = 100  # investment level per arbitrage event
-    transactional_cost = 0
 
-    return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment, "IBB")
+    return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
     create_scatterplot(return_list)
 
 
@@ -84,9 +92,10 @@ def create_scatterplot(return_list):
     )
     )
 
+
     data = [trace0]
 
-    layout = go.Layout(title="Net-Return Spread",
+    layout = go.Layout(title= str("Net-Return Spread (Index = " + benchmark_index + ", Transaction Cost = " + str(transaction_cost) + ")"),
                        xaxis=dict(title='Rolling σ Window Length'),
                        yaxis=dict(title='σ Threshold'),
                        hovermode='closest'
@@ -107,7 +116,7 @@ def generate_net_return_list( w_tup, k_tup, investment, index_name):
     net_return_list = []
 
     # index_df creation line should be here, so it doesnt need to be created for each investment trial
-    index_df = get_transformed_index_data(index_name = "IBB")
+    index_df = get_transformed_index_data(index_name = benchmark_index)
 
     print(index_df.tail(10))
 
@@ -173,7 +182,7 @@ def calc_return(w, k, investment, index_df):
 
 
         stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_close"].shift)(-1))*stock_df['event_flag']
-        stock_df["net_return"] = (stock_df["return"] - investment - 0.2) * stock_df['event_flag']
+        stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
 
 
@@ -210,7 +219,7 @@ def calc_return(w, k, investment, index_df):
 
 
 
-def get_transformed_index_data(index_name = "IBB"):
+def get_transformed_index_data(index_name):
 
     df = pd.read_csv(dir_path + "\\index_csvs\\" + index_name + ".csv")
     print("index_name: ", index_name)
@@ -251,8 +260,6 @@ micro_cap_list = [ "ALDX", "BLRX", "KDMN", "KALV", "KMDA", "MDGL", "PTGX", "RETA
                        "ZFGN", "OBSV"]
 
 
-global biotech_index
-biotech_index = "XBI"
 
 if __name__ == "__main__":
     main()
