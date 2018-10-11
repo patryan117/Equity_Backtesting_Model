@@ -94,7 +94,7 @@ def create_scatterplot(return_list):
 
     data = [trace0]
 
-    layout = go.Layout(title= str("Net-Return Spread ( " + strategy + ", Index = " + benchmark_index + ", Transaction Cost = $" + str(transaction_cost) + ")"),
+    layout = go.Layout(title= str("Net-Return Spread (" + strategy + ", Index = " + benchmark_index + ", Transaction Cost = $" + str(transaction_cost) + ")"),
                        xaxis=dict(title='Rolling σ Window Length'),
                        yaxis=dict(title='σ Threshold'),
                        hovermode='closest'
@@ -176,8 +176,11 @@ def calc_return(w, k, investment, index_df):
 
         #TODO: SAVE THE (DATE: PRICE) VALUES FOR EXTREME EVENTS
 
+        "Strategy 3:  Buy on next day (close)(n+1) if  Δsp is < (μ – kσ), sell on following day at opening price"
 
-        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_close"].shift)(-1))*stock_df['event_flag']
+        stock_df["return"] = (investment / (stock_df["stock_close"].shift(-1)) * (stock_df["stock_open"].shift)(-2))*stock_df['event_flag']
+
+
         stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
 
@@ -193,7 +196,7 @@ def calc_return(w, k, investment, index_df):
 
 
         if i == "ABEO":
-            df.to_csv(i + "_strategy_3.csv")
+            stock_df.to_csv(i + "_strategy_3.csv")
 
         print(i, " : ", (stock_df["net_return"].sum()))
         # print(df)
