@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ABEO_strategy_1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ABEO_strategy_3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ABEO_strategy_4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABEOstrategy_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ABEO_strategy_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABEOtrouble.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategy_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategy_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategy_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategy_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp-plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/temp-plot.html" afterDir="false" />
-    </list>
+    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +51,8 @@
       <file leaf-file-name="strategy_1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/strategy_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+            <state relative-caret-position="225">
+              <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -76,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/collect.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -707,14 +695,14 @@
     <entry file="file://$PROJECT_DIR$/collect.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/strategy_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        <state relative-caret-position="225">
+          <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
