@@ -152,7 +152,6 @@ def calc_return(w, k, investment, index_df):
         stock_df['index_close'] = stock_df['date'].map(index_delta_dict)
         stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open"})
 
-
         stock_df["index_close_delta"] = ((stock_df["index_close"] - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
         stock_df["stock_close_delta"] = (((stock_df["stock_close"]) - (stock_df["stock_close"].shift)(1)) / (stock_df["stock_close"].shift)(1))
 
