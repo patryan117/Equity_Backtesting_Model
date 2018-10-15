@@ -4,5 +4,6 @@
 
 - collect.py: Extracts a collection of micro-cap bio-tech company financial history and stores in a subdirectory as a set of .csv files. 
 - transform.py: Creates Pandas dataframes from stored .csv files and runs backtesting simulations.
+- strategy_x.py: 
 
-(note webcrawling modlue is currently being developed to extract news samples and analyze for sentiment rankings)
+(note webcrawling modlue is currently being developed to collect news samples and analyze for sentiment rankings)
