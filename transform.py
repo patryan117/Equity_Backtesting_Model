@@ -8,6 +8,10 @@ import plotly.graph_objs as go
 import os
 
 
+"Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
+
+
+
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -21,12 +25,13 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 # TODO: Round decimal on plotly overlay
 
 global transaction_cost
-transaction_cost = 0.20
+transaction_cost = 0.5
 
 global benchmark_index
 benchmark_index = "XBI"
 
-
+global strategy
+strategy = "Strategy 1"
 
 def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " id cap biotech companies")
@@ -42,6 +47,8 @@ def main():
     #small trial
     # std_trailing_window_inputs = (6, 8, 10, 12)   # trailing_sd window
     # std_threshold = (0.5, 1, 1.5, 2, 2.5, 3)  # standard_dev sampling window
+
+
     investment = 100  # investment level per arbitrage event
 
     return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
@@ -88,7 +95,7 @@ def create_scatterplot(return_list):
 
     data = [trace0]
 
-    layout = go.Layout(title= str("Net-Return Spread (Benchmark Index = " + benchmark_index + ", Transaction Cost = $" + str(transaction_cost) + ")"),
+    layout = go.Layout(title= str("Net-Return Spread (" + strategy + ", Index = " + benchmark_index + ", Transaction Cost = $" + str(transaction_cost) + ")"),
                        xaxis=dict(title='Rolling σ Window Length'),
                        yaxis=dict(title='σ Threshold'),
                        hovermode='closest'
@@ -152,6 +159,7 @@ def calc_return(w, k, investment, index_df):
         stock_df['index_close'] = stock_df['date'].map(index_delta_dict)
         stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open"})
 
+
         stock_df["index_close_delta"] = ((stock_df["index_close"] - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
         stock_df["stock_close_delta"] = (((stock_df["stock_close"]) - (stock_df["stock_close"].shift)(1)) / (stock_df["stock_close"].shift)(1))
 
@@ -167,10 +175,10 @@ def calc_return(w, k, investment, index_df):
 
         # stock_df['event_flag'] = np.where(stock_df['ncd_daily_k_stds'] <= -k, 1, 0)
 
-        #TODO: SAVE THE (DATE: PRICE) VALUES FOR EXTREME EVENTS
+        "Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
 
+        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
 
-        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_close"].shift)(-1))*stock_df['event_flag']
         stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
 
@@ -185,8 +193,8 @@ def calc_return(w, k, investment, index_df):
 
 
 
-        # if i == "ABEO":
-        #     df.to_csv(i + "trouble.csv")
+        if i == "ABEO":
+            stock_df.to_csv(i + "_strategy_1.csv")
 
         print(i, " : ", (stock_df["net_return"].sum()))
         # print(df)
