@@ -51,11 +51,14 @@ def main():
 
     investment = 100  # investment level per arbitrage event
 
-    return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
-    create_scatterplot(return_list)
+    # return_list = generate_net_return_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
+    roi_list = generate_roi_list_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
+    # create_scatterplot(return_list)
 
 
-    print(return_list)
+    # print(return_list)
+    print(roi_list)
+
     print("\n--- %s seconds ---" % (time.time() - start_time))
     print("\n--- %s minutes ---" % (((time.time() - start_time))/60))
 
@@ -104,8 +107,7 @@ def create_scatterplot(return_list):
 
 
 
-
-def generate_net_return_list( w_tup, k_tup, investment, index_name):
+def generate_net_return_spread( w_tup, k_tup, investment, index_name):
 
     combo_list = (generate_cartesian_product(w_tup, k_tup))
     print(combo_list)
@@ -125,7 +127,7 @@ def generate_net_return_list( w_tup, k_tup, investment, index_name):
         counter += 1
         w = i[0]
         k = i[1]
-        net_return = calc_return(w, k, investment, index_df)
+        net_return = calc_cum_return(w, k, investment, index_df)
 
         w_list.append(w)
         k_list.append(k)
@@ -138,8 +140,34 @@ def generate_net_return_list( w_tup, k_tup, investment, index_name):
 
 
 
+def generate_roi_list_spread( w_tup, k_tup, investment, index_name):
 
-def calc_return(w, k, investment, index_df):
+    combo_list = (generate_cartesian_product(w_tup, k_tup))
+    print(combo_list)
+    counter = 0
+
+
+    grand_roi_list = []
+
+
+    # index_df creation line should be here, so it doesnt need to be created for each investment simulation
+    index_df = get_transformed_index_data(index_name = benchmark_index)
+
+    print(index_df.tail(10))
+
+    for i in combo_list:
+
+        counter += 1
+        w = i[0]
+        k = i[1]
+        grand_roi_list.append(get_roi_list_per_theta_set(w, k, investment, index_df))
+
+
+    return[grand_roi_list]
+
+
+
+def calc_cum_return(w, k, investment, index_df):
 
     cum_sum = 0
     event_count = 0
@@ -212,6 +240,66 @@ def calc_return(w, k, investment, index_df):
     # print("Average portfolio return: ", cum_sum/event_count)
 
     return cum_sum
+
+
+def get_roi_list_per_theta_set(w, k, investment, index_df):
+
+    cum_sum = 0
+    event_count = 0
+    index_delta_dict = index_df.set_index('date').to_dict()['close']
+
+    for i in micro_cap_list:   # do this for every stock name
+
+        stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")  #TODO: Make dynamic (so it forms a list from the subdirectory names alone)
+        stock_df.columns = map(str.lower, stock_df.columns)
+        stock_df = stock_df.dropna()
+        stock_df = stock_df.drop(columns=['low', 'high', 'adj close', 'volume'])
+
+
+        # map index dictionary (date: delta) to a new column on each stock's dataframe
+        stock_df['index_close'] = stock_df['date'].map(index_delta_dict)
+        stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open"})
+
+
+        stock_df["index_close_delta"] = ((stock_df["index_close"] - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
+        stock_df["stock_close_delta"] = (((stock_df["stock_close"]) - (stock_df["stock_close"].shift)(1)) / (stock_df["stock_close"].shift)(1))
+
+        # negate Tracking Error
+        stock_df["net_close_delta"] = ((stock_df["stock_close_delta"]) - stock_df["index_close_delta"])
+        stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].rolling(w).std()  #add shift(1) before rolling to not include that rows day in the calculation
+        stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
+        stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
+        stock_df['mu_-_k_*_sd'] = ( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
+        stock_df['event_flag'] = np.where(stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])), 1, 0)
+
+        "Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
+
+        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
+        stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
+        stock_df["roi"] = (stock_df["net_return"] / investment)
+
+
+        # print("Stock Name: ", i)
+        # print("Trailing Window: ", w)
+        # print("STD Threshold: ", k)
+        # print(stock_df.tail(10))
+
+        cum_sum = cum_sum + (stock_df["net_return"].sum())
+        event_count += (stock_df["event_flag"].sum())
+
+        roi_list = stock_df['roi'].tolist()
+        print("Stock Name: ", i, "w:", w, "k:", k, "roi list:", roi_list)
+
+
+    # print("Trailing Window: ", w)
+    # print("STD Threshold: ", k)
+    # print("Max Sum: ", max_sum)
+    # print("Event_Count: ", event_count)
+    # print("Total Vested (Pre-Return): ", event_count  * p )
+    # print("Total portfolio return: ", cum_sum)
+    # print("Average portfolio return: ", cum_sum/event_count)
+
+    return roi_list
 
 
 
