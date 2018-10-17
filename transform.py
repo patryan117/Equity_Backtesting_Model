@@ -50,8 +50,8 @@ def main():
 
 
     #small trial
-    std_trailing_window_inputs = (10, 15, 20, 25)   # trailing_sd window
-    std_threshold = (0.5, 1, 1.5, 2, 2.5, 3)  # standard_dev sampling window
+    std_trailing_window_inputs = [20]   # trailing_sd window
+    std_threshold = [0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
 
 
     investment = 100  # investment level per arbitrage event
@@ -252,6 +252,9 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
     cum_sum = 0
     event_count = 0
     cum_roi_list = []
+    cum_max = 0
+    cum_min = 0
+
     index_delta_dict = index_df.set_index('date').to_dict()['close']
 
     for i in micro_cap_list:   # do this for every stock name
@@ -283,7 +286,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
         stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
         stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
-        stock_df["rounded_roi"] = stock_df["roi"].round(3)
+        stock_df["rounded_roi"] = stock_df["roi"].round(2)
 
 
         cum_sum = cum_sum + (stock_df["net_return"].sum())
@@ -294,10 +297,17 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
 
         cum_roi_list = cum_roi_list + rounded_roi_list
 
+        max = (stock_df["rounded_roi"].max())
+        if max > cum_max:
+            cum_max = max
 
-        print("Stock Name: (", i, "), w: (", w, "), k: (", k, "), roi list: (", rounded_roi_list, ")")
+        min = (stock_df["rounded_roi"].min())
+        if max > cum_min:
+            cum_min = min
 
-        print(len(cum_roi_list))
+        print("Stock Name: (", i, "), max: (", max , "w: (", w, "), k: (", k, "), roi list: (", rounded_roi_list, ")")
+
+
 
     # print("Trailing Window: ", w)
     # print("STD Threshold: ", k)
@@ -328,7 +338,6 @@ def get_transformed_index_data(index_name):
 def generate_cartesian_product(a,b):
 
     temp = []
-
     for t1 in a:
         for t2 in b:
             temp += [(t1, t2),]
