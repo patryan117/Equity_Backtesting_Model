@@ -165,7 +165,7 @@ def generate_roi_list_spread( w_tup, k_tup, investment, index_name):
         counter += 1
         w = i[0]
         k = i[1]
-        grand_roi_list.append( ((w, k,), get_roi_list_per_theta_set(w, k, investment, index_df)))
+        grand_roi_list.append( ((i, w, k,), get_roi_list_per_theta_set(w, k, investment, index_df)))
         print(grand_roi_list)
 
     return[grand_roi_list]
@@ -251,6 +251,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
 
     cum_sum = 0
     event_count = 0
+    cum_roi_list = []
     index_delta_dict = index_df.set_index('date').to_dict()['close']
 
     for i in micro_cap_list:   # do this for every stock name
@@ -289,8 +290,14 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
         event_count += (stock_df["event_flag"].sum())
 
         rounded_roi_list = stock_df['rounded_roi'].tolist()
+        rounded_roi_list = list(filter(lambda a: a != 0, rounded_roi_list))
+
+        cum_roi_list = cum_roi_list + rounded_roi_list
+
+
         print("Stock Name: (", i, "), w: (", w, "), k: (", k, "), roi list: (", rounded_roi_list, ")")
 
+        print(len(cum_roi_list))
 
     # print("Trailing Window: ", w)
     # print("STD Threshold: ", k)
@@ -300,7 +307,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
     # print("Total portfolio return: ", cum_sum)
     # print("Average portfolio return: ", cum_sum/event_count)
 
-    return (rounded_roi_list)
+    return (cum_roi_list)
 
 
 
