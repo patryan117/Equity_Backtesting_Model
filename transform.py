@@ -4,8 +4,13 @@ import os
 import time
 import plotly
 import plotly.offline
+plotly.tools.set_credentials_file(username='patryan117', api_key='uL0Ft3ypM2FMNnVB00d0')
+
 import plotly.graph_objs as go
 import os
+
+
+
 
 
 "Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
@@ -39,14 +44,14 @@ def main():
 
 
     #big trial (20 - 30 min runtime)
-    std_trailing_window_inputs = (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)   # trailing_sd window
-    std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
+    # std_trailing_window_inputs = (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)   # trailing_sd window
+    # std_threshold = (.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3, 3.25,  3.5)  # standard_dev sampling window
 
 
 
     #small trial
-    # std_trailing_window_inputs = (6, 8, 10, 12)   # trailing_sd window
-    # std_threshold = (0.5, 1, 1.5, 2, 2.5, 3)  # standard_dev sampling window
+    std_trailing_window_inputs = (10, 15, 20, 25)   # trailing_sd window
+    std_threshold = (0.5, 1, 1.5, 2, 2.5, 3)  # standard_dev sampling window
 
 
     investment = 100  # investment level per arbitrage event
@@ -160,8 +165,8 @@ def generate_roi_list_spread( w_tup, k_tup, investment, index_name):
         counter += 1
         w = i[0]
         k = i[1]
-        grand_roi_list.append(get_roi_list_per_theta_set(w, k, investment, index_df))
-
+        grand_roi_list.append( ((w, k,), get_roi_list_per_theta_set(w, k, investment, index_df)))
+        print(grand_roi_list)
 
     return[grand_roi_list]
 
@@ -277,18 +282,14 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
         stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
         stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
+        stock_df["rounded_roi"] = stock_df["roi"].round(3)
 
-
-        # print("Stock Name: ", i)
-        # print("Trailing Window: ", w)
-        # print("STD Threshold: ", k)
-        # print(stock_df.tail(10))
 
         cum_sum = cum_sum + (stock_df["net_return"].sum())
         event_count += (stock_df["event_flag"].sum())
 
-        roi_list = stock_df['roi'].tolist()
-        print("Stock Name: ", i, "w:", w, "k:", k, "roi list:", roi_list)
+        rounded_roi_list = stock_df['rounded_roi'].tolist()
+        print("Stock Name: (", i, "), w: (", w, "), k: (", k, "), roi list: (", rounded_roi_list, ")")
 
 
     # print("Trailing Window: ", w)
@@ -299,7 +300,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
     # print("Total portfolio return: ", cum_sum)
     # print("Average portfolio return: ", cum_sum/event_count)
 
-    return roi_list
+    return (rounded_roi_list)
 
 
 
