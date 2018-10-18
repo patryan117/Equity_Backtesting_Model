@@ -129,8 +129,13 @@ def make_topo_histogram(grand_roi_list):
     print("\n\n")
     print(dataframe)
 
-
     x_axis_as_strings = ['{:.2f}'.format(x) for x in template_array]
+
+
+    # make visualization based on functions
+
+
+
 
 
     data = [
