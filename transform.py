@@ -44,7 +44,7 @@ def main():
 
     #small trial
     std_trailing_window_inputs = [20]   # trailing_sd window
-    std_threshold = [0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
+    std_threshold = [0, 0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
 
     global w
     w = std_trailing_window_inputs
@@ -107,8 +107,9 @@ def make_topo_histogram(grand_roi_list):
 
     array_dict = {}
     for x in range(len(template_array)):
-        array_dict[str(x)] = template_array[x]
-        print (array_dict)
+        array_dict[x] = template_array[x]
+    print (array_dict)
+
 
 
     for x in grand_roi_list:
@@ -122,13 +123,11 @@ def make_topo_histogram(grand_roi_list):
             freq_list.append(values.count(j))
         dataframe[str(k)] = freq_list
 
-    dataframe.rename(index= array_dict, inplace=True)
 
+    dataframe =dataframe.rename(index=array_dict)
+
+    print("\n\n")
     print(dataframe)
-
-
-
-
 
 
     x_axis_as_strings = ['{:.2f}'.format(x) for x in template_array]
@@ -151,16 +150,10 @@ def make_topo_histogram(grand_roi_list):
             yaxis=dict(
                 ticktext=x_axis_as_strings,
                 # tickvals=template_array,
-                nticks=5,
-                tickfont=dict(
-                    color='green',
-                    size=12,
-                    family='Old Standard TT, serif',
-                ),
+                nticks=10,
             ),
             zaxis=dict(
                 ticktext=k_list,
-                tickvals=k_list,
                 nticks=4,
                 ticks='outside',
                 tick0=0,
