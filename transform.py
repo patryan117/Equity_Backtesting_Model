@@ -23,7 +23,7 @@ pd.set_option('display.max_colwidth', -1)  # or 199
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 global transaction_cost
-transaction_cost = 0.5
+transaction_cost = .05
 
 global benchmark_index
 benchmark_index = "XBI"
@@ -45,6 +45,12 @@ def main():
     #small trial
     std_trailing_window_inputs = [20]   # trailing_sd window
     std_threshold = [0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
+
+    global w
+    w = std_trailing_window_inputs
+
+    global k
+    k = std_threshold
 
 
     investment = 100  # investment level per arbitrage event
@@ -74,8 +80,6 @@ def main():
 
 def make_topo_histogram(grand_roi_list):
 
-    print(grand_roi_list)
-
     cum_max = 0
     cum_min = 0
 
@@ -91,8 +95,7 @@ def make_topo_histogram(grand_roi_list):
         if cur_min < cum_min:
             cum_min = cur_min
 
-    print("cum_max", cum_max)
-    print("cum_min", cum_min)
+
 
     template_array = make_min_max_array(min=cum_min, max=cum_max, step= 0.01)
 
@@ -100,6 +103,12 @@ def make_topo_histogram(grand_roi_list):
 
     dataframe = pd.DataFrame()
     k_list = []
+
+
+    array_dict = {}
+    for x in range(len(template_array)):
+        array_dict[str(x)] = template_array[x]
+        print (array_dict)
 
 
     for x in grand_roi_list:
@@ -112,8 +121,17 @@ def make_topo_histogram(grand_roi_list):
         for j in template_array:
             freq_list.append(values.count(j))
         dataframe[str(k)] = freq_list
+
+    dataframe.rename(index= array_dict, inplace=True)
+
     print(dataframe)
 
+
+
+
+
+
+    x_axis_as_strings = ['{:.2f}'.format(x) for x in template_array]
 
 
     data = [
@@ -125,6 +143,29 @@ def make_topo_histogram(grand_roi_list):
 
     layout = go.Layout(
         title='ROI Frequency',
+        scene=dict(
+            xaxis=dict(
+                # ticktext= x_axis_as_strings,
+                # tickvals=template_array,
+                ),
+            yaxis=dict(
+                ticktext=x_axis_as_strings,
+                # tickvals=template_array,
+                nticks=5,
+                tickfont=dict(
+                    color='green',
+                    size=12,
+                    family='Old Standard TT, serif',
+                ),
+            ),
+            zaxis=dict(
+                ticktext=k_list,
+                tickvals=k_list,
+                nticks=4,
+                ticks='outside',
+                tick0=0,
+                tickwidth=4),
+            ),
         autosize=True,
         width=1000,
         height=700,
@@ -365,7 +406,6 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
         stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
         stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
-
 
 
         stock_df["rounded_roi"] = stock_df["roi"].round(2)   # rounding control
