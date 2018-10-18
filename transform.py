@@ -44,8 +44,8 @@ def main():
 
     #small trial
     std_trailing_window_inputs = [20]   # trailing_sd window
-    std_threshold = [0, 0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
-    # std_threshold = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]  # standard_dev sampling window
+    # std_threshold = [0, 0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
+    std_threshold = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]  # standard_dev sampling window
 
     global w
     w = std_trailing_window_inputs
@@ -150,15 +150,18 @@ def make_topo_histogram(grand_roi_list):
         title='ROI Frequency',
         scene=dict(
             xaxis=dict(
+                title= '(k; σ Threshold)',
                 ticktext= k_list,
                 tickvals=list(range(len(k_list)-1)),
                 ),
             yaxis=dict(
+                title='(ROI Value)',
                 ticktext=y_axis_as_strings[0::5],
                 tickvals=list(range(len(y_axis_as_strings)-1))[0::5],
                 nticks=10,
             ),
             zaxis=dict(
+                title='(ROI Frequency)',
                 ticktext=k_list,
                 nticks=4,
                 ticks='outside',
@@ -417,7 +420,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
 
         rounded_roi_list = stock_df['rounded_roi'].tolist()
 
-        # rounded_roi_list = list(filter(lambda a: a != 0, rounded_roi_list)) # remove to add back in zeros
+        rounded_roi_list = list(filter(lambda a: a != 0, rounded_roi_list)) # remove to add back in zeros
 
         cum_roi_list = cum_roi_list + rounded_roi_list
 
