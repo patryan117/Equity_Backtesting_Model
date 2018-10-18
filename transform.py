@@ -45,6 +45,7 @@ def main():
     #small trial
     std_trailing_window_inputs = [20]   # trailing_sd window
     std_threshold = [0, 0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
+    # std_threshold = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]  # standard_dev sampling window
 
     global w
     w = std_trailing_window_inputs
@@ -97,7 +98,7 @@ def make_topo_histogram(grand_roi_list):
 
 
 
-    template_array = make_min_max_array(min=cum_min, max=cum_max, step= 0.01)
+    template_array = make_min_max_array(min=-0.2, max=0.2, step= 0.01)   # set array limits
 
     print("template_array", template_array)
 
@@ -129,12 +130,12 @@ def make_topo_histogram(grand_roi_list):
     print("\n\n")
     print(dataframe)
 
-    x_axis_as_strings = ['{:.2f}'.format(x) for x in template_array]
+    y_axis_as_strings = ['{:.2f}'.format(x) for x in template_array]
 
+    print(y_axis_as_strings)
+    print(y_axis_as_strings[0::5])
 
     # make visualization based on functions
-
-
 
 
 
@@ -149,12 +150,12 @@ def make_topo_histogram(grand_roi_list):
         title='ROI Frequency',
         scene=dict(
             xaxis=dict(
-                # ticktext= x_axis_as_strings,
-                # tickvals=template_array,
+                ticktext= k_list,
+                tickvals=list(range(len(k_list)-1)),
                 ),
             yaxis=dict(
-                ticktext=x_axis_as_strings,
-                # tickvals=template_array,
+                ticktext=y_axis_as_strings[0::5],
+                tickvals=list(range(len(y_axis_as_strings)-1))[0::5],
                 nticks=10,
             ),
             zaxis=dict(
@@ -416,7 +417,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
 
         rounded_roi_list = stock_df['rounded_roi'].tolist()
 
-        rounded_roi_list = list(filter(lambda a: a != 0, rounded_roi_list)) # remove to add back in zeros
+        # rounded_roi_list = list(filter(lambda a: a != 0, rounded_roi_list)) # remove to add back in zeros
 
         cum_roi_list = cum_roi_list + rounded_roi_list
 
