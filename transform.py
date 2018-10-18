@@ -9,7 +9,9 @@ plotly.tools.set_credentials_file(username='patryan117', api_key='uL0Ft3ypM2FMNn
 import plotly.graph_objs as go
 import os
 
-
+pd.set_option('display.max_columns', None)  # or 1000
+pd.set_option('display.max_rows', None)  # or 1000
+pd.set_option('display.max_colwidth', -1)  # or 199
 
 
 
@@ -19,15 +21,6 @@ import os
 
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-
-# TODO: Add script to isolate and visualize recognized events.  (i.e. save the +- 20 rows around a detected event and visualize)
-
-#
-# TODO: Add two new features to each Pandas dataframe :
-# i.	ROI column (return/ risked investment)
-# ii.	Roi_flag column (indicating when an event has taken place)
-
-# TODO: Round decimal on plotly overlay
 
 global transaction_cost
 transaction_cost = 0.5
@@ -56,17 +49,98 @@ def main():
 
     investment = 100  # investment level per arbitrage event
 
-    # return_list = generate_net_return_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
 
-    roi_list = generate_roi_list_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
+    # create scatterplot of return spreads:
+    # return_list = generate_net_return_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
     # create_scatterplot(return_list)
 
-    print(roi_list)
+    #create topo map of roi spreads
+    roi_list = generate_roi_list_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
+    make_topo_histogram(roi_list)
+
+
+
+
+
+
     # print(return_list)
 
 
     print("\n--- %s seconds ---" % (time.time() - start_time))
     print("\n--- %s minutes ---" % (((time.time() - start_time))/60))
+
+
+
+
+def make_topo_histogram(grand_roi_list):
+
+    print(grand_roi_list)
+
+    cum_max = 0
+    cum_min = 0
+
+    values_array = map(lambda x: x[1], grand_roi_list)
+
+    for x in values_array:
+        cur_max = max(x)
+        cur_min = min(x)
+
+        if cur_max > cum_max:
+            cum_max = cur_max
+
+        if cur_min < cum_min:
+            cum_min = cur_min
+
+    print("cum_max", cum_max)
+    print("cum_min", cum_min)
+
+    template_array = make_min_max_array(min=cum_min, max=cum_max, step= 0.01)
+
+    print("template_array", template_array)
+
+    dataframe = pd.DataFrame()
+    k_list = []
+
+
+    for x in grand_roi_list:
+        k = x[0]
+        values = x[1]
+        freq_list = []
+
+        k_list.append(k)
+
+        for j in template_array:
+            freq_list.append(values.count(j))
+        dataframe[str(k)] = freq_list
+    print(dataframe)
+
+
+
+    data = [
+        go.Surface(
+            z=dataframe.as_matrix()
+        )
+    ]
+
+
+    layout = go.Layout(
+        title='ROI Frequency',
+        autosize=True,
+        width=1000,
+        height=700,
+        margin=dict(
+            l=65,
+            r=50,
+            b=65,
+            t=90
+        )
+    )
+
+
+    plotly.offline.plot({"data": data, "layout": layout})
+
+
+
 
 
 
@@ -173,7 +247,7 @@ def generate_roi_list_spread( w_tup, k_tup, investment, index_name):
     print(grand_roi_list[0])
     print(grand_roi_list[1])
 
-    return[grand_roi_list]
+    return grand_roi_list
 
 
 
@@ -264,7 +338,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
 
     for i in micro_cap_list:   # do this for every stock name
 
-        stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv") 
+        stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")
         stock_df.columns = map(str.lower, stock_df.columns)
         stock_df = stock_df.dropna()
         stock_df = stock_df.drop(columns=['low', 'high', 'adj close', 'volume'])
@@ -286,7 +360,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
         stock_df['mu_-_k_*_sd'] = ( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
         stock_df['event_flag'] = np.where(stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])), 1, 0)
 
-        "Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
+        "Strategy 1: Buy on day (n) at close if  Δ(sp) is < (μ – kσ), sell on next day at opening price."
 
         stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
         stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
@@ -370,7 +444,7 @@ def make_min_max_array (min, max, step):
     val = min
 
     while val <  max:
-        array.append(round(val,2))
+        array.append(round(val, 2))
         val = val + step
 
     return array
