@@ -62,7 +62,7 @@ def main():
 
 
     # print(return_list)
-    print(roi_list)
+
 
     print("\n--- %s seconds ---" % (time.time() - start_time))
     print("\n--- %s minutes ---" % (((time.time() - start_time))/60))
@@ -165,8 +165,12 @@ def generate_roi_list_spread( w_tup, k_tup, investment, index_name):
         counter += 1
         w = i[0]
         k = i[1]
-        grand_roi_list.append( ((i, w, k,), get_roi_list_per_theta_set(w, k, investment, index_df)))
-        print(grand_roi_list)
+        grand_roi_list.append( (k, get_roi_list_per_theta_set(w, k, investment, index_df)))
+
+
+    print("\n")
+    print(grand_roi_list[0])
+    print(grand_roi_list[1])
 
     return[grand_roi_list]
 
@@ -286,14 +290,20 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
         stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
         stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
-        stock_df["rounded_roi"] = stock_df["roi"].round(2)
+
+
+
+        stock_df["rounded_roi"] = stock_df["roi"].round(2)   # rounding control
+        stock_df = stock_df.dropna()
+
 
 
         cum_sum = cum_sum + (stock_df["net_return"].sum())
         event_count += (stock_df["event_flag"].sum())
 
         rounded_roi_list = stock_df['rounded_roi'].tolist()
-        rounded_roi_list = list(filter(lambda a: a != 0, rounded_roi_list))
+
+        rounded_roi_list = list(filter(lambda a: a != 0, rounded_roi_list)) # remove to add back in zeros
 
         cum_roi_list = cum_roi_list + rounded_roi_list
 
@@ -305,7 +315,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
         if max > cum_min:
             cum_min = min
 
-        print("Stock Name: (", i, "), max: (", max , "w: (", w, "), k: (", k, "), roi list: (", rounded_roi_list, ")")
+        # print("Stock Name: (", i, "), max: (", max , "w: (", w, "), k: (", k, "), roi list: (", rounded_roi_list, ")")
 
 
 
@@ -317,6 +327,13 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
     # print("Total portfolio return: ", cum_sum)
     # print("Average portfolio return: ", cum_sum/event_count)
 
+
+
+    print ("max: (", cum_max , "w: (", w, "), k: (", k, "), roi list:", cum_roi_list)
+
+
+
+    cum_roi_list = cum_roi_list
     return (cum_roi_list)
 
 
@@ -343,6 +360,19 @@ def generate_cartesian_product(a,b):
             temp += [(t1, t2),]
 
     return temp
+
+
+
+def make_min_max_array (min, max, step):
+
+    array = []
+    val = min
+
+    while val <  max:
+        array.append(round(val,2))
+        val = val + step
+
+    return array
 
 
 
