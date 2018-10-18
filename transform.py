@@ -57,10 +57,11 @@ def main():
     investment = 100  # investment level per arbitrage event
 
     # return_list = generate_net_return_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
+
     roi_list = generate_roi_list_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
     # create_scatterplot(return_list)
 
-
+    print(roi_list)
     # print(return_list)
 
 
@@ -263,7 +264,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
 
     for i in micro_cap_list:   # do this for every stock name
 
-        stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")  #TODO: Make dynamic (so it forms a list from the subdirectory names alone)
+        stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv") 
         stock_df.columns = map(str.lower, stock_df.columns)
         stock_df = stock_df.dropna()
         stock_df = stock_df.drop(columns=['low', 'high', 'adj close', 'volume'])
