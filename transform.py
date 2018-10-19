@@ -23,7 +23,7 @@ pd.set_option('display.max_colwidth', -1)  # or 199
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 global transaction_cost
-transaction_cost = .05
+transaction_cost = 0.2
 
 global benchmark_index
 benchmark_index = "XBI"
@@ -47,11 +47,11 @@ def main():
     # std_threshold = [0, 0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
     std_threshold = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]  # standard_dev sampling window
 
-    global w
-    w = std_trailing_window_inputs
+    global glob_w
+    glob_w = std_trailing_window_inputs
 
-    global k
-    k = std_threshold
+    global glob_k
+    glob_k = std_threshold
 
 
     investment = 100  # investment level per arbitrage event
@@ -98,7 +98,7 @@ def make_topo_histogram(grand_roi_list):
 
 
 
-    template_array = make_min_max_array(min=-0.2, max=0.2, step= 0.01)   # set array limits
+    template_array = make_min_max_array(min=-0.1, max=0.1, step= 0.01)   # set array limits
 
     print("template_array", template_array)
 
@@ -147,15 +147,15 @@ def make_topo_histogram(grand_roi_list):
 
 
     layout = go.Layout(
-        title='ROI Frequency',
+        title='ROI Frequency: (k =' + str(glob_w) + ", Index = " + benchmark_index + ", USD per Trade = " + str(transaction_cost) + " )",
         scene=dict(
             xaxis=dict(
-                title= '(k; σ Threshold)',
+                title= '(kσ)',
                 ticktext= k_list,
                 tickvals=list(range(len(k_list)-1)),
                 ),
             yaxis=dict(
-                title='(ROI Value)',
+                title='(ROI)',
                 ticktext=y_axis_as_strings[0::5],
                 tickvals=list(range(len(y_axis_as_strings)-1))[0::5],
                 nticks=10,
