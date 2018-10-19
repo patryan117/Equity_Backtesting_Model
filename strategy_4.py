@@ -147,7 +147,7 @@ def make_topo_histogram(grand_roi_list):
 
 
     layout = go.Layout(
-        title='ROI Frequency: (k =' + str(glob_w) + ", Index = " + benchmark_index + ", USD per Trade = " + str(transaction_cost) + " )",
+        title='ROI Frequency: (' + strategy + ", w =" + str(glob_w) + ", Index = " + benchmark_index + ", USD per Trade = " + str(transaction_cost) + " )",
         scene=dict(
             xaxis=dict(
                 title= '(kσ)',
@@ -168,7 +168,7 @@ def make_topo_histogram(grand_roi_list):
                 tick0=0,
                 tickwidth=4,
                 range=[0, 17000],
-              ),
+                ),
             ),
         autosize=True,
         width=1000,

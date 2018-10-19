@@ -23,7 +23,7 @@ pd.set_option('display.max_colwidth', -1)  # or 199
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 global transaction_cost
-transaction_cost = 0.25
+transaction_cost = 0.5
 
 global benchmark_index
 benchmark_index = "XBI"
@@ -166,7 +166,9 @@ def make_topo_histogram(grand_roi_list):
                 nticks=4,
                 ticks='outside',
                 tick0=0,
-                tickwidth=4),
+                tickwidth=4,
+                range = [0, 17000],
+                ),
             ),
         autosize=True,
         width=1000,
