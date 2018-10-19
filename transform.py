@@ -180,7 +180,13 @@ def make_topo_histogram(grand_roi_list):
     )
 
 
-    plotly.offline.plot({"data": data, "layout": layout})
+    savename = ('3D_ROI_Hist_(' + strategy + ")w=" + str(glob_w) + ",_Index=" + str(benchmark_index) + ",_USD_per_Trade_=_" + str(transaction_cost) + ")")
+    print(savename)
+
+    plotly.offline.plot({"data": data, "layout": layout}, filename=(savename) + ".html")
+
+    # plotly.offline.plot(filename = savename + ".html")
+
 
 
 
