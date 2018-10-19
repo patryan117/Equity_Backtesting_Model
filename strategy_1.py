@@ -23,13 +23,13 @@ pd.set_option('display.max_colwidth', -1)  # or 199
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 global transaction_cost
-transaction_cost = 0.2
+transaction_cost = 0.25
 
 global benchmark_index
 benchmark_index = "XBI"
 
 global strategy
-strategy = "Strategy 1"
+strategy = "Strategy_1"
 
 def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " id cap biotech companies")

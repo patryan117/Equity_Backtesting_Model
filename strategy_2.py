@@ -23,13 +23,13 @@ pd.set_option('display.max_colwidth', -1)  # or 199
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 global transaction_cost
-transaction_cost = 0.2
+transaction_cost = 0.25
 
 global benchmark_index
 benchmark_index = "XBI"
 
 global strategy
-strategy = "Strategy 1"
+strategy = "Strategy_2"
 
 def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " id cap biotech companies")
@@ -147,7 +147,7 @@ def make_topo_histogram(grand_roi_list):
 
 
     layout = go.Layout(
-        title='ROI Frequency: (' + strategy + ", w =" + str(glob_w) + ", Index = " + benchmark_index + ", USD per Trade = " + str(transaction_cost) + " )",
+        title='ROI Frequency: (' + strategy + ", k =" + str(glob_w) + ", Index = " + benchmark_index + ", USD per Trade = " + str(transaction_cost) + " )",
         scene=dict(
             xaxis=dict(
                 title= '(kσ)',
@@ -332,13 +332,12 @@ def calc_cum_return(w, k, investment, index_df):
         stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
         stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
         stock_df['mu_-_k_*_sd'] = ( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
-        stock_df['event_flag'] = np.where(stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])), 1, 0)
+        stock_df['event_flag'] = np.where(
+            stock_df['net_close_delta'] < (stock_df["ncd_rolling_mean"] - (k * stock_df["ncd_rolling_std"])), 1, 0)
 
-        # stock_df['event_flag'] = np.where(stock_df['ncd_daily_k_stds'] <= -k, 1, 0)
+        "Strategy 1: Buy on day (n) at close if  Δ(sp) is < (μ – kσ), sell on next day at opening price."
 
-        "Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
-
-        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
+        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_close"].shift)(-1)) * stock_df['event_flag']
 
         stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
@@ -411,7 +410,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
 
         "Strategy 1: Buy on day (n) at close if  Δ(sp) is < (μ – kσ), sell on next day at opening price."
 
-        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
+        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_close"].shift)(-1))*stock_df['event_flag']
         stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
 
