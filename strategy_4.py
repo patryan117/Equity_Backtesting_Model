@@ -30,7 +30,6 @@ global strategy
 strategy = "Strategy_4"
 
 
-
 def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " id cap biotech companies")
     start_time = time.time()
