@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="" />
+    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/transform.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="transform.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="transform.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/transform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="182" column="13" selection-start-line="182" selection-end-line="183" />
+            <state relative-caret-position="238">
+              <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#3258#4108#0" />
@@ -114,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategy_4.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="strategy_4.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strategy_4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-561">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="-493">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#5932#6782#0" />
@@ -218,11 +220,11 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_10.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_8.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_11.py" />
-        <option value="$PROJECT_DIR$/transform.py" />
         <option value="$PROJECT_DIR$/strategy_1.py" />
         <option value="$PROJECT_DIR$/strategy_2.py" />
         <option value="$PROJECT_DIR$/strategy_3.py" />
         <option value="$PROJECT_DIR$/strategy_4.py" />
+        <option value="$PROJECT_DIR$/transform.py" />
       </list>
     </option>
   </component>
@@ -251,6 +253,10 @@
             <path>
               <item name="Analysis_of_Biotech_Disclosures" type="b2602c69:ProjectViewProjectNode" />
               <item name="Analysis_of_Biotech_Disclosures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analysis_of_Biotech_Disclosures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -423,7 +429,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
@@ -793,19 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/transform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="182" column="13" selection-start-line="182" selection-end-line="183" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3258#4108#0" />
-            <element signature="e#4420#5028#0" />
-            <element signature="e#4816#7923#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/strategy_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -846,13 +839,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/strategy_4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="-493">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#5932#6782#0" />
             <element signature="e#6860#7468#0" />
             <element signature="e#7526#10633#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#3258#4108#0" />
+            <element signature="e#4420#5028#0" />
+            <element signature="e#4816#7923#0" />
           </folding>
         </state>
       </provider>
