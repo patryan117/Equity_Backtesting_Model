@@ -190,8 +190,6 @@ def make_topo_histogram(grand_roi_list):
 
 
 
-
-
 def create_scatterplot(return_list):
 
     std_trailing_window = return_list[0]
