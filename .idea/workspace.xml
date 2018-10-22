@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/strategy_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -116,7 +116,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategy_4.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="strategy_4.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strategy_4.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -127,6 +127,15 @@
                 <element signature="e#6860#7468#0" />
                 <element signature="e#7526#10633#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="collect.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/collect.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -209,7 +218,6 @@
         <option value="$USER_HOME$/Downloads/main_task1 (1).py" />
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao/1_5.py" />
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao/1_7.py" />
-        <option value="$PROJECT_DIR$/collect.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$USER_HOME$/Downloads/main_task3 (2).py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
@@ -225,6 +233,7 @@
         <option value="$PROJECT_DIR$/strategy_3.py" />
         <option value="$PROJECT_DIR$/transform.py" />
         <option value="$PROJECT_DIR$/strategy_4.py" />
+        <option value="$PROJECT_DIR$/collect.py" />
       </list>
     </option>
   </component>
@@ -705,13 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/collect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pandas/core/indexes/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -860,6 +862,13 @@
             <element signature="e#6860#7468#0" />
             <element signature="e#7526#10633#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
         </state>
       </provider>
     </entry>
