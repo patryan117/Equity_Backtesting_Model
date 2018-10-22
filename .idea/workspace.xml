@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/transform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategy_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +33,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="transform.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="transform.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/transform.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -116,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategy_4.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="strategy_4.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/strategy_4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="255">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#5932#6782#0" />
@@ -223,8 +223,8 @@
         <option value="$PROJECT_DIR$/strategy_1.py" />
         <option value="$PROJECT_DIR$/strategy_2.py" />
         <option value="$PROJECT_DIR$/strategy_3.py" />
-        <option value="$PROJECT_DIR$/strategy_4.py" />
         <option value="$PROJECT_DIR$/transform.py" />
+        <option value="$PROJECT_DIR$/strategy_4.py" />
       </list>
     </option>
   </component>
@@ -837,19 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/strategy_4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#5932#6782#0" />
-            <element signature="e#6860#7468#0" />
-            <element signature="e#7526#10633#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/transform.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -859,6 +846,19 @@
             <element signature="e#3258#4108#0" />
             <element signature="e#4420#5028#0" />
             <element signature="e#4816#7923#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strategy_4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#5932#6782#0" />
+            <element signature="e#6860#7468#0" />
+            <element signature="e#7526#10633#0" />
           </folding>
         </state>
       </provider>

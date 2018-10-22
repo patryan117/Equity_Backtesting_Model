@@ -107,7 +107,6 @@ def make_topo_histogram(grand_roi_list):
     print (array_dict)
 
 
-
     for x in grand_roi_list:
         k = x[0]
         values = x[1]
