@@ -188,8 +188,6 @@ def make_topo_histogram(grand_roi_list):
     # plotly.offline.plot(filename = savename + ".html")
 
 
-
-
 def create_scatterplot(return_list):
 
     std_trailing_window = return_list[0]
