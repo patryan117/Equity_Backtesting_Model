@@ -23,7 +23,6 @@ def main():
 
 
 
-
 # def convert_csv_files_to_dfs():
 #     for filename in os.listdir(dir_path + "/stock_csvs/"):
 #         if filename.endswith(".csv"):
