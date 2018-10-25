@@ -146,6 +146,7 @@ def make_topo_histogram(grand_roi_list):
     ]
 
 
+
     layout = go.Layout(
         title='ROI Frequency: (' + strategy + ", w =" + str(glob_w) + ", Index = " + benchmark_index + ", USD per Trade = " + str(transaction_cost) + " )",
         scene=dict(

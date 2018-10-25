@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="" />
+    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/strategy_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_3.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +23,7 @@
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$test.coverage" NAME="test Coverage Results" MODIFIED="1538662296334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_1.coverage" NAME="1_1 Coverage Results" MODIFIED="1538514036111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_3.coverage" NAME="scratch_3 Coverage Results" MODIFIED="1539206054244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_12.coverage" NAME="scratch_12 Coverage Results" MODIFIED="1540396599876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_1.coverage" NAME="strategy_1 Coverage Results" MODIFIED="1539964825244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$main_task1__1_.coverage" NAME="main_task1 (1) Coverage Results" MODIFIED="1538057350104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$transform.coverage" NAME="transform Coverage Results" MODIFIED="1539959930814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -31,10 +34,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="scratch_12.py" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_12.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="transform.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/transform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="1326">
               <caret line="78" column="38" lean-forward="true" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -49,20 +61,8 @@
       <file leaf-file-name="template_4.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template_4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
+            <state relative-caret-position="3043">
               <caret line="179" column="19" selection-start-line="179" selection-end-line="180" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template_1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template_1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -99,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategy_3.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="strategy_3.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/strategy_3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="149" column="154" selection-start-line="149" selection-start-column="14" selection-end-line="149" selection-end-column="154" />
+            <state relative-caret-position="153">
+              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#5932#6782#0" />
@@ -129,23 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="collect.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="collect.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/collect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template_2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template_2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="179" column="30" selection-start-line="179" selection-end-line="180" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -228,10 +216,11 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_11.py" />
         <option value="$PROJECT_DIR$/strategy_1.py" />
         <option value="$PROJECT_DIR$/strategy_2.py" />
-        <option value="$PROJECT_DIR$/strategy_3.py" />
         <option value="$PROJECT_DIR$/transform.py" />
         <option value="$PROJECT_DIR$/strategy_4.py" />
         <option value="$PROJECT_DIR$/collect.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_12.py" />
+        <option value="$PROJECT_DIR$/strategy_3.py" />
       </list>
     </option>
   </component>
@@ -246,7 +235,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
-    <option name="width" value="1948" />
+    <option name="y" value="-15" />
+    <option name="width" value="1950" />
     <option name="height" value="2075" />
   </component>
   <component name="ProjectView">
@@ -300,7 +290,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.strategy_4">
+  <component name="RunManager" selected="Python.scratch_12">
+    <configuration name="scratch_12" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Analysis_of_Biotech_Disclosures" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_12.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="strategy_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -377,39 +386,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="transform" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Analysis_of_Biotech_Disclosures" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/transform.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
-      <item itemvalue="Python.transform" />
       <item itemvalue="Python.strategy_2" />
       <item itemvalue="Python.strategy_3" />
       <item itemvalue="Python.strategy_4" />
       <item itemvalue="Python.strategy_1" />
+      <item itemvalue="Python.scratch_12" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.scratch_12" />
         <item itemvalue="Python.strategy_4" />
         <item itemvalue="Python.strategy_3" />
         <item itemvalue="Python.strategy_2" />
         <item itemvalue="Python.strategy_1" />
-        <item itemvalue="Python.transform" />
       </list>
     </recent_temporary>
   </component>
@@ -497,23 +487,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/collect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template_3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
@@ -789,9 +762,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/strategy_4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#5932#6782#0" />
+            <element signature="e#6860#7468#0" />
+            <element signature="e#7526#10633#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_12.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="78" column="38" lean-forward="true" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#3258#4108#0" />
+            <element signature="e#4420#5028#0" />
+            <element signature="e#4816#7923#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/template_4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
+        <state relative-caret-position="3043">
           <caret line="179" column="19" selection-start-line="179" selection-end-line="180" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -824,49 +837,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/3D_ROI_Hist_(Strategy_1)( w=[20],_Index=XBI,_USD_per_Trade_=_0.5).html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/strategy_3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="149" column="154" selection-start-line="149" selection-start-column="14" selection-end-line="149" selection-end-column="154" />
+        <state relative-caret-position="153">
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#5932#6782#0" />
             <element signature="e#6860#7468#0" />
             <element signature="e#7526#10633#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/transform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="78" column="38" lean-forward="true" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3258#4108#0" />
-            <element signature="e#4420#5028#0" />
-            <element signature="e#4816#7923#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/strategy_4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#5932#6782#0" />
-            <element signature="e#6860#7468#0" />
-            <element signature="e#7526#10633#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/collect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
