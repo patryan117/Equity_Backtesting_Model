@@ -95,7 +95,6 @@ def _get_crumbs_and_cookies(stock):
 
 
 
-
 def convert_to_unix(date):
 
     datum = datetime.strptime(date, '%d-%m-%Y')
