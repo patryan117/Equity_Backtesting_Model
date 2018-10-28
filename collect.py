@@ -19,20 +19,6 @@ def main():
     # get_mid_cap_stock_data()
     get_biotech_index_data()
     print("\n--- %s seconds ---" % (time.time() - start_time))
-    # convert_csv_files_to_dfs()
-
-
-
-
-# def convert_csv_files_to_dfs():
-#     for filename in os.listdir(dir_path + "/stock_csvs/"):
-#         if filename.endswith(".csv"):
-#             file_loc = os.path.join(dir_path, 'relative/path/to/file/you/want')
-#             print(filename)
-#             df = pd.read_csv(dir_path + "/stock_csvs/" + filename)
-#             print("df sucessfuly converted")
-#             # df.to_pickle('testpickle.pkl')
-#             # print("pickle saved!")
 
 
 def get_mid_cap_stock_data():
