@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/collect.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect.py" afterDir="false" />
-    </list>
+    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,140 +11,86 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_8.coverage" NAME="scratch_8 Coverage Results" MODIFIED="1539875259586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$WONG_13_5.coverage" NAME="WONG 13_5 Coverage Results" MODIFIED="1540657600020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$exercise_5_19.coverage" NAME="exercise 5.19 Coverage Results" MODIFIED="1540652298378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$WONG_5_9.coverage" NAME="WONG 5_9 Coverage Results" MODIFIED="1540657486109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_10.coverage" NAME="scratch_10 Coverage Results" MODIFIED="1539869287474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_2.coverage" NAME="strategy_2 Coverage Results" MODIFIED="1539964835327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$assignment_3_task__1_.coverage" NAME="assignment 3 task (1) Coverage Results" MODIFIED="1540655229006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Rar$DIa15832.37846" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_7.coverage" NAME="1_7 Coverage Results" MODIFIED="1538576910049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$exercise_5_9.coverage" NAME="exercise 5.9 Coverage Results" MODIFIED="1540654955797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$assignment_3_task.coverage" NAME="assignment 3 task Coverage Results" MODIFIED="1540655373524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_1.coverage" NAME="1_1 Coverage Results" MODIFIED="1538514036111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_3.coverage" NAME="scratch_3 Coverage Results" MODIFIED="1539206054244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$exercise_5_7.coverage" NAME="exercise 5.7 Coverage Results" MODIFIED="1540652222240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$exercise_13_5.coverage" NAME="exercise 13.5 Coverage Results" MODIFIED="1540654632333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_11.coverage" NAME="scratch_11 Coverage Results" MODIFIED="1539890420008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$numpyPerformance.coverage" NAME="numpyPerformance Coverage Results" MODIFIED="1538514004979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_3.coverage" NAME="1_3 Coverage Results" MODIFIED="1538514077417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_3.coverage" NAME="strategy_3 Coverage Results" MODIFIED="1539964842601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_10.coverage" NAME="scratch_10 Coverage Results" MODIFIED="1539869287474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_2.coverage" NAME="strategy_2 Coverage Results" MODIFIED="1539964835327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_4.coverage" NAME="scratch_4 Coverage Results" MODIFIED="1539352310584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_7.coverage" NAME="1_7 Coverage Results" MODIFIED="1538576910049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$Count_Letters.coverage" NAME="Count Letters Coverage Results" MODIFIED="1540655990270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$test.coverage" NAME="test Coverage Results" MODIFIED="1538662296334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_1.coverage" NAME="1_1 Coverage Results" MODIFIED="1538514036111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_3.coverage" NAME="scratch_3 Coverage Results" MODIFIED="1539206054244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$exercise_13_3.coverage" NAME="exercise 13.3 Coverage Results" MODIFIED="1540655761748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$WONG_13_3.coverage" NAME="WONG 13_3 Coverage Results" MODIFIED="1540657558289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_12.coverage" NAME="scratch_12 Coverage Results" MODIFIED="1540396599876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_1.coverage" NAME="strategy_1 Coverage Results" MODIFIED="1539964825244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$main_task1__1_.coverage" NAME="main_task1 (1) Coverage Results" MODIFIED="1538057350104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$transform.coverage" NAME="transform Coverage Results" MODIFIED="1539959930814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$WONG_Charles_Dickens.coverage" NAME="WONG Charles Dickens Coverage Results" MODIFIED="1540657686044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_5.coverage" NAME="1_5 Coverage Results" MODIFIED="1538514138105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_11.coverage" NAME="scratch_11 Coverage Results" MODIFIED="1539890420008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_4.coverage" NAME="strategy_4 Coverage Results" MODIFIED="1539966151448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$collect.coverage" NAME="collect Coverage Results" MODIFIED="1538577428629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="scratch_12.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_12.py">
+      <file leaf-file-name="WONG 5_9.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 5_9.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="153">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transform.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/transform.py">
+      <file leaf-file-name="WONG Charles Dickens.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG Charles Dickens.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="78" column="38" lean-forward="true" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
+            <state relative-caret-position="221">
+              <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WONG 13_3.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 13_3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#3258#4108#0" />
-                <element signature="e#4420#5028#0" />
-                <element signature="e#4816#7923#0" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template_4.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template_4.py">
+      <file leaf-file-name="WONG 13_5.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 13_5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3043">
-              <caret line="179" column="19" selection-start-line="179" selection-end-line="180" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategy_1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/strategy_1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#5932#6782#0" />
-                <element signature="e#6860#7468#0" />
-                <element signature="e#7526#10633#0" />
-              </folding>
-            </state>
-          </provider>
+      <file leaf-file-name="WONG 5_19.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 5_19.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="strategy_2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/strategy_2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#5932#6782#0" />
-                <element signature="e#6860#7468#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strategy_3.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/strategy_3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3911">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#2172#4668#0" />
-                <element signature="e#7526#10633#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strategy_4.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/strategy_4.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#5932#6782#0" />
-                <element signature="e#6860#7468#0" />
-                <element signature="e#7526#10633#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collect.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/collect.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template_3.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template_3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="180" column="18" selection-start-line="180" selection-end-line="181" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+      <file leaf-file-name="WONG 5_7.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 5_7.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -220,6 +164,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_12.py" />
         <option value="$PROJECT_DIR$/strategy_3.py" />
         <option value="$PROJECT_DIR$/collect.py" />
+        <option value="$PROJECT_DIR$/../../../Desktop/CS521/Count Letters.py" />
       </list>
     </option>
   </component>
@@ -234,7 +179,6 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
-    <option name="y" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
   </component>
@@ -289,8 +233,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.scratch_12">
-    <configuration name="scratch_12" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.WONG Charles Dickens">
+    <configuration name="Count Letters" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -298,18 +242,18 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../Desktop/CS521" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_12.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../Desktop/CS521/Count Letters.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="strategy_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="WONG 13_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -317,18 +261,18 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../Desktop/CS521" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/strategy_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../Desktop/CS521/WONG 13_3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="strategy_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="WONG 13_5" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -336,18 +280,18 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../Desktop/CS521" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/strategy_2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../Desktop/CS521/WONG 13_5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="strategy_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="WONG 5_9" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -355,18 +299,18 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../Desktop/CS521" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/strategy_3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../Desktop/CS521/WONG 5_9.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="strategy_4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="WONG Charles Dickens" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -374,31 +318,31 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../Desktop/CS521" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/strategy_4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../Desktop/CS521/WONG Charles Dickens.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.strategy_2" />
-      <item itemvalue="Python.strategy_3" />
-      <item itemvalue="Python.strategy_4" />
-      <item itemvalue="Python.strategy_1" />
-      <item itemvalue="Python.scratch_12" />
+      <item itemvalue="Python.Count Letters" />
+      <item itemvalue="Python.WONG 5_9" />
+      <item itemvalue="Python.WONG Charles Dickens" />
+      <item itemvalue="Python.WONG 13_3" />
+      <item itemvalue="Python.WONG 13_5" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.scratch_12" />
-        <item itemvalue="Python.strategy_4" />
-        <item itemvalue="Python.strategy_3" />
-        <item itemvalue="Python.strategy_2" />
-        <item itemvalue="Python.strategy_1" />
+        <item itemvalue="Python.WONG Charles Dickens" />
+        <item itemvalue="Python.WONG 13_5" />
+        <item itemvalue="Python.WONG 13_3" />
+        <item itemvalue="Python.WONG 5_9" />
+        <item itemvalue="Python.Count Letters" />
       </list>
     </recent_temporary>
   </component>
@@ -426,16 +370,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50033534" side_tool="true" weight="0.371266" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32859176" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.37980086" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32859176" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1240778" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1240778" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32716927" />
@@ -456,12 +399,12 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32859176" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1240778" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1240778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.32859176" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.37980086" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32716927" />
       <window_info anchor="right" id="Database" order="3" />
@@ -486,94 +429,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/template_4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="96" column="55" selection-start-line="96" selection-start-column="55" selection-end-line="96" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="78" selection-start-line="40" selection-start-column="78" selection-end-line="40" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/collect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/transform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2890">
-          <caret line="177" column="18" lean-forward="true" selection-start-line="177" selection-start-column="18" selection-end-line="177" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3258#4108#0" />
-            <element signature="e#4420#5028#0" />
-            <element signature="e#4816#7923#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/main_task2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="123" column="87" selection-start-line="123" selection-start-column="77" selection-end-line="123" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/main_task1 (1).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/numpyPerformance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao/1_1.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao/1_3.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao/1_5.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao/1_7.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pandas/core/window.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="178" selection-start-line="178" selection-end-line="178" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stock_csvs/SNDX.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stock_csvs/ALNA.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-612" />
@@ -741,16 +596,6 @@
     <entry file="file://$PROJECT_DIR$/temp-plot.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/template_3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="180" column="18" selection-start-line="180" selection-end-line="181" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/strategy_4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -839,8 +684,114 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/collect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="289">
           <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="180" column="18" selection-start-line="180" selection-end-line="181" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/exercise 5.19.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/exercise 13.5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/exercise 5.7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/exercise 5.9.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa15832.37846/assignment 3 task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/assignment 3 task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="6" lean-forward="true" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/exercise 13.3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa19612.5517/text.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Count Letters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 5_7.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 5_9.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 13_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 13_5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 5_19.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG Charles Dickens.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
         </state>
       </provider>
     </entry>
