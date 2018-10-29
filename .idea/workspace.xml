@@ -44,31 +44,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WONG 5_9.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 5_9.py">
+      <file leaf-file-name="transform.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/transform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="5542">
+              <caret line="326" lean-forward="true" selection-start-line="326" selection-end-line="326" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WONG Charles Dickens.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG Charles Dickens.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collect.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="collect.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/collect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="255">
               <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3D_ROI_Hist_(Strategy_4)( w=[20],_Index=XBI,_USD_per_Trade_=_0.25).html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/3D_ROI_Hist_(Strategy_4)( w=[20],_Index=XBI,_USD_per_Trade_=_0.25).html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="WONG 13_3.py" pinned="false" current-in-tab="false">
@@ -386,7 +385,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32859176" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.37980086" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.13371266" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32859176" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1240778" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -439,11 +438,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stock_csvs/ALNA.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-612" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stock_csvs/ARWR.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -626,19 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/transform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="38" lean-forward="true" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#3258#4108#0" />
-            <element signature="e#4420#5028#0" />
-            <element signature="e#4816#7923#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template_4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3043">
@@ -764,13 +745,6 @@
     <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 5_7.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 5_9.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 13_3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -798,10 +772,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/WONG 5_9.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/collect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="255">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3D_ROI_Hist_(Strategy_4)( w=[20],_Index=XBI,_USD_per_Trade_=_0.25).html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5542">
+          <caret line="326" lean-forward="true" selection-start-line="326" selection-end-line="326" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
