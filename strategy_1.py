@@ -198,13 +198,20 @@ def make_topo_histogram(grand_roi_list):
 
 def create_scatterplot(return_list):
 
+
     std_trailing_window = return_list[0]
     std_threshold = return_list[1]
     net_returns = return_list[2]
 
+    print(std_trailing_window)
+    print(std_threshold)
+    print(net_returns)
+
     scaled_net_returns = []  # scale down return
+    minmax_return = max( max(net_returns), abs(min(net_returns)))
+
     for x in net_returns:
-        y = x/ max(net_returns)
+        y = x / minmax_return
         scaled_net_returns.append(abs(y) * 30)
 
     max_val = max( max(net_returns), abs(min(net_returns)))
@@ -235,6 +242,8 @@ def create_scatterplot(return_list):
                        hovermode='closest'
                        )
     plotly.offline.plot({"data": data, "layout": layout})
+
+
 
 
 
@@ -460,7 +469,6 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
 
     cum_roi_list = cum_roi_list
     return (cum_roi_list)
-
 
 
 

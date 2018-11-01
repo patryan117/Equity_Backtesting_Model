@@ -69,7 +69,7 @@ def create_scatterplot(return_list):
 
     scaled_net_returns = []  # scale down return
     for x in net_returns:
-        y = x/ max(net_returns)
+        y = x / max(net_returns)
         scaled_net_returns.append(abs(y) * 30)
 
     max_val = max( max(net_returns), abs(min(net_returns)))

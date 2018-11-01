@@ -43,7 +43,7 @@ def main():
     #small trial
     std_trailing_window_inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]   # trailing_sd window
     # std_threshold = [0, 0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
-    std_threshold = [1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]  # standard_dev sampling window
+    std_threshold = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]  # standard_dev sampling window
 
     global glob_w
     glob_w = std_trailing_window_inputs
@@ -192,13 +192,18 @@ def make_topo_histogram(grand_roi_list):
 
 def create_scatterplot(return_list):
 
+
     std_trailing_window = return_list[0]
     std_threshold = return_list[1]
     net_returns = return_list[2]
 
+    print(std_trailing_window)
+    print(std_threshold)
+    print(net_returns)
+
     scaled_net_returns = []  # scale down return
     for x in net_returns:
-        y = x/ max(net_returns)
+        y = x / max( max(net_returns), abs(min(net_returns)))
         scaled_net_returns.append(abs(y) * 30)
 
     max_val = max( max(net_returns), abs(min(net_returns)))
