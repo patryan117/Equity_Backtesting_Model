@@ -315,10 +315,10 @@ def calc_cum_return(w, k, investment, index_df):
         stock_df["index_close_delta"] = ((stock_df["index_close"] - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
         stock_df["stock_close_delta"] = (((stock_df["stock_close"]) - (stock_df["stock_close"].shift)(1)) / (stock_df["stock_close"].shift)(1))
 
-        # Remove Tracking Error
+        # Tracking Error Adjustment
         stock_df["net_close_delta"] = ((stock_df["stock_close_delta"]) - stock_df["index_close_delta"])
 
-        #ndc = net close delta
+        #ndc = net close delta: (the day over day change in closing price)
         stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].rolling(w).std()  #add shift(1) before rolling to not include that rows day in the calculation
         stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
         stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
@@ -331,7 +331,7 @@ def calc_cum_return(w, k, investment, index_df):
 
         stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
 
-        stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
+        stock_df["net_return"] = (stock_df["return"] - investment - (2 * transaction_cost)) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
 
 
