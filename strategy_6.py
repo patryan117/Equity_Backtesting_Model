@@ -22,10 +22,6 @@ pd.set_option('display.max_colwidth', -1)  # or 199
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-
-
-
-
 global transaction_cost
 transaction_cost = 0.25
 
@@ -33,7 +29,7 @@ global benchmark_index
 benchmark_index = "XBI"
 
 global strategy
-strategy = "Strategy 5"
+strategy = "Strategy 6"
 
 def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " id cap biotech companies")
@@ -47,9 +43,9 @@ def main():
 
 
     #small trial
-    std_trailing_window_inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]   # trailing_sd window
+    std_trailing_window_inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]   # trailing_sd window
     # std_threshold = [0, 0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
-    std_threshold = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]  # standard_dev sampling window
+    std_threshold = [.25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25,  2.5, 2.75,  3,]  # standard_dev sampling window
 
     global glob_w
     glob_w = std_trailing_window_inputs
@@ -334,14 +330,12 @@ def calc_cum_return(w, k, investment, index_df):
         stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
         stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
         stock_df['mu_-_k_*_sd'] = (stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
-        stock_df['event_flag'] = np.where((stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])))  &  \
-                                          (stock_df['volume_delta'] > (stock_df["volume_rolling_mean"] + (2*stock_df["volume_rolling_std"])))  , 1, 0)
+        stock_df['event_flag'] = np.where((stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])))  , 1, 0)
 
-        # stock_df['event_flag'] = np.where(stock_df['ncd_daily_k_stds'] <= -k, 1, 0)
 
         "Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
 
-        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
+        stock_df["return"] = (investment - (investment / stock_df["stock_close"] * stock_df["stock_open"].shift(-1)))*stock_df['event_flag']
 
         stock_df["net_return"] = (stock_df["return"] - investment - (2 * transaction_cost)) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/strategy_6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ABEO_strategy_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ABEO_strategy_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategy_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/strategy_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp-plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/temp-plot.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,6 +36,7 @@
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_11.coverage" NAME="scratch_11 Coverage Results" MODIFIED="1539890420008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$numpyPerformance.coverage" NAME="numpyPerformance Coverage Results" MODIFIED="1538514004979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_3.coverage" NAME="1_3 Coverage Results" MODIFIED="1538514077417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_6.coverage" NAME="strategy_6 Coverage Results" MODIFIED="1541171849962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_3.coverage" NAME="strategy_3 Coverage Results" MODIFIED="1541121503412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_4.coverage" NAME="scratch_4 Coverage Results" MODIFIED="1539352310584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$Count_Letters.coverage" NAME="Count Letters Coverage Results" MODIFIED="1540655990270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
@@ -52,8 +57,8 @@
       <file leaf-file-name="transform.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/transform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="334" selection-start-line="332" selection-start-column="7" selection-end-line="334" />
+            <state relative-caret-position="544">
+              <caret line="338" selection-start-line="338" selection-end-line="338" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#4716#5863#0" />
@@ -63,39 +68,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategy_5.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="strategy_5.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strategy_5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="336" lean-forward="true" selection-start-line="336" selection-end-line="336" />
+            <state relative-caret-position="307">
+              <caret line="231" selection-start-line="190" selection-end-line="231" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#5980#6830#0" />
+                <element signature="e#6908#7516#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategy_1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/strategy_1.py">
+      <file leaf-file-name="strategy_6.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/strategy_6.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="46" column="5" selection-start-line="45" selection-end-line="48" />
+              <caret line="337" column="103" lean-forward="true" selection-start-line="337" selection-start-column="103" selection-end-line="337" selection-end-column="103" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#6934#7542#0" />
-                <element signature="e#7600#10707#0" />
-                <element signature="e#10775#14185#0" />
-                <element signature="e#14239#14518#0" />
-                <element signature="e#14565#14661#0" />
+                <element signature="e#2206#4708#0" />
+                <element signature="e#5980#6830#0" />
+                <element signature="e#11474#14884#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="temp-plot.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/temp-plot.html">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="ops.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pandas/core/ops.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="685" selection-start-line="685" selection-end-line="685" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="strategy_2.py" pinned="false" current-in-tab="false">
@@ -113,13 +121,15 @@
       <file leaf-file-name="strategy_4.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strategy_4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="417" selection-start-line="417" selection-end-line="417" />
+            <state relative-caret-position="227">
+              <caret line="341" column="91" selection-start-line="341" selection-start-column="91" selection-end-line="341" selection-end-column="91" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#2168#4721#0" />
                 <element signature="e#5999#6849#0" />
                 <element signature="e#6927#7535#0" />
+                <element signature="e#10768#14189#0" />
+                <element signature="e#14243#14522#0" />
               </folding>
             </state>
           </provider>
@@ -244,12 +254,13 @@
         <option value="$PROJECT_DIR$/collect.py" />
         <option value="$PROJECT_DIR$/transform.py" />
         <option value="$PROJECT_DIR$/strategy_1.py" />
-        <option value="$PROJECT_DIR$/strategy_4.py" />
         <option value="$PROJECT_DIR$/template_2.py" />
         <option value="$PROJECT_DIR$/template_4.py" />
         <option value="$PROJECT_DIR$/strategy_3.py" />
         <option value="$PROJECT_DIR$/strategy_2.py" />
         <option value="$PROJECT_DIR$/strategy_5.py" />
+        <option value="$PROJECT_DIR$/strategy_4.py" />
+        <option value="$PROJECT_DIR$/strategy_6.py" />
       </list>
     </option>
   </component>
@@ -262,7 +273,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
@@ -318,7 +329,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.strategy_5">
+  <component name="RunManager" selected="Python.strategy_6">
     <configuration name="strategy_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -395,7 +406,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="template_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="strategy_6" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -408,7 +419,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/template_2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/strategy_6.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -417,17 +428,17 @@
     <list>
       <item itemvalue="Python.strategy_3" />
       <item itemvalue="Python.strategy_4" />
-      <item itemvalue="Python.template_2" />
       <item itemvalue="Python.strategy_2" />
       <item itemvalue="Python.strategy_5" />
+      <item itemvalue="Python.strategy_6" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.strategy_6" />
         <item itemvalue="Python.strategy_5" />
         <item itemvalue="Python.strategy_4" />
         <item itemvalue="Python.strategy_3" />
         <item itemvalue="Python.strategy_2" />
-        <item itemvalue="Python.template_2" />
       </list>
     </recent_temporary>
   </component>
@@ -454,7 +465,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50033534" side_tool="true" weight="0.371266" />
@@ -599,13 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pandas/core/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12444">
-          <caret line="835" selection-start-line="835" selection-end-line="835" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -740,31 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/transform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="334" selection-start-line="332" selection-start-column="7" selection-end-line="334" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#4716#5863#0" />
-            <element signature="e#5943#6793#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/strategy_4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="417" selection-start-line="417" selection-end-line="417" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#2168#4721#0" />
-            <element signature="e#5999#6849#0" />
-            <element signature="e#6927#7535#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/strategy_3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1240">
@@ -787,13 +767,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/transform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="338" selection-start-line="338" selection-end-line="338" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#4716#5863#0" />
+            <element signature="e#5943#6793#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strategy_4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="341" column="91" selection-start-line="341" selection-start-column="91" selection-end-line="341" selection-end-column="91" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#2168#4721#0" />
+            <element signature="e#5999#6849#0" />
+            <element signature="e#6927#7535#0" />
+            <element signature="e#10768#14189#0" />
+            <element signature="e#14243#14522#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pandas/core/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="685" selection-start-line="685" selection-end-line="685" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/strategy_5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="336" lean-forward="true" selection-start-line="336" selection-end-line="336" />
+        <state relative-caret-position="307">
+          <caret line="231" selection-start-line="190" selection-end-line="231" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#5980#6830#0" />
+            <element signature="e#6908#7516#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strategy_6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="337" column="103" lean-forward="true" selection-start-line="337" selection-start-column="103" selection-end-line="337" selection-end-column="103" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#2206#4708#0" />
+            <element signature="e#5980#6830#0" />
+            <element signature="e#11474#14884#0" />
           </folding>
         </state>
       </provider>
