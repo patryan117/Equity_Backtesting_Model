@@ -349,7 +349,7 @@ def calc_cum_return(w, k, investment, index_df):
 
         "Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
 
-        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
+        stock_df["return"] = (investment / ((stock_df["stock_close"]) * stock_df["stock_open"].shift(-1)))*stock_df['event_flag']
 
         stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
