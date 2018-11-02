@@ -196,17 +196,20 @@ def make_topo_histogram(grand_roi_list):
 
 
 
-
-
 def create_scatterplot(return_list):
+
 
     std_trailing_window = return_list[0]
     std_threshold = return_list[1]
     net_returns = return_list[2]
 
+    print(std_trailing_window)
+    print(std_threshold)
+    print(net_returns)
+
     scaled_net_returns = []  # scale down return
     for x in net_returns:
-        y = x/ max(net_returns)
+        y = x / max( max(net_returns), abs(min(net_returns)))
         scaled_net_returns.append(abs(y) * 30)
 
     max_val = max( max(net_returns), abs(min(net_returns)))
@@ -237,6 +240,7 @@ def create_scatterplot(return_list):
                        hovermode='closest'
                        )
     plotly.offline.plot({"data": data, "layout": layout})
+
 
 
 
@@ -342,7 +346,7 @@ def calc_cum_return(w, k, investment, index_df):
 
         "Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
 
-        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
+        stock_df["return"] = (investment / (stock_df["stock_close"].shift(-1)) * (stock_df["stock_open"].shift)(-2))*stock_df['event_flag']
 
         stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)

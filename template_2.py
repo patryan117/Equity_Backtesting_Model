@@ -24,7 +24,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 # TODO: Round decimal on plotly overlay
 
 global transaction_cost
-transaction_cost = 0.00
+transaction_cost = 0.50
 
 global benchmark_index
 benchmark_index = "XBI"
@@ -174,13 +174,12 @@ def calc_return(w, k, investment, index_df):
 
         # stock_df['event_flag'] = np.where(stock_df['ncd_daily_k_stds'] <= -k, 1, 0)
 
-        #TODO: SAVE THE (DATE: PRICE) VALUES FOR EXTREME EVENTS
 
 
         stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_close"].shift)(-1))*stock_df['event_flag']
 
 
-        stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
+        stock_df["net_return"] = (stock_df["return"] - investment - (2 *transaction_cost)) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
 
 

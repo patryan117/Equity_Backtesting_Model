@@ -46,9 +46,9 @@ def main():
 
 
     #small trial
-    # std_trailing_window_inputs = (6, 8, 10, 12)   # trailing_sd window
-    # std_threshold = (0.5, 1, 1.5, 2, 2.5, 3)  # standard_dev sampling window
-    investment = 100  # investment level per arbitrage event
+    std_trailing_window_inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]   # trailing_sd window
+    # std_threshold = [0, 0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
+    std_threshold = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]  # standard_dev sampling window
 
     return_list = generate_net_return_list(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
     create_scatterplot(return_list)
