@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/strategy_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ABEO_strategy_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ABEO_strategy_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABEO_strategy_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ABEO_strategy_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategy_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategy_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp-plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/temp-plot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategy_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_5.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +19,7 @@
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$WONG_5_9.coverage" NAME="WONG 5_9 Coverage Results" MODIFIED="1540657486109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_10.coverage" NAME="scratch_10 Coverage Results" MODIFIED="1539869287474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_2.coverage" NAME="strategy_2 Coverage Results" MODIFIED="1541121496645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_5.coverage" NAME="strategy_5 Coverage Results" MODIFIED="1541163416760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_5.coverage" NAME="strategy_5 Coverage Results" MODIFIED="1541166688737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$assignment_3_task__1_.coverage" NAME="assignment 3 task (1) Coverage Results" MODIFIED="1540655229006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Rar$DIa15832.37846" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_7.coverage" NAME="1_7 Coverage Results" MODIFIED="1538576910049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$exercise_5_9.coverage" NAME="exercise 5.9 Coverage Results" MODIFIED="1540654955797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
@@ -73,8 +66,8 @@
       <file leaf-file-name="strategy_5.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/strategy_5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="333" column="92" selection-start-line="333" selection-start-column="92" selection-end-line="333" selection-end-column="92" />
+            <state relative-caret-position="187">
+              <caret line="336" lean-forward="true" selection-start-line="336" selection-end-line="336" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#5980#6830#0" />
@@ -269,7 +262,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
@@ -461,17 +454,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50033534" side_tool="true" weight="0.371266" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.39829302" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.39829302" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32859176" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32859176" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11200537" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11200537" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32997987" />
@@ -797,8 +789,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/strategy_5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="333" column="92" selection-start-line="333" selection-start-column="92" selection-end-line="333" selection-end-column="92" />
+        <state relative-caret-position="187">
+          <caret line="336" lean-forward="true" selection-start-line="336" selection-end-line="336" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#5980#6830#0" />

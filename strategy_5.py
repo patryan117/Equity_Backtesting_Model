@@ -331,7 +331,7 @@ def calc_cum_return(w, k, investment, index_df):
         stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
         stock_df['mu_-_k_*_sd'] = (stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
         stock_df['event_flag'] = np.where((stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])))  &  \
-                                          (stock_df['volume_delta'] > (stock_df["volume_rolling_mean"] - (1*stock_df["volume_rolling_std"])))  , 1, 0)
+                                          (stock_df['volume_delta'] > (stock_df["volume_rolling_mean"] + (2*stock_df["volume_rolling_std"])))  , 1, 0)
 
         # stock_df['event_flag'] = np.where(stock_df['ncd_daily_k_stds'] <= -k, 1, 0)
 
