@@ -29,7 +29,7 @@ global benchmark_index
 benchmark_index = "XBI"
 
 global strategy
-strategy = "Strategy 5"
+strategy = "Strategy_1"
 
 def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " id cap biotech companies")
@@ -43,9 +43,9 @@ def main():
 
 
     #small trial
-    std_trailing_window_inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]   # trailing_sd window
+    std_trailing_window_inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]   # trailing_sd window
     # std_threshold = [0, 0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
-    std_threshold = [1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]  # standard_dev sampling window
+    std_threshold = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]  # standard_dev sampling window
 
     global glob_w
     glob_w = std_trailing_window_inputs
@@ -60,10 +60,17 @@ def main():
     # create scatterplot of return spreads:
     return_list = generate_net_return_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
     create_scatterplot(return_list)
+    create_histogram(return_list)
 
-    #create topo map of roi spreads
-    # roi_list = generate_roi_list_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
+
+
+
+    # CREATE A 3D SURFACE MAP OF ROUNDED ROI'S
+    # roi_list = generate_roi_list_spread([20], std_threshold, investment, benchmark_index)
     # make_topo_histogram(roi_list)
+
+
+
 
 
 
@@ -72,6 +79,16 @@ def main():
 
     print("\n--- %s seconds ---" % (time.time() - start_time))
     print("\n--- %s minutes ---" % (((time.time() - start_time))/60))
+
+
+
+def create_histogram(return_list):
+
+    x = return_list[2]
+    data = [go.Histogram(x=x, histnorm='probability')]
+
+    plotly.offline.plot({"data": data})
+    # plotly.offline.plot({"data": data, "layout": layout}, filename=(savename) + ".html")
 
 
 
@@ -163,7 +180,9 @@ def make_topo_histogram(grand_roi_list):
                 nticks=4,
                 ticks='outside',
                 tick0=0,
-                tickwidth=4),
+                tickwidth=4,
+                range = [0, 17000],
+                ),
             ),
         autosize=True,
         width=1000,
@@ -185,15 +204,28 @@ def make_topo_histogram(grand_roi_list):
     # plotly.offline.plot(filename = savename + ".html")
 
 
+
+
+
+
+
+
 def create_scatterplot(return_list):
+
 
     std_trailing_window = return_list[0]
     std_threshold = return_list[1]
     net_returns = return_list[2]
 
+    print(std_trailing_window)
+    print(std_threshold)
+    print(net_returns)
+
     scaled_net_returns = []  # scale down return
+    minmax_return = max( max(net_returns), abs(min(net_returns)))
+
     for x in net_returns:
-        y = x/ max(net_returns)
+        y = x / minmax_return
         scaled_net_returns.append(abs(y) * 30)
 
     max_val = max( max(net_returns), abs(min(net_returns)))
@@ -224,6 +256,8 @@ def create_scatterplot(return_list):
                        hovermode='closest'
                        )
     plotly.offline.plot({"data": data, "layout": layout})
+
+
 
 
 
@@ -304,42 +338,34 @@ def calc_cum_return(w, k, investment, index_df):
         stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")  #TODO: Make dynamic (so it forms a list from the subdirectory names alone)
         stock_df.columns = map(str.lower, stock_df.columns)
         stock_df = stock_df.dropna()
-        stock_df = stock_df.drop(columns=['low', 'high', 'adj close'])
+        stock_df = stock_df.drop(columns=['low', 'high', 'adj close', 'volume'])
 
 
         # map index dictionary (date: delta) to a new column on each stock's dataframe
         stock_df['index_close'] = stock_df['date'].map(index_delta_dict)
-        stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open", "volume": "stock_volume"})
+        stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open"})
 
 
         stock_df["index_close_delta"] = ((stock_df["index_close"] - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
         stock_df["stock_close_delta"] = (((stock_df["stock_close"]) - (stock_df["stock_close"].shift)(1)) / (stock_df["stock_close"].shift)(1))
 
-        # Tracking Error Adjustment
+        # Remove Tracking Error
         stock_df["net_close_delta"] = ((stock_df["stock_close_delta"]) - stock_df["index_close_delta"])
 
-        stock_df["volume_delta"] = (((stock_df["stock_volume"]) - (stock_df["stock_volume"].shift)(1)) / (stock_df["stock_volume"].shift)(1))
-
-        # volume
-        stock_df["volume_rolling_std"] = stock_df["volume_delta"].rolling(w).std()  #add shift(1) before rolling to not include that rows day in the calculation
-        stock_df["volume_rolling_mean"] = stock_df["volume_delta"].rolling(w).mean()
-        stock_df["volume_k_stds"] = stock_df["volume_delta"] / stock_df["volume_rolling_std"]
-
-        #ndc = net close delta: (the day over day change in closing price)
+        #ndc = net close delta
         stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].rolling(w).std()  #add shift(1) before rolling to not include that rows day in the calculation
         stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
         stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
-        stock_df['mu_-_k_*_sd'] = (stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
-        stock_df['event_flag'] = np.where((stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])))  &  \
-                                          (stock_df['volume_delta'] < ( stock_df["volume_rolling_mean"] - (k*2*stock_df["volume_rolling_std"])))  , 1, 0)
+        stock_df['mu_-_k_*_sd'] = ( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
+        stock_df['event_flag'] = np.where(stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])), 1, 0)
 
         # stock_df['event_flag'] = np.where(stock_df['ncd_daily_k_stds'] <= -k, 1, 0)
 
         "Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
 
-        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
+        stock_df["return"] = ((investment / stock_df["stock_close"]) * stock_df["stock_open"].shift(-1))*stock_df['event_flag']
 
-        stock_df["net_return"] = (stock_df["return"] - investment - (2 * transaction_cost)) * stock_df['event_flag']
+        stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
 
 
@@ -411,7 +437,7 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
         "Strategy 1: Buy on day (n) at close if  Δ(sp) is < (μ – kσ), sell on next day at opening price."
 
         stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
-        stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
+        stock_df["net_return"] = (stock_df["return"] - investment - (2 * transaction_cost)) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
 
 
@@ -457,7 +483,6 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
 
     cum_roi_list = cum_roi_list
     return (cum_roi_list)
-
 
 
 
