@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ABEO_strategy_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ABEO_strategy_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategy_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_8.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp-plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/temp-plot.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,8 +137,8 @@
       <file leaf-file-name="strategy_8.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/strategy_8.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+            <state relative-caret-position="223">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#7576#8184#0" />
@@ -277,7 +275,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
@@ -469,7 +467,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50033534" side_tool="true" weight="0.371266" />
@@ -834,8 +832,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/strategy_8.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+        <state relative-caret-position="223">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#7576#8184#0" />
