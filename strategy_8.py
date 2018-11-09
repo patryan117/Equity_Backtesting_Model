@@ -381,8 +381,7 @@ def calc_cum_return(w, k, investment, index_df):
 
 
 
-        if i == "ABEO":
-            stock_df.to_csv(i + "_strategy_1.csv")
+
 
         print(i, " : ", (stock_df["net_return"].sum()))
         # print(df)

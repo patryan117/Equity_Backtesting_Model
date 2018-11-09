@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/ABEO_strategy_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ABEO_strategy_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategy_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stratey_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategy_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategy_8.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp-plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/temp-plot.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +31,7 @@
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$template_2.coverage" NAME="template_2 Coverage Results" MODIFIED="1541120933527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$exercise_5_7.coverage" NAME="exercise 5.7 Coverage Results" MODIFIED="1540652222240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$exercise_13_5.coverage" NAME="exercise 13.5 Coverage Results" MODIFIED="1540654632333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_8.coverage" NAME="strategy_8 Coverage Results" MODIFIED="1541787186473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_8.coverage" NAME="strategy_8 Coverage Results" MODIFIED="1541787604832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_11.coverage" NAME="scratch_11 Coverage Results" MODIFIED="1539890420008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$numpyPerformance.coverage" NAME="numpyPerformance Coverage Results" MODIFIED="1538514004979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$1_3.coverage" NAME="1_3 Coverage Results" MODIFIED="1538514077417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Temp1_Homework1 Yichang Shao (1).zip/Homework1 Yichang Shao" />
@@ -123,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategy_7.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="strategy_7.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strategy_7.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+            <state relative-caret-position="306">
+              <caret line="91" column="16" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#7281#7889#0" />
@@ -137,11 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strategy_8.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="strategy_8.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/strategy_8.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="170">
+              <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#7576#8184#0" />
@@ -264,8 +263,8 @@
         <option value="$PROJECT_DIR$/strategy_1.py" />
         <option value="$PROJECT_DIR$/transform.py" />
         <option value="$PROJECT_DIR$/stratey_8.py" />
-        <option value="$PROJECT_DIR$/strategy_8.py" />
         <option value="$PROJECT_DIR$/strategy_7.py" />
+        <option value="$PROJECT_DIR$/strategy_8.py" />
       </list>
     </option>
   </component>
@@ -334,7 +333,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.strategy_7">
+  <component name="RunManager" selected="Python.strategy_8">
     <configuration name="scratch_13" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Analysis_of_Biotech_Disclosures" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -439,8 +438,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.strategy_7" />
         <item itemvalue="Python.strategy_8" />
+        <item itemvalue="Python.strategy_7" />
         <item itemvalue="Python.strategy_1" />
         <item itemvalue="Python.scratch_13" />
         <item itemvalue="Python.strategy_2" />
@@ -470,8 +469,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50033534" side_tool="true" weight="0.371266" />
@@ -822,25 +820,25 @@
     <entry file="file://$PROJECT_DIR$/ABEO_strategy_1.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/strategy_8.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#7576#8184#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/strategy_7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+        <state relative-caret-position="306">
+          <caret line="91" column="16" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#7281#7889#0" />
             <element signature="e#11120#14536#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strategy_8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#7576#8184#0" />
           </folding>
         </state>
       </provider>
