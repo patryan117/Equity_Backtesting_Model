@@ -29,7 +29,7 @@ global benchmark_index
 benchmark_index = "XBI"
 
 global strategy
-strategy = "Strategy_7"
+strategy = "Strategy_8"
 
 def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " id cap biotech companies")
@@ -47,7 +47,6 @@ def main():
     # std_threshold = [0, 0.5, 1, 1.5, 2, 2.5, 3]  # standard_dev sampling window
     std_threshold = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]  # standard_dev sampling window
 
-
     global glob_w
     glob_w = std_trailing_window_inputs
 
@@ -60,13 +59,15 @@ def main():
 
     # create scatterplot of return spreads:
     return_list = generate_net_return_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
-
-    # create_scatterplot(return_list)
-
-    create_histogram(return_list)
+    create_scatterplot(return_list)
+    # create_histogram(return_list)
 
 
 
+
+    # CREATE A 3D SURFACE MAP OF ROUNDED ROI'S
+    # roi_list = generate_roi_list_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
+    # make_topo_histogram(roi_list)
 
 
 
@@ -255,7 +256,6 @@ def create_scatterplot(return_list):
                        yaxis=dict(title='σ Threshold'),
                        hovermode='closest'
                        )
-
     plotly.offline.plot({"data": data, "layout": layout})
 
 
@@ -365,7 +365,7 @@ def calc_cum_return(w, k, investment, index_df):
 
         "Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
 
-        stock_df["return"] = ((investment / stock_df["typical"]) * stock_df["stock_open"].shift(-1))*stock_df['event_flag']
+        stock_df["return"] = ((investment / stock_df["typical"]) * stock_df["stock_close"].shift(-1))*stock_df['event_flag']
 
         stock_df["net_return"] = (stock_df["return"] - investment - (2 * transaction_cost)) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
@@ -436,9 +436,8 @@ def get_roi_list_per_theta_set(w, k, investment, index_df):
         stock_df['mu_-_k_*_sd'] = ( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
         stock_df['event_flag'] = np.where(stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])), 1, 0)
 
-        "Strategy 1: Buy on day (n) at close if  Δ(sp) is < (μ – kσ), sell on next day at opening price."
 
-        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1))*stock_df['event_flag']
+        stock_df["return"] = (investment / (stock_df["stock_close"]) * (stock_df["stock_close"].shift)(-1))*stock_df['event_flag']
         stock_df["net_return"] = (stock_df["return"] - investment - (2 * transaction_cost)) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
 
