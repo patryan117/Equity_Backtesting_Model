@@ -29,7 +29,7 @@ global benchmark_index
 benchmark_index = "XBI"
 
 global strategy
-strategy = "Strategy_1"
+strategy = "TRANSFORM"
 
 def main():
     print( "Simulating trading strategy on " + str(len(micro_cap_list)) + " id cap biotech companies")

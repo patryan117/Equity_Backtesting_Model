@@ -15,7 +15,7 @@ pd.set_option('display.max_colwidth', -1)  # or 199
 
 
 
-"Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
+"Strategy 1: Buy on day (n) at typical price if  Δsp is < (μ – kσ), sell on next day at opening price."
 
 
 
@@ -60,6 +60,10 @@ def main():
     # create scatterplot of return spreads:
     return_list = generate_net_return_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
     create_scatterplot(return_list)
+    create_histogram(return_list)
+
+
+
 
     # CREATE A 3D SURFACE MAP OF ROUNDED ROI'S
     # roi_list = generate_roi_list_spread(std_trailing_window_inputs, std_threshold, investment, benchmark_index)
@@ -76,6 +80,17 @@ def main():
     print("\n--- %s seconds ---" % (time.time() - start_time))
     print("\n--- %s minutes ---" % (((time.time() - start_time))/60))
 
+
+
+
+
+def create_histogram(return_list):
+
+    x = return_list[2]
+    data = [go.Histogram(x=x, histnorm='probability')]
+
+    plotly.offline.plot({"data": data})
+    # plotly.offline.plot({"data": data, "layout": layout}, filename=(savename) + ".html")
 
 
 
@@ -324,12 +339,12 @@ def calc_cum_return(w, k, investment, index_df):
         stock_df = pd.read_csv(dir_path + "\\stock_csvs\\" + i +".csv")  #TODO: Make dynamic (so it forms a list from the subdirectory names alone)
         stock_df.columns = map(str.lower, stock_df.columns)
         stock_df = stock_df.dropna()
-        stock_df = stock_df.drop(columns=['low', 'high', 'adj close', 'volume'])
+        stock_df = stock_df.drop(columns=['adj close', 'volume'])
 
 
         # map index dictionary (date: delta) to a new column on each stock's dataframe
         stock_df['index_close'] = stock_df['date'].map(index_delta_dict)
-        stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open"})
+        stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open", "low": "stock_low", "high":"stock_high"})
 
 
         stock_df["index_close_delta"] = ((stock_df["index_close"] - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
@@ -343,15 +358,16 @@ def calc_cum_return(w, k, investment, index_df):
         stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
         stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
         stock_df['mu_-_k_*_sd'] = ( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
+        stock_df["typical"] = (stock_df["stock_high"] + stock_df["stock_low"] + stock_df["stock_open"] + stock_df["stock_close"] / 4)
         stock_df['event_flag'] = np.where(stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])), 1, 0)
 
         # stock_df['event_flag'] = np.where(stock_df['ncd_daily_k_stds'] <= -k, 1, 0)
 
         "Strategy 1: Buy on day (n) at close if  Δsp is < (μ – kσ), sell on next day at opening price."
 
-        stock_df["return"] = ((investment / stock_df["stock_close"]) * stock_df["stock_open"].shift(-1))*stock_df['event_flag']
+        stock_df["return"] = ((investment / stock_df["typical"]) * stock_df["stock_open"].shift(-1))*stock_df['event_flag']
 
-        stock_df["net_return"] = (stock_df["return"] - investment - transaction_cost) * stock_df['event_flag']
+        stock_df["net_return"] = (stock_df["return"] - investment - (2 * transaction_cost)) * stock_df['event_flag']
         stock_df["roi"] = (stock_df["net_return"] / investment)
 
 
