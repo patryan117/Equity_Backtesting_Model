@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backtest_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backtest_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp-plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/temp-plot.html" afterDir="false" />
     </list>
@@ -37,7 +38,7 @@
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_6.coverage" NAME="strategy_6 Coverage Results" MODIFIED="1541172631966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$strategy_3.coverage" NAME="strategy_3 Coverage Results" MODIFIED="1541176322700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_14.coverage" NAME="scratch_14 Coverage Results" MODIFIED="1541537628001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$backtest_model.coverage" NAME="backtest_model Coverage Results" MODIFIED="1541963162708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$backtest_model.coverage" NAME="backtest_model Coverage Results" MODIFIED="1541963963245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$scratch_4.coverage" NAME="scratch_4 Coverage Results" MODIFIED="1539352310584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$Count_Letters.coverage" NAME="Count Letters Coverage Results" MODIFIED="1540655990270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$test.coverage" NAME="test Coverage Results" MODIFIED="1538662296334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -100,8 +101,8 @@
       <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backtest_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="258" lean-forward="true" selection-start-line="258" selection-end-line="258" />
+            <state relative-caret-position="160">
+              <caret line="324" lean-forward="true" selection-start-line="324" selection-end-line="324" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
                 <element signature="e#2924#3036#0" />
@@ -111,11 +112,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="strategy_4.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/strategy_4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="341" column="54" selection-start-line="341" selection-end-line="342" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="strategy_3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strategy_3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="421" column="15" selection-start-line="421" selection-end-line="422" />
+            <state relative-caret-position="-769">
+              <caret line="425" selection-start-line="425" selection-end-line="425" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -131,6 +144,18 @@
               <folding>
                 <element signature="e#2371#4927#0" />
                 <element signature="e#7281#7889#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strategy_5.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/strategy_5.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="377" column="18" lean-forward="true" selection-start-line="299" selection-start-column="4" selection-end-line="377" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -648,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/strategy_4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive_3d_topo_hist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
@@ -706,16 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/strategy_5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6936">
-          <caret line="413" selection-start-line="413" selection-end-line="413" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -776,8 +784,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/strategy_3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="421" column="15" selection-start-line="421" selection-end-line="422" />
+        <state relative-caret-position="-769">
+          <caret line="425" selection-start-line="425" selection-end-line="425" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strategy_4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="341" column="54" selection-start-line="341" selection-end-line="342" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strategy_5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="377" column="18" lean-forward="true" selection-start-line="299" selection-start-column="4" selection-end-line="377" selection-end-column="18" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -786,8 +814,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backtest_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="258" lean-forward="true" selection-start-line="258" selection-end-line="258" />
+        <state relative-caret-position="160">
+          <caret line="324" lean-forward="true" selection-start-line="324" selection-end-line="324" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
             <element signature="e#2924#3036#0" />
