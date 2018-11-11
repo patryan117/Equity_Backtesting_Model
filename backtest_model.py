@@ -105,7 +105,7 @@ class backtest():
         data = [trace0]
 
         layout = go.Layout(title=str(
-            "Net-Return Spread (" + "strategy " + self.strategy + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
+            "Net-Return Spread (" + "strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
                 self.transaction_cost) + ")"),
                            xaxis=dict(title='Rolling σ Window Length'),
                            yaxis=dict(title='σ Threshold'),
