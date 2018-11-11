@@ -99,7 +99,7 @@ class backtest():
         cum_sum = 0
         event_count = 0
         max_sum = 0  #for debugging printout
-        index_delta_dict = self.index.set_index('date').to_dict()['close']
+        index_delta_dict = self.index.set_index('date').to_dict()['close']  # this is supposed to be a df
 
 
         for i in self.micro_cap_list:
