@@ -4,8 +4,6 @@ import os
 import numpy as np
 import plotly
 import plotly.offline
-plotly.tools.set_credentials_file(username='patryan117', api_key='uL0Ft3ypM2FMNnVB00d0')
-
 import plotly.graph_objs as go
 import os
 
@@ -107,7 +105,7 @@ class backtest():
         data = [trace0]
 
         layout = go.Layout(title=str(
-            "Net-Return Spread (" + "strategy x" + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
+            "Net-Return Spread (" + "strategy " + self.strategy + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
                 self.transaction_cost) + ")"),
                            xaxis=dict(title='Rolling σ Window Length'),
                            yaxis=dict(title='σ Threshold'),
@@ -215,5 +213,47 @@ class backtest():
             return cum_sum
 
 
+
+        if self.strategy == 3:
+
+            cum_sum = 0
+            event_count = 0
+            max_sum = 0
+            index_delta_dict = self.index_df.set_index('date').to_dict()['close']
+
+            for i in self.micro_cap_list:
+                stock_df = pd.read_csv(self.dir_path + "\\stock_csvs\\" + i + ".csv")
+                stock_df.columns = map(str.lower, stock_df.columns)
+                stock_df = stock_df.dropna()
+                stock_df = stock_df.drop(columns=['low', 'high', 'adj close', 'volume'])
+                stock_df['index_close'] = stock_df['date'].map(index_delta_dict)
+                stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open"})
+                stock_df["index_close_delta"] = ((stock_df["index_close"] - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
+                stock_df["stock_close_delta"] = (((stock_df["stock_close"]) - (stock_df["stock_close"].shift)(1)) / (stock_df["stock_close"].shift)(1))
+                stock_df["net_close_delta"] = ((stock_df["stock_close_delta"]) - stock_df["index_close_delta"])
+                stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].rolling(w).std()
+                stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
+                stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
+                stock_df['mu_-_k_*_sd'] = (stock_df["ncd_rolling_mean"] - (k * stock_df["ncd_rolling_std"]))
+                stock_df['event_flag'] = np.where(stock_df['net_close_delta'] < (stock_df["ncd_rolling_mean"] - (k * stock_df["ncd_rolling_std"])), 1, 0)
+                stock_df["return"] = (self.investment / (stock_df["stock_close"].shift(-1)) * (stock_df["stock_open"].shift)(-2)) * stock_df['event_flag']
+                stock_df["net_return"] = (stock_df["return"] - self.investment - self.transaction_cost) * stock_df['event_flag']
+                stock_df["roi"] = (stock_df["net_return"] / self.investment)
+                cum_sum = cum_sum + (stock_df["net_return"].sum())
+                event_count += (stock_df["event_flag"].sum())
+                print(i, " : ", (stock_df["net_return"].sum()))
+
+            print("\n")
+            print("Stock Name: ", i)
+            print("Trailing Window: ", w)
+            print("STD Threshold: ", k)
+            print("Total portfolio return: ", cum_sum)
+
+            return cum_sum
+
+
+
+
 cake = backtest(strategy=2, index_name="XBI")
 cake.create_scatterplot()
+
