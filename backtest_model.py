@@ -2,13 +2,17 @@
 import pandas as pd
 import os
 import numpy as np
+import plotly
+import plotly.offline
+plotly.tools.set_credentials_file(username='patryan117', api_key='uL0Ft3ypM2FMNnVB00d0')
 
+import plotly.graph_objs as go
+import os
 
 class backtest():
 
     def __init__ (self, index_name="XBI"):
 
-        print("sup bruh, im initialilizing")
         self.dir_path = os.path.dirname(os.path.realpath(__file__))
         self.investment = 100
         # self.k_tup = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]
@@ -18,7 +22,6 @@ class backtest():
         self.transaction_cost = 0.25
         self.index_name = index_name
         self.index_df = self.get_transformed_index_data()
-
 
         self.micro_cap_list = ["ALDX", "BLRX", "KDMN", "KALV", "KMDA", "MDGL", "PTGX", "RETA", "TRVN", "CDTX", \
                           "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
@@ -35,9 +38,6 @@ class backtest():
                           "ZFGN", "OBSV"]
 
 
-    def print_index_df(self):
-        print(self.index_df)
-
     def generate_net_return_spread(self):
 
         combo_list = (self.generate_cartesian_product(self.w_tup, self.k_tup))
@@ -46,7 +46,6 @@ class backtest():
         k_list = []
         net_return_list = []
 
-        # index_df creation line should be here, so it doesnt need to be created for each investment simulation
         for i in combo_list:
             counter += 1
             cur_w = i[0]
@@ -62,10 +61,48 @@ class backtest():
         self.strategy_output = [tuple(w_list), tuple(k_list), tuple(net_return_list)]
         return [tuple(w_list), tuple(k_list), tuple(net_return_list)]
 
+    def create_scatterplot(self):
 
-    def print_strategy_output(self):
-        print(self.strategy_output)
+        std_trailing_window = self.strategy_output[0]
+        std_threshold = self.strategy_output[1]
+        net_returns = self.strategy_output[2]
+        scaled_net_returns = []  # scale down return
+        minmax_return = max(max(net_returns), abs(min(net_returns)))
 
+        for x in net_returns:
+            y = x / minmax_return
+            scaled_net_returns.append(abs(y) * 30)
+
+        max_val = max(max(net_returns), abs(min(net_returns)))
+
+        print(std_trailing_window)
+        print(std_threshold)
+        print(net_returns)
+
+        trace0 = go.Scatter(
+            x=std_trailing_window,
+            y=std_threshold,
+            text=net_returns,
+            mode='markers',
+            marker=dict(
+                color=net_returns,
+                size=scaled_net_returns,
+                showscale=True,
+                cmax=max_val,
+                cmin=(-max_val),
+            )
+        )
+
+        data = [trace0]
+
+        layout = go.Layout(title=str(
+            "Net-Return Spread (" + "strategy x" + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
+                self.transaction_cost) + ")"),
+                           xaxis=dict(title='Rolling σ Window Length'),
+                           yaxis=dict(title='σ Threshold'),
+                           hovermode='closest'
+                           )
+        plotly.offline.plot({"data": data, "layout": layout})
 
     def generate_cartesian_product(self, a,b):
 
@@ -114,14 +151,9 @@ class backtest():
             stock_df["roi"] = (stock_df["net_return"] / self.investment)
             cum_sum = cum_sum + (stock_df["net_return"].sum())
             event_count += (stock_df["event_flag"].sum())
-
-
             print(i, " : ", (stock_df["net_return"].sum()))
-            # print(df)
-
 
         print("\n")
-
         print("Stock Name: ", i)
         print("Trailing Window: ", w)
         print("STD Threshold: ", k)
@@ -131,4 +163,4 @@ class backtest():
 
 
 cake = backtest(index_name="XBI")
-print(cake.generate_net_return_spread())
+cake.create_scatterplot()
