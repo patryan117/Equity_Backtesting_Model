@@ -11,8 +11,10 @@ import os
 
 class backtest():
 
-    def __init__ (self, index_name="XBI"):
+    def __init__ (self, strategy=1, index_name="XBI"):
 
+        print("sup bruh, im initialilizing")
+        self.strategy = strategy
         self.dir_path = os.path.dirname(os.path.realpath(__file__))
         self.investment = 100
         # self.k_tup = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]
@@ -37,6 +39,10 @@ class backtest():
                           "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA", "SBPH", "VVUS", \
                           "ZFGN", "OBSV"]
 
+        self.strategy_output = self.generate_net_return_spread()
+
+    def print_index_df(self):
+        print(self.index_df)
 
     def generate_net_return_spread(self):
 
@@ -46,6 +52,7 @@ class backtest():
         k_list = []
         net_return_list = []
 
+        # index_df creation line should be here, so it doesnt need to be created for each investment simulation
         for i in combo_list:
             counter += 1
             cur_w = i[0]
@@ -58,7 +65,6 @@ class backtest():
             print("****************************************", len(combo_list) - counter,
                   "Calculations Remaining ****************************************\n")
 
-        self.strategy_output = [tuple(w_list), tuple(k_list), tuple(net_return_list)]
         return [tuple(w_list), tuple(k_list), tuple(net_return_list)]
 
     def create_scatterplot(self):
@@ -66,6 +72,11 @@ class backtest():
         std_trailing_window = self.strategy_output[0]
         std_threshold = self.strategy_output[1]
         net_returns = self.strategy_output[2]
+
+        print(std_trailing_window)
+        print(std_threshold)
+        print(net_returns)
+
         scaled_net_returns = []  # scale down return
         minmax_return = max(max(net_returns), abs(min(net_returns)))
 
@@ -125,42 +136,84 @@ class backtest():
 
     def calc_cum_return(self, w, k):
 
-        cum_sum = 0
-        event_count = 0
-        max_sum = 0
-        index_delta_dict = self.index_df.set_index('date').to_dict()['close']
 
-        for i in self.micro_cap_list:
+        if self.strategy == 1:
 
-            stock_df = pd.read_csv(self.dir_path + "\\stock_csvs\\" + i +".csv")
-            stock_df.columns = map(str.lower, stock_df.columns)
-            stock_df = stock_df.dropna()
-            stock_df = stock_df.drop(columns=['low', 'high', 'adj close', 'volume'])
-            stock_df['index_close'] = stock_df['date'].map(index_delta_dict)
-            stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open"})
-            stock_df["index_close_delta"] = ((stock_df["index_close"] - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
-            stock_df["stock_close_delta"] = (((stock_df["stock_close"]) - (stock_df["stock_close"].shift)(1)) / (stock_df["stock_close"].shift)(1))
-            stock_df["net_close_delta"] = ((stock_df["stock_close_delta"]) - stock_df["index_close_delta"])
-            stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].rolling(w).std()  #add shift(1) before rolling to not include that rows day in the calculation
-            stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
-            stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
-            stock_df['mu_-_k_*_sd'] = ( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
-            stock_df['event_flag'] = np.where(stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])), 1, 0)
-            stock_df["return"] = ((self.investment / stock_df["stock_close"]) * stock_df["stock_open"].shift(-1))*stock_df['event_flag']
-            stock_df["net_return"] = (stock_df["return"] - self.investment - self.transaction_cost) * stock_df['event_flag']
-            stock_df["roi"] = (stock_df["net_return"] / self.investment)
-            cum_sum = cum_sum + (stock_df["net_return"].sum())
-            event_count += (stock_df["event_flag"].sum())
-            print(i, " : ", (stock_df["net_return"].sum()))
-
-        print("\n")
-        print("Stock Name: ", i)
-        print("Trailing Window: ", w)
-        print("STD Threshold: ", k)
-        print("Total portfolio return: ", cum_sum)
-
-        return cum_sum
+            cum_sum = 0
+            event_count = 0
+            max_sum = 0
+            index_delta_dict = self.index_df.set_index('date').to_dict()['close']
 
 
-cake = backtest(index_name="XBI")
+            for i in self.micro_cap_list:
+
+                stock_df = pd.read_csv(self.dir_path + "\\stock_csvs\\" + i +".csv")
+                stock_df.columns = map(str.lower, stock_df.columns)
+                stock_df = stock_df.dropna()
+                stock_df = stock_df.drop(columns=['low', 'high', 'adj close', 'volume'])
+                stock_df['index_close'] = stock_df['date'].map(index_delta_dict)
+                stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open"})
+                stock_df["index_close_delta"] = ((stock_df["index_close"] - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
+                stock_df["stock_close_delta"] = (((stock_df["stock_close"]) - (stock_df["stock_close"].shift)(1)) / (stock_df["stock_close"].shift)(1))
+                stock_df["net_close_delta"] = ((stock_df["stock_close_delta"]) - stock_df["index_close_delta"])
+                stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].rolling(w).std()  #add shift(1) before rolling to not include that rows day in the calculation
+                stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
+                stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
+                stock_df['mu_-_k_*_sd'] = ( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
+                stock_df['event_flag'] = np.where(stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])), 1, 0)
+                stock_df["return"] = ((self.investment / stock_df["stock_close"]) * stock_df["stock_open"].shift(-1))*stock_df['event_flag']
+                stock_df["net_return"] = (stock_df["return"] - self.investment - self.transaction_cost) * stock_df['event_flag']
+                stock_df["roi"] = (stock_df["net_return"] / self.investment)
+                cum_sum = cum_sum + (stock_df["net_return"].sum())
+                event_count += (stock_df["event_flag"].sum())
+                print(i, " : ", (stock_df["net_return"].sum()))
+
+            print("\n")
+            print("Stock Name: ", i)
+            print("Trailing Window: ", w)
+            print("STD Threshold: ", k)
+            print("Total portfolio return: ", cum_sum)
+
+            return cum_sum
+
+
+        if self.strategy == 2:
+
+            cum_sum = 0
+            event_count = 0
+            max_sum = 0
+            index_delta_dict = self.index_df.set_index('date').to_dict()['close']
+
+            for i in self.micro_cap_list:
+                stock_df = pd.read_csv(self.dir_path + "\\stock_csvs\\" + i + ".csv")
+                stock_df.columns = map(str.lower, stock_df.columns)
+                stock_df = stock_df.dropna()
+                stock_df = stock_df.drop(columns=['low', 'high', 'adj close', 'volume'])
+                stock_df['index_close'] = stock_df['date'].map(index_delta_dict)
+                stock_df = stock_df.rename(index=str, columns={"close": "stock_close", "open": "stock_open"})
+                stock_df["index_close_delta"] = ((stock_df["index_close"] - (stock_df["index_close"].shift)(1)) / (stock_df["index_close"].shift)(1))
+                stock_df["stock_close_delta"] = (((stock_df["stock_close"]) - (stock_df["stock_close"].shift)(1)) / (stock_df["stock_close"].shift)(1))
+                stock_df["net_close_delta"] = ((stock_df["stock_close_delta"]) - stock_df["index_close_delta"])
+                stock_df["ncd_rolling_std"] = stock_df["net_close_delta"].rolling(w).std()
+                stock_df["ncd_rolling_mean"] = stock_df["net_close_delta"].rolling(w).mean()
+                stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
+                stock_df['mu_-_k_*_sd'] = (stock_df["ncd_rolling_mean"] - (k * stock_df["ncd_rolling_std"]))
+                stock_df['event_flag'] = np.where(stock_df['net_close_delta'] < (stock_df["ncd_rolling_mean"] - (k * stock_df["ncd_rolling_std"])), 1, 0)
+                stock_df["return"] = ((self.investment / stock_df["stock_close"]) * stock_df["stock_close"].shift(-1)) *  stock_df['event_flag']
+                stock_df["net_return"] = (stock_df["return"] - self.investment - self.transaction_cost) * stock_df['event_flag']
+                stock_df["roi"] = (stock_df["net_return"] / self.investment)
+                cum_sum = cum_sum + (stock_df["net_return"].sum())
+                event_count += (stock_df["event_flag"].sum())
+                print(i, " : ", (stock_df["net_return"].sum()))
+
+            print("\n")
+            print("Stock Name: ", i)
+            print("Trailing Window: ", w)
+            print("STD Threshold: ", k)
+            print("Total portfolio return: ", cum_sum)
+
+            return cum_sum
+
+
+cake = backtest(strategy=2, index_name="XBI")
 cake.create_scatterplot()
