@@ -159,6 +159,7 @@ class backtest():
                 stock_df["ncd_daily_k_stds"] = stock_df["net_close_delta"] / stock_df["ncd_rolling_std"]
                 stock_df['mu_-_k_*_sd'] = ( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"]))
                 stock_df['event_flag'] = np.where(stock_df['net_close_delta'] <( stock_df["ncd_rolling_mean"] - (k*stock_df["ncd_rolling_std"])), 1, 0)
+
                 stock_df["return"] = ((self.investment / stock_df["stock_close"]) * stock_df["stock_open"].shift(-1))*stock_df['event_flag']
                 stock_df["net_return"] = (stock_df["return"] - self.investment - self.transaction_cost) * stock_df['event_flag']
                 stock_df["roi"] = (stock_df["net_return"] / self.investment)
@@ -183,6 +184,7 @@ class backtest():
             index_delta_dict = self.index_df.set_index('date').to_dict()['close']
 
             for i in self.micro_cap_list:
+
                 stock_df = pd.read_csv(self.dir_path + "\\stock_csvs\\" + i + ".csv")
                 stock_df.columns = map(str.lower, stock_df.columns)
                 stock_df = stock_df.dropna()
