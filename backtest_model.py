@@ -472,10 +472,6 @@ class backtest():
 
 
 
-
-
-
-
-cake = backtest(strategy=8, index_name="XBI")
-cake.create_scatterplot()
+model_1 = backtest(strategy=8, index_name="XBI")
+model_1.create_scatterplot()
 
