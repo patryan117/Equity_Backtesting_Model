@@ -11,7 +11,7 @@ class backtest():
 
     def __init__ (self, strategy=1, index_name="XBI"):
 
-        print("sup bruh, im initialilizing")
+
         self.strategy = strategy
         self.dir_path = os.path.dirname(os.path.realpath(__file__))
         self.investment = 100
@@ -140,7 +140,6 @@ class backtest():
 
             cum_sum = 0
             event_count = 0
-            max_sum = 0
             index_delta_dict = self.index_df.set_index('date').to_dict()['close']
 
 
@@ -181,7 +180,6 @@ class backtest():
 
             cum_sum = 0
             event_count = 0
-            max_sum = 0
             index_delta_dict = self.index_df.set_index('date').to_dict()['close']
 
             for i in self.micro_cap_list:
@@ -223,7 +221,6 @@ class backtest():
 
             cum_sum = 0
             event_count = 0
-            max_sum = 0
             index_delta_dict = self.index_df.set_index('date').to_dict()['close']
 
             for i in self.micro_cap_list:
@@ -263,7 +260,6 @@ class backtest():
 
             cum_sum = 0
             event_count = 0
-            max_sum = 0
             index_delta_dict = self.index_df.set_index('date').to_dict()['close']
 
             for i in self.micro_cap_list:
@@ -304,7 +300,6 @@ class backtest():
 
             cum_sum = 0
             event_count = 0
-            max_sum = 0  # for debugging printout
             index_delta_dict = self.index_df.set_index('date').to_dict()['close']
 
             for i in self.micro_cap_list:
@@ -350,7 +345,6 @@ class backtest():
 
             cum_sum = 0
             event_count = 0
-            max_sum = 0  # for debugging printout
             index_delta_dict = self.index_df.set_index('date').to_dict()['close']
 
             for i in self.micro_cap_list:
@@ -396,7 +390,6 @@ class backtest():
 
                 cum_sum = 0
                 event_count = 0
-                max_sum = 0  # for debugging printout
                 index_delta_dict = self.index_df.set_index('date').to_dict()['close']
 
                 for i in self.micro_cap_list:
@@ -440,7 +433,6 @@ class backtest():
 
                 cum_sum = 0
                 event_count = 0
-                max_sum = 0  # for debugging printout
                 index_delta_dict = self.index_df.set_index('date').to_dict()['close']
 
                 for i in self.micro_cap_list:
