@@ -471,7 +471,5 @@ class backtest():
                 return cum_sum
 
 
-
 model_1 = backtest(strategy=8, index_name="XBI")
 model_1.create_scatterplot()
-
