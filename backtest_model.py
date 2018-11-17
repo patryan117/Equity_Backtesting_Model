@@ -11,7 +11,6 @@ class backtest():
 
     def __init__ (self, strategy=1, index_name="XBI"):
 
-
         self.strategy = strategy
         self.dir_path = os.path.dirname(os.path.realpath(__file__))
         self.investment = 100
