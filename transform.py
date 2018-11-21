@@ -90,7 +90,6 @@ def create_histogram(return_list):
 
 
 
-
 def make_topo_histogram(grand_roi_list):
 
     cum_max = 0
