@@ -15,10 +15,10 @@ class backtest():
         self.dir_path = os.path.dirname(os.path.realpath(__file__))
         self.investment = 100
         self.strategy_name = "Strategy" + str(self.strategy)
-        # self.k_tup = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]
-        # self.w_tup = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]   # trailing_sd window
-        self.k_tup = [0,  1,  2,  3]
-        self.w_tup = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,]  # trailing_sd window
+        self.k_tup = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]
+        self.w_tup = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]   # trailing_sd window
+        # self.k_tup = [0,  1,  2,  3]
+        # self.w_tup = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,]  # trailing_sd window
         self.transaction_cost = 0.25
         self.index_name = index_name
         self.index_df = self.get_transformed_index_data()
@@ -470,5 +470,5 @@ class backtest():
                 return cum_sum
 
 
-model_1 = backtest(strategy=8, index_name="XBI")
+model_1 = backtest(strategy=3, index_name="XBI")
 model_1.create_scatterplot()
