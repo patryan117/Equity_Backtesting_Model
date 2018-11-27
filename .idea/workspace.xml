@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="" />
+    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/backtest_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backtest_model.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,8 +99,8 @@
       <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backtest_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="473" column="28" lean-forward="true" selection-start-line="473" selection-start-column="28" selection-end-line="473" selection-end-column="28" />
+            <state relative-caret-position="206">
+              <caret line="475" lean-forward="true" selection-start-line="475" selection-end-line="475" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
               </folding>
@@ -275,7 +277,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
@@ -467,14 +469,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50033534" side_tool="true" weight="0.371266" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32859176" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.7596017" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.49786627" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32859176" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992248" visible="true" weight="0.212609" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -821,8 +824,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backtest_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="473" column="28" lean-forward="true" selection-start-line="473" selection-start-column="28" selection-end-line="473" selection-end-column="28" />
+        <state relative-caret-position="206">
+          <caret line="475" lean-forward="true" selection-start-line="475" selection-end-line="475" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
           </folding>

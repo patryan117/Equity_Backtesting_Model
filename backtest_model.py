@@ -472,3 +472,4 @@ class backtest():
 
 model_1 = backtest(strategy=5, index_name="XBI")
 model_1.create_scatterplot()
+
