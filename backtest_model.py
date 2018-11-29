@@ -427,7 +427,6 @@ class backtest():
                 return cum_sum
 
 
-
         if self.strategy == 8:
 
                 cum_sum = 0
@@ -468,6 +467,9 @@ class backtest():
                 print("Total portfolio return: ", cum_sum)
 
                 return cum_sum
+
+
+##########################################################
 
 
 model_1 = backtest(strategy=5, index_name="XBI")
