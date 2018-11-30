@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="" />
+    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backtest_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backtest_model.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,8 +100,8 @@
       <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backtest_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="395" column="45" lean-forward="true" selection-start-line="395" selection-start-column="45" selection-end-line="395" selection-end-column="45" />
+            <state relative-caret-position="340">
+              <caret line="437" column="35" selection-start-line="437" selection-start-column="35" selection-end-line="437" selection-end-column="35" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
               </folding>
@@ -822,8 +825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backtest_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="395" column="45" lean-forward="true" selection-start-line="395" selection-start-column="45" selection-end-line="395" selection-end-column="45" />
+        <state relative-caret-position="340">
+          <caret line="437" column="35" selection-start-line="437" selection-start-column="35" selection-end-line="437" selection-end-column="35" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
           </folding>
