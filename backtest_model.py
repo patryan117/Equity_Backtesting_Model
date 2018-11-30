@@ -137,7 +137,7 @@ class backtest():
 
         if self.strategy == 1:
 
-            print( "Simulating Strategy 1: Buy on day (n) at (close) if  Δsp is < (μ – kσ), sell on next day at (open)." )
+            print( "Initiating Strategy 1: Buy on day (n) at (close) if  Δsp is < (μ – kσ), sell on next day at (open)." )
 
             cum_sum = 0
             event_count = 0
@@ -177,7 +177,9 @@ class backtest():
             return cum_sum
 
 
-        if self.strategy == 2:  #	Buy on day (n) at (close) if   Δsp is < (μ – kσ), sell on next day at (close).
+        if self.strategy == 2:
+
+            print( "Initiating Strategy 2: Buy on day (n) at (close) if   Δsp is < (μ – kσ), sell on next day at (close)." )
 
             cum_sum = 0
             event_count = 0
@@ -218,7 +220,10 @@ class backtest():
 
 
 
-        if self.strategy == 3:   # Buy on next day’s (n+1) at (close) if  Δsp is < (μ – kσ), sell on following day (n+2) at (open).
+        if self.strategy == 3:
+
+
+            print( "Initiating Strategy 3: Buy on next day’s (n+1) at (close) if  Δsp is < (μ – kσ), sell on following day (n+2) at (open)." )
 
             cum_sum = 0
             event_count = 0
