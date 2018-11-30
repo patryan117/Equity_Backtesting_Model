@@ -264,7 +264,12 @@ class backtest():
 
 
 
-        if self.strategy == 4:  # Buy on next day’s (n+1) at (close) if  Δsp is < (μ – kσ), sell on following day (n+2) at (close).
+
+        if self.strategy == 4:
+
+
+            print( "Initiating Strategy 4: Buy on next day’s (n+1) at (close) if  Δsp is < (μ – kσ), sell on following day (n+2) at (close)." )
+
 
             cum_sum = 0
             event_count = 0
@@ -304,7 +309,9 @@ class backtest():
             return cum_sum
 
 
-        if self.strategy == 5:   # Buy on day (n) if if Δsp is < (μ – kσ) and if if  Δvol is > (μ + hσ), sell on following day at (close).
+        if self.strategy == 5:
+
+            print( "Initiating Strategy 5: Buy on day (n) if if Δsp is < (μ – kσ) and if if  Δvol is > (μ + hσ), sell on following day at (close)." )
 
             cum_sum = 0
             event_count = 0
@@ -351,7 +358,9 @@ class backtest():
 
 
 
-        if self.strategy == 6:   #  Short on day at (close) if  Δsp is < (μ – kσ), return on next day at (open).
+        if self.strategy == 6:
+
+            print( "Initiating Strategy 6: Short on day at (close) if  Δsp is < (μ – kσ), return on next day at (open)." )
 
             cum_sum = 0
             event_count = 0
@@ -398,7 +407,9 @@ class backtest():
 
 
 
-        if self.strategy == 7:  # Buy on day (n) at (typical price) if  Δsp is < (μ – kσ), sell on next day at (open).
+        if self.strategy == 7:
+
+                print("Initializing Strategy 7: Buy on day (n) at (typical price) if  Δsp is < (μ – kσ), sell on next day at (open).")
 
                 cum_sum = 0
                 event_count = 0
@@ -440,7 +451,10 @@ class backtest():
                 return cum_sum
 
 
-        if self.strategy == 8:   # 	Buy on day (n) at (typical price) if  Δsp is < (μ – kσ), sell on next day at (close).
+
+        if self.strategy == 8:
+
+                print("Initializing Strategy 8: Buy on day (n) at (typical price) if  Δsp is < (μ – kσ), sell on next day at (close).")
 
                 cum_sum = 0
                 event_count = 0
