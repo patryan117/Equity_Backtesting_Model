@@ -135,7 +135,9 @@ class backtest():
     def calc_cum_return(self, w, k):
 
 
-        if self.strategy == 1:
+        if self.strategy == 1:  #Buy on day (n) at (close) if  Δsp is < (μ – kσ), sell on next day at (open).
+
+            print()
 
             cum_sum = 0
             event_count = 0
@@ -467,6 +469,10 @@ class backtest():
                 print("Total portfolio return: ", cum_sum)
 
                 return cum_sum
+
+
+
+
 
 
 ##########################################################
