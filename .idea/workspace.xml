@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_4.py" beforeDir="false" />
-    </list>
+    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backtest_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3298">
-              <caret line="200" column="18" selection-start-line="200" selection-start-column="18" selection-end-line="200" selection-end-column="18" />
+            <state relative-caret-position="442">
+              <caret line="432" column="52" lean-forward="true" selection-start-line="432" selection-start-column="52" selection-end-line="432" selection-end-column="52" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
               </folding>
@@ -98,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getProbs.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getProbs.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Downloads/getProbs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+            <state relative-caret-position="323">
+              <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -260,11 +257,6 @@
             <path>
               <item name="Analysis_of_Biotech_Disclosures" type="b2602c69:ProjectViewProjectNode" />
               <item name="Analysis_of_Biotech_Disclosures" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analysis_of_Biotech_Disclosures" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Analysis_of_Biotech_Disclosures" type="462c0819:PsiDirectoryNode" />
-              <item name="stock_csvs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Analysis_of_Biotech_Disclosures" type="b2602c69:ProjectViewProjectNode" />
@@ -687,16 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backtest_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3298">
-          <caret line="200" column="18" selection-start-line="200" selection-start-column="18" selection-end-line="200" selection-end-column="18" />
-          <folding>
-            <element signature="e#1#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive_3d_topo_hist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -706,8 +688,18 @@
     </entry>
     <entry file="file://$USER_HOME$/Downloads/getProbs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        <state relative-caret-position="323">
+          <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backtest_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="432" column="52" lean-forward="true" selection-start-line="432" selection-start-column="52" selection-end-line="432" selection-end-column="52" />
+          <folding>
+            <element signature="e#1#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
