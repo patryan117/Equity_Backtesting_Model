@@ -220,6 +220,7 @@ class backtest():
 
 
 
+
         if self.strategy == 3:
 
 

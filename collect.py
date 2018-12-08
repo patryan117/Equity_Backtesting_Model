@@ -131,9 +131,7 @@ micro_cap_list = ["ALDX", "BLRX",  "KDMN", "KALV", "KMDA", "MDGL", "PTGX", "RETA
                        "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA",  "SBPH", "VVUS", \
                        "ZFGN", "OBSV"]
 
-# Removed items:
-# "PTI", "VBIV", TOCA, MDWD, CLSD, NERV, VCEL, PSTI, CTIC, CRMD, NBY, BCLI
-# CUR, CGEN, CASI, CYAD, SNDX, DFFN, AVXL, TCON, CBMG, BPTH, MGEN, CAPR, PTN, TTNP, SYN
+
 
 
 global biotech_index_list
