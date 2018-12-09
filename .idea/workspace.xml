@@ -86,8 +86,8 @@
       <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backtest_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="161" column="61" selection-start-line="161" selection-end-line="162" />
+            <state relative-caret-position="260">
+              <caret line="204" column="24" lean-forward="true" selection-start-line="204" selection-end-line="205" selection-end-column="128" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
               </folding>
@@ -264,7 +264,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
@@ -456,7 +456,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
@@ -711,8 +711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backtest_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="161" column="61" selection-start-line="161" selection-end-line="162" />
+        <state relative-caret-position="260">
+          <caret line="204" column="24" lean-forward="true" selection-start-line="204" selection-end-line="205" selection-end-column="128" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
           </folding>
