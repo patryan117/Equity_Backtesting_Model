@@ -86,8 +86,8 @@
       <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backtest_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="204" column="24" lean-forward="true" selection-start-line="204" selection-end-line="205" selection-end-column="128" />
+            <state relative-caret-position="339">
+              <caret line="389" column="34" lean-forward="true" selection-start-line="389" selection-end-line="390" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
               </folding>
@@ -711,8 +711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backtest_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="204" column="24" lean-forward="true" selection-start-line="204" selection-end-line="205" selection-end-column="128" />
+        <state relative-caret-position="339">
+          <caret line="389" column="34" lean-forward="true" selection-start-line="389" selection-end-line="390" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
           </folding>
