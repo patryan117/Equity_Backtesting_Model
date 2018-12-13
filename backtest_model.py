@@ -23,19 +23,17 @@ class backtest():
         self.index_name = index_name
         self.index_df = self.get_transformed_index_data()
 
-        self.micro_cap_list = ["ALDX", "BLRX", "KDMN", "KALV", "KMDA",  "PTGX",  "TRVN", "CDTX", \
-                          "MTNB", "NBRV", "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
-                          "ALRN", "AVEO", "BTAI",  "FBIO", "GALT", \
-                          "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP", "INFI", "KURA", "LPTX", "MEIP",  "NK", "ONS", \
-                          "PIRS", "RNN", "SLS", "SRNE", "STML", "SNSS", "TRIL", "VBLT", "VSTM", \
-                          "ZYME", "ZYNE", "AXSM", "NTEC", "NERV", \
-                          "TENX", "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "IMMY", "OCUL", "OHRP", "OPHT", \
-                          "OVAS", "RDHL", "PLX", "GNMX", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
-                           "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
-                          "CPRX", "CHMA", "EIGR", "FATE", "NVLN", "RGLS", "RCKT", "SBBP",  "XENE", "ATHX",
-                          "PRQR", \
-                          "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA", "SBPH", "VVUS", \
-                          "ZFGN", "OBSV"]
+        self.micro_cap_list = ["ALDX", "BLRX", "KDMN", "KALV", "KMDA",  "PTGX",  "TRVN", "CDTX",  "MTNB", "NBRV", \
+                               "KIN", "XOMA", "CMRX", "CTRV", "NNVC", "CDXS", "PFNX", "ATNM", "AGLE", "AFMD", \
+                              "ALRN", "AVEO", "BTAI",  "FBIO", "GALT", "GNPX", "GTXI", "IMDZ", "IMGN", "IMMP",\
+                               "INFI", "KURA", "LPTX", "MEIP",  "NK", "ONS", "PIRS", "RNN", "SLS", "SRNE", "STML",\
+                               "SNSS", "TRIL", "VBLT", "VSTM",   "ZYME", "ZYNE", "AXSM", "NTEC", "NERV",  "TENX", \
+                               "KRYS", "MNKD", "NEPT", "ADVM", "AGTC", "IMMY", "OCUL", "OHRP", "OPHT",  "OVAS",\
+                               "RDHL", "PLX", "GNMX", "GEMP", "SELB", "CALA", "ADMA", "ASNS", "CFRX", "DVAX", \
+                               "SMMT", "MTFB", "SPRO", "AMPE", "ABUS", "CNAT", "DRNA", "GLMD", "VTL", "ALNA", \
+                              "CPRX", "CHMA", "EIGR", "FATE", "NVLN", "RGLS", "RCKT", "SBBP",  "XENE", "ATHX",
+                              "PRQR", "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA", "SBPH", \
+                              "VVUS", "ZFGN", "OBSV"]
 
         self.strategy_output = self.generate_net_return_spread()
 
@@ -64,6 +62,7 @@ class backtest():
                   "Calculations Remaining ****************************************\n")
 
         return [tuple(w_list), tuple(k_list), tuple(net_return_list)]
+
 
     def create_scatterplot(self):
 
