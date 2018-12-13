@@ -16,10 +16,10 @@ class backtest():
         self.dir_path = os.path.dirname(os.path.realpath(__file__))
         self.investment = 100
         self.strategy_name = "Strategy" + str(self.strategy)
-        # self.k_tup = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]
-        # self.w_tup = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]   # trailing_sd window
-        self.k_tup = [0,  1,  2,  3]
-        self.w_tup = [10, 11, 12, 13, 14, 15, ]  # trailing_sd window
+        self.k_tup = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]
+        self.w_tup = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]   # trailing_sd window
+        # self.k_tup = [0,  1,  2,  3]
+        # self.w_tup = [10, 11, 12, 13, 14, 15 ]  # trailing_sd window
         self.transaction_cost = 0.25
         self.index_name = index_name
         self.index_df = self.get_transformed_index_data()
@@ -36,7 +36,9 @@ class backtest():
                               "PRQR", "PULM", "VRNA", "ARCT", "GLYC", "NYMX", "SPHS", "URGN", "GNCA", "SBPH", \
                               "VVUS", "ZFGN", "OBSV"]
 
-        self.stock_dict = self.get_stock_dict()
+        self.stock_return_dict = self.get_empty_stock_dict()
+        self.stock_transaction_count_dict = self.get_empty_stock_dict()
+
 
         self.strategy_output = self.generate_net_return_spread()
 
@@ -46,15 +48,15 @@ class backtest():
         print(self.index_df)
 
 
-    def get_stock_dict(self):
+    def get_empty_stock_dict(self):
         dict = {}
         for x in self.micro_cap_list:
             dict[x] = 0
         return dict
 
-    def plot_top_stock_returns(self, n=10):
+    def plot_top_net_stock_returns(self, n=15):
 
-        top_dict = dict(Counter(self.stock_dict).most_common(n))
+        top_dict = dict(Counter(self.stock_return_dict).most_common(n))
         keys, values = zip(*top_dict.items())
 
         data = [go.Bar(
@@ -69,6 +71,34 @@ class backtest():
                            )
 
         plotly.offline.plot({"data": data, "layout": layout})
+        time.sleep(1)
+
+    def plot_top_average_stock_returns(self, n=15):
+
+        return_dict = self.stock_return_dict
+        freq_dict = self.stock_transaction_count_dict
+        average_return_dict = {}
+
+        for key in return_dict:
+            average_return_dict[key] = return_dict[key] / freq_dict[key]
+
+
+        top_dict = dict(Counter(average_return_dict).most_common(n))
+        keys, values = zip(*top_dict.items())
+
+        data = [go.Bar(
+            x=list(values),
+            y=list(keys),
+            orientation='h'
+        )]
+
+        layout = go.Layout(title=str(
+            "Top " + str(n) +  " Average Returns By Stock (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
+                self.transaction_cost) + ")"),
+                           )
+
+        plotly.offline.plot({"data": data, "layout": layout})
+        time.sleep(1)
 
     def generate_net_return_spread(self):
 
@@ -94,7 +124,7 @@ class backtest():
         return [tuple(w_list), tuple(k_list), tuple(net_return_list)]
 
 
-    def create_scatterplot(self):
+    def plot_net_return_scatterplot(self):
 
         std_trailing_window = self.strategy_output[0]
         std_threshold = self.strategy_output[1]
@@ -133,14 +163,13 @@ class backtest():
                            hovermode='closest'
                            )
         plotly.offline.plot({"data": data, "layout": layout})
+        time.sleep(1)
 
 
-    def create_histogram(self):
+    def plot_net_return_histogram(self, bins=15):
 
         x = self.strategy_output[2]
-
-        number_of_bins = 15
-        data = [go.Histogram(x=x, histnorm='probability', nbinsx = number_of_bins,)]
+        data = [go.Histogram(x=x, histnorm='probability', nbinsx = bins,)]
 
         layout = go.Layout(
             title=("Net-Return Histogram (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
@@ -151,14 +180,10 @@ class backtest():
             yaxis=dict(
                 title='Frequency'
             ),
-
-
-            # bargap=0.2,
-            # bargroupgap=0.1
         )
 
         plotly.offline.plot({"data": data, "layout":layout})
-        time.sleep(0.1)
+        time.sleep(1)
 
         # plotly.offline.plot({"data": data, "layout": layout}, filename=(savename) + ".html")
 
@@ -185,7 +210,7 @@ class backtest():
         return (df)
 
     def print_stock_dict(self):
-        print(self.stock_dict)
+        print(self.stock_return_dict)
 
     def calc_cum_return(self, w, k):
 
@@ -221,7 +246,9 @@ class backtest():
                 cum_sum = cum_sum + (stock_df["net_return"].sum())
                 event_count += (stock_df["event_flag"].sum())
                 print(i, " : ", (stock_df["net_return"].sum()))
-                self.stock_dict[i] += cum_sum
+                self.stock_return_dict[i] += cum_sum
+                self.stock_transaction_count_dict[i] += event_count
+
 
             print("\n")
             print("Stock Name: ", i)
@@ -263,7 +290,9 @@ class backtest():
                 cum_sum = cum_sum + (stock_df["net_return"].sum())
                 event_count += (stock_df["event_flag"].sum())
                 print(i, " : ", (stock_df["net_return"].sum()))
-                self.stock_dict[i] += cum_sum
+                self.stock_return_dict[i] += cum_sum
+                self.stock_transaction_count_dict[i] += event_count
+
 
             print("\n")
             print("Stock Name: ", i)
@@ -308,7 +337,9 @@ class backtest():
                 cum_sum = cum_sum + (stock_df["net_return"].sum())
                 event_count += (stock_df["event_flag"].sum())
                 print(i, " : ", (stock_df["net_return"].sum()))
-                self.stock_dict[i] += cum_sum
+                self.stock_return_dict[i] += cum_sum
+                self.stock_transaction_count_dict[i] += event_count
+
 
             print("\n")
             print("Stock Name: ", i)
@@ -354,7 +385,9 @@ class backtest():
                 cum_sum = cum_sum + (stock_df["net_return"].sum())
                 event_count += (stock_df["event_flag"].sum())
                 print(i, " : ", (stock_df["net_return"].sum()))
-                self.stock_dict[i] += cum_sum
+                self.stock_return_dict[i] += cum_sum
+                self.stock_transaction_count_dict[i] += event_count
+
 
             print("\n")
             print("Stock Name: ", i)
@@ -396,11 +429,13 @@ class backtest():
                 stock_df['event_flag'] = np.where((stock_df['net_close_delta'] < (stock_df["ncd_rolling_mean"] - (k * stock_df["ncd_rolling_std"]))) & \
                     (stock_df['volume_delta'] > (stock_df["volume_rolling_mean"] + (2 * stock_df["volume_rolling_std"]))), 1, 0)
                 stock_df["return"] = (self.investment / (stock_df["stock_close"]) * (stock_df["stock_open"].shift)(-1)) * stock_df['event_flag']
-                stock_df["net_return"] = (stock_df["return"] - self.investment - (2 * self.transaction_cost)) * stock_df['event_flag']
+                stock_df["net_return"] = (stock_df["return"] - self.investment - self.transaction_cost) * stock_df['event_flag']
                 stock_df["roi"] = (stock_df["net_return"] / self.investment)
                 cum_sum = cum_sum + (stock_df["net_return"].sum())
                 event_count += (stock_df["event_flag"].sum())
-                self.stock_dict[i] += cum_sum
+                self.stock_return_dict[i] += cum_sum
+                self.stock_transaction_count_dict[i] += event_count
+
                 print(i, " : ", (stock_df["net_return"].sum()))
 
             print("\n")
@@ -443,12 +478,14 @@ class backtest():
 
                 stock_df['event_flag'] = np.where((stock_df['net_close_delta'] < (stock_df["ncd_rolling_mean"] - (k * stock_df["ncd_rolling_std"]))), 1, 0)
                 stock_df["return"] = (self.investment + (self.investment - (self.investment / stock_df["stock_close"] * stock_df["stock_open"].shift(-1)))) * stock_df['event_flag']
-                stock_df["net_return"] = (stock_df["return"] - self.investment - (2 * self.transaction_cost)) * stock_df['event_flag']
+                stock_df["net_return"] = (stock_df["return"] - self.investment -  self.transaction_cost) * stock_df['event_flag']
                 stock_df["roi"] = (stock_df["net_return"] / self.investment)
                 cum_sum = cum_sum + (stock_df["net_return"].sum())
                 event_count += (stock_df["event_flag"].sum())
                 print(i, " : ", (stock_df["net_return"].sum()))
-                self.stock_dict[i] += cum_sum
+                self.stock_return_dict[i] += cum_sum
+                self.stock_transaction_count_dict[i] += event_count
+
 
             print("\n")
             print("Stock Name: ", i)
@@ -488,12 +525,13 @@ class backtest():
 
                     stock_df['event_flag'] = np.where(stock_df['net_close_delta'] < (stock_df["ncd_rolling_mean"] - (k * stock_df["ncd_rolling_std"])), 1, 0)
                     stock_df["return"] = ((self.investment / stock_df["typical"]) * stock_df["stock_open"].shift(-1)) * stock_df['event_flag']
-                    stock_df["net_return"] = (stock_df["return"] - self.investment - (2 * self.transaction_cost)) * stock_df['event_flag']
+                    stock_df["net_return"] = (stock_df["return"] - self.investment -  self.transaction_cost) * stock_df['event_flag']
                     stock_df["roi"] = (stock_df["net_return"] / self.investment)
                     cum_sum = cum_sum + (stock_df["net_return"].sum())
                     event_count += (stock_df["event_flag"].sum())
                     print(i, " : ", (stock_df["net_return"].sum()))
-                    self.stock_dict[i] += cum_sum
+                    self.stock_return_dict[i] += cum_sum
+                    self.stock_transaction_count_dict[i] += event_count
 
                 print("\n")
                 print("Stock Name: ", i)
@@ -532,14 +570,15 @@ class backtest():
 
                     stock_df['event_flag'] = np.where(stock_df['net_close_delta'] < (stock_df["ncd_rolling_mean"] - (k * stock_df["ncd_rolling_std"])), 1, 0)
                     stock_df["return"] = ((self.investment / stock_df["typical"]) * stock_df["stock_close"].shift(-1)) * stock_df['event_flag']
-                    stock_df["net_return"] = (stock_df["return"] - self.investment - (2 * self.transaction_cost)) * stock_df['event_flag']
+                    stock_df["net_return"] = (stock_df["return"] - self.investment - self.transaction_cost) * stock_df['event_flag']
                     stock_df["roi"] = (stock_df["net_return"] / self.investment)
 
                     cum_sum = cum_sum + (stock_df["net_return"].sum())
                     event_count += (stock_df["event_flag"].sum())
 
                     print(i, " : ", (stock_df["net_return"].sum()))
-                    self.stock_dict[i] += cum_sum
+                    self.stock_return_dict[i] += cum_sum
+                    self.stock_transaction_count_dict[i] += event_count
 
                 print("\n")
                 print("Stock Name: ", i)
@@ -557,8 +596,9 @@ class backtest():
 ##########################################################
 
 
-model_1 = backtest(strategy=1, index_name="XBI")
-model_1.create_scatterplot()
-model_1.create_histogram()
-model_1.plot_top_stock_returns()
+model_1 = backtest(strategy=3, index_name="XBI")
+model_1.plot_net_return_scatterplot()
+model_1.plot_net_return_histogram(15)
+model_1.plot_top_net_stock_returns(15)
+model_1.plot_top_average_stock_returns(15)
 
