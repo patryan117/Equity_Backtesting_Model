@@ -1,6 +1,7 @@
 
 import pandas as pd
 import os
+import time
 import numpy as np
 import plotly
 import plotly.offline
@@ -15,10 +16,10 @@ class backtest():
         self.dir_path = os.path.dirname(os.path.realpath(__file__))
         self.investment = 100
         self.strategy_name = "Strategy" + str(self.strategy)
-        self.k_tup = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]
-        self.w_tup = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]   # trailing_sd window
-        # self.k_tup = [0,  1,  2,  3]
-        # self.w_tup = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,]  # trailing_sd window
+        # self.k_tup = [0, 0.25, 0.5, 0.75,  1, 1.25,  1.5, 1.75,  2, 2.25,  2.5, 2.75,  3]
+        # self.w_tup = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]   # trailing_sd window
+        self.k_tup = [0,  1,  2,  3]
+        self.w_tup = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,]  # trailing_sd window
         self.transaction_cost = 0.25
         self.index_name = index_name
         self.index_df = self.get_transformed_index_data()
@@ -70,10 +71,6 @@ class backtest():
         std_threshold = self.strategy_output[1]
         net_returns = self.strategy_output[2]
 
-        print(std_trailing_window)
-        print(std_threshold)
-        print(net_returns)
-
         scaled_net_returns = []  # scale down return
         minmax_return = max(max(net_returns), abs(min(net_returns)))
 
@@ -82,10 +79,6 @@ class backtest():
             scaled_net_returns.append(abs(y) * 30)
 
         max_val = max(max(net_returns), abs(min(net_returns)))
-
-        print(std_trailing_window)
-        print(std_threshold)
-        print(net_returns)
 
         trace0 = go.Scatter(
             x=std_trailing_window,
@@ -112,14 +105,41 @@ class backtest():
                            )
         plotly.offline.plot({"data": data, "layout": layout})
 
+
+    def create_histogram(self):
+
+        x = self.strategy_output[2]
+        data = [go.Histogram(x=x, histnorm='probability')]
+
+        layout = go.Layout(
+            title=("Net-Return Histogram (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
+                self.transaction_cost) + ")"),
+            xaxis=dict(
+                title='Frequency'
+            ),
+            yaxis=dict(
+                title='Net-Return'
+            ),
+            # bargap=0.2,
+            # bargroupgap=0.1
+        )
+
+        plotly.offline.plot({"data": data, "layout":layout})
+
+
+        # plotly.offline.plot({"data": data, "layout": layout}, filename=(savename) + ".html")
+
+
+
     def generate_cartesian_product(self, a,b):
 
         temp = []
         for t1 in a:
             for t2 in b:
                 temp += [(t1, t2),]
-
         return temp
+
+
 
     def get_transformed_index_data(self):
 
@@ -130,6 +150,8 @@ class backtest():
         df["index_close_delta"] = (df["close"]) / (df["close"].shift)(1) - 1
         df = df.dropna()
         return (df)
+
+
 
     def calc_cum_return(self, w, k):
 
@@ -505,4 +527,6 @@ class backtest():
 
 model_1 = backtest(strategy=5, index_name="XBI")
 model_1.create_scatterplot()
+time.sleep(1)
+model_1.create_histogram()
 
