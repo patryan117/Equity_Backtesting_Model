@@ -109,17 +109,21 @@ class backtest():
     def create_histogram(self):
 
         x = self.strategy_output[2]
-        data = [go.Histogram(x=x, histnorm='probability')]
+
+        number_of_bins = 15
+        data = [go.Histogram(x=x, histnorm='probability', nbinsx = number_of_bins,)]
 
         layout = go.Layout(
             title=("Net-Return Histogram (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
                 self.transaction_cost) + ")"),
             xaxis=dict(
-                title='Frequency'
-            ),
-            yaxis=dict(
                 title='Net-Return'
             ),
+            yaxis=dict(
+                title='Frequency'
+            ),
+
+
             # bargap=0.2,
             # bargroupgap=0.1
         )
