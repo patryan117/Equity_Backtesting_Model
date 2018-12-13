@@ -101,24 +101,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maintask_2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../Desktop/CS777_Assignment_6/maintask_2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="29" lean-forward="true" selection-end-line="186" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="maintask_3.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../../Desktop/CS777_Assignment_6/maintask_3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="36" column="25" lean-forward="true" selection-end-line="251" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LICENSE">
           <provider selected="true" editor-type-id="text-editor" />
@@ -142,20 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maintask_1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/maintask_1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2839">
-              <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="archive_3d_topo_hist.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="archive_3d_topo_hist.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/archive_3d_topo_hist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+            <state relative-caret-position="-969">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -258,7 +231,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
@@ -450,7 +423,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
@@ -647,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/archive_3d_topo_hist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -666,20 +632,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/get average.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/getProbs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/maintask_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2839">
-          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-end-line="2" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backtest_model.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -698,10 +650,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS777_Assignment_6/maintask_1.py">
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS777_Assignment_6/maintask_3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="102" column="46" selection-end-line="118" />
+        <state relative-caret-position="408">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -712,10 +664,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS777_Assignment_6/maintask_3.py">
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS777_Assignment_6/maintask_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="36" column="25" lean-forward="true" selection-end-line="251" />
+        <state relative-caret-position="281">
+          <caret line="102" column="46" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/maintask_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2839">
+          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/getProbs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive_3d_topo_hist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
