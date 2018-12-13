@@ -67,7 +67,18 @@ class backtest():
 
         layout = go.Layout(title=str(
             "Top " + str(n) +  " Returns By Stock (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
-                self.transaction_cost) + ")"),
+                self.transaction_cost) + ")",
+        ),
+            xaxis=dict(
+                title='Net-Return'
+            ),
+            yaxis=dict(
+                title='Stock Name'
+            ),
+
+
+
+
                            )
 
         plotly.offline.plot({"data": data, "layout": layout})
@@ -86,15 +97,32 @@ class backtest():
         top_dict = dict(Counter(average_return_dict).most_common(n))
         keys, values = zip(*top_dict.items())
 
+        def add_spaces(mylist):
+            mylist= list(mylist)
+            outlist = []
+            for x in mylist:
+                outlist.append(x + "  ")
+            return outlist
+
+        keys = add_spaces(keys)
+
         data = [go.Bar(
             x=list(values),
             y=list(keys),
             orientation='h'
         )]
 
+
         layout = go.Layout(title=str(
-            "Top " + str(n) +  " Average Returns By Stock (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
-                self.transaction_cost) + ")"),
+            "Top " + str(n) +  " Stocks by Average Net-Return (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
+                self.transaction_cost) + ")",
+        ),
+            xaxis=dict(
+                title='Average Net-Return per Transaction (USD or % Gain)'
+            ),
+            yaxis=dict(
+                title='Stock Name'
+            ),
                            )
 
         plotly.offline.plot({"data": data, "layout": layout})
@@ -158,12 +186,13 @@ class backtest():
         layout = go.Layout(title=str(
             "Net-Return Spread (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
                 self.transaction_cost) + ")"),
-                           xaxis=dict(title='Rolling σ Window Length'),
+                           xaxis=dict(title='Trailing Calculation Window'),
                            yaxis=dict(title='σ Threshold'),
                            hovermode='closest'
                            )
         plotly.offline.plot({"data": data, "layout": layout})
         time.sleep(1)
+
 
 
     def plot_net_return_histogram(self, bins=15):
@@ -592,13 +621,13 @@ class backtest():
 
 
 
-
+# Implementation (Set i to the max number of strategies)
 ##########################################################
 
 
-model_1 = backtest(strategy=3, index_name="XBI")
-model_1.plot_net_return_scatterplot()
-model_1.plot_net_return_histogram(15)
-model_1.plot_top_net_stock_returns(15)
-model_1.plot_top_average_stock_returns(15)
+for i in range(8):
+    model_1 = backtest(strategy=i, index_name="XBI")
+    model_1.plot_net_return_scatterplot()
+    model_1.plot_net_return_histogram(15)
+    model_1.plot_top_average_stock_returns(15)
 
