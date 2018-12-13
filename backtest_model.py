@@ -118,7 +118,7 @@ class backtest():
                 self.transaction_cost) + ")",
         ),
             xaxis=dict(
-                title='Average Net-Return per Transaction (USD or % Gain)'
+                title='Average Net Return per Transaction (USD or % Gain)'
             ),
             yaxis=dict(
                 title='Stock Name'
@@ -184,7 +184,7 @@ class backtest():
         data = [trace0]
 
         layout = go.Layout(title=str(
-            "Net-Return Spread (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
+            "Net Return Spread (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
                 self.transaction_cost) + ")"),
                            xaxis=dict(title='Trailing Calculation Window'),
                            yaxis=dict(title='σ Threshold'),
@@ -201,7 +201,7 @@ class backtest():
         data = [go.Histogram(x=x, histnorm='probability', nbinsx = bins,)]
 
         layout = go.Layout(
-            title=("Net-Return Histogram (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
+            title=("Net Return Histogram (" + "Strategy " + str(self.strategy) + ", Index = " + self.index_name + ", Transaction Cost = $" + str(
                 self.transaction_cost) + ")"),
             xaxis=dict(
                 title='Net-Return'
