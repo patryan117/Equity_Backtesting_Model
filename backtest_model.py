@@ -740,48 +740,48 @@ model_1.plot_net_return_scatterplot()
 model_1.plot_net_return_histogram(15)
 model_1.plot_top_average_stock_returns(15)
 
-# model_2 = backtest(strategy=2, index_name="XBI")
-# model_2.plot_net_return_scatterplot()
-# model_2.plot_net_return_histogram(15)
-# model_2.plot_top_average_stock_returns(15)
-#
-# model_3 = backtest(strategy=3, index_name="XBI")
-# model_3.plot_net_return_scatterplot()
-# model_3.plot_net_return_histogram(15)
-# model_3.plot_top_average_stock_returns(15)
-#
-# model_4 = backtest(strategy=4, index_name="XBI")
-# model_4.plot_net_return_scatterplot()
-# model_4.plot_net_return_histogram(15)
-# model_4.plot_top_average_stock_returns(15)
-#
-# model_5 = backtest(strategy=5, index_name="XBI")
-# model_5.plot_net_return_scatterplot()
-# model_5.plot_net_return_histogram(15)
-# model_5.plot_top_average_stock_returns(15)
-#
-# model_6 = backtest(strategy=6, index_name="XBI")
-# model_6.plot_net_return_scatterplot()
-# model_6.plot_net_return_histogram(15)
-# model_6.plot_top_average_stock_returns(15)
-#
-# model_7 = backtest(strategy=7, index_name="XBI")
-# model_7.plot_net_return_scatterplot()
-# model_7.plot_net_return_histogram(15)
-# model_7.plot_top_average_stock_returns(15)
-#
-# model_8 = backtest(strategy=8, index_name="XBI")
-# model_8.plot_net_return_scatterplot()
-# model_8.plot_net_return_histogram(15)
-# model_8.plot_top_average_stock_returns(15)
-#
-# model_9 = backtest(strategy=9, index_name="XBI")
-# model_9.plot_net_return_scatterplot()
-# model_9.plot_net_return_histogram(15)
-# model_9.plot_top_average_stock_returns(15)
-#
-# model_10 = backtest(strategy=10, index_name="XBI")
-# model_10.plot_net_return_scatterplot()
-# model_10.plot_net_return_histogram(15)
-# model_10.plot_top_average_stock_returns(15)
+model_2 = backtest(strategy=2, index_name="XBI")
+model_2.plot_net_return_scatterplot()
+model_2.plot_net_return_histogram(15)
+model_2.plot_top_average_stock_returns(15)
+
+model_3 = backtest(strategy=3, index_name="XBI")
+model_3.plot_net_return_scatterplot()
+model_3.plot_net_return_histogram(15)
+model_3.plot_top_average_stock_returns(15)
+
+model_4 = backtest(strategy=4, index_name="XBI")
+model_4.plot_net_return_scatterplot()
+model_4.plot_net_return_histogram(15)
+model_4.plot_top_average_stock_returns(15)
+
+model_5 = backtest(strategy=5, index_name="XBI")
+model_5.plot_net_return_scatterplot()
+model_5.plot_net_return_histogram(15)
+model_5.plot_top_average_stock_returns(15)
+
+model_6 = backtest(strategy=6, index_name="XBI")
+model_6.plot_net_return_scatterplot()
+model_6.plot_net_return_histogram(15)
+model_6.plot_top_average_stock_returns(15)
+
+model_7 = backtest(strategy=7, index_name="XBI")
+model_7.plot_net_return_scatterplot()
+model_7.plot_net_return_histogram(15)
+model_7.plot_top_average_stock_returns(15)
+
+model_8 = backtest(strategy=8, index_name="XBI")
+model_8.plot_net_return_scatterplot()
+model_8.plot_net_return_histogram(15)
+model_8.plot_top_average_stock_returns(15)
+
+model_9 = backtest(strategy=9, index_name="XBI")
+model_9.plot_net_return_scatterplot()
+model_9.plot_net_return_histogram(15)
+model_9.plot_top_average_stock_returns(15)
+
+model_10 = backtest(strategy=10, index_name="XBI")
+model_10.plot_net_return_scatterplot()
+model_10.plot_net_return_histogram(15)
+model_10.plot_top_average_stock_returns(15)
 
