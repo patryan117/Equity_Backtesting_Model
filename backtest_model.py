@@ -735,6 +735,7 @@ class backtest():
 
 
 
+
 model_1 = backtest(strategy=1, index_name="XBI")
 model_1.plot_net_return_scatterplot()
 model_1.plot_net_return_histogram(15)
