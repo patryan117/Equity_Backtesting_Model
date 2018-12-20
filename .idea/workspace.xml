@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="" />
+    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp-plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/temp-plot.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +96,7 @@
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$Jiexi_Tan_Assignment6.coverage" NAME="Jiexi_Tan_Assignment6 Coverage Results" MODIFIED="1544996544957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Temp/Rar$DIa68336.32318" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$Excersise15_3.coverage" NAME="Excersise15-3 Coverage Results" MODIFIED="1545005763634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$numpyPerformance.coverage" NAME="numpyPerformance Coverage Results" MODIFIED="1538514004979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$backtest_model.coverage" NAME="backtest_model Coverage Results" MODIFIED="1545075183756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$backtest_model.coverage" NAME="backtest_model Coverage Results" MODIFIED="1545307337176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$Problem_15_3.coverage" NAME="Problem_15.3 Coverage Results" MODIFIED="1545002516155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$exercise_15_3.coverage" NAME="exercise 15.3 Coverage Results" MODIFIED="1544995984518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Desktop/CS521" />
     <SUITE FILE_PATH="coverage/Analysis_of_Biotech_Disclosures$archive_3d_topo_hist.coverage" NAME="archive_3d_topo_hist Coverage Results" MODIFIED="1541249318319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -136,24 +139,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backtest_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="737" lean-forward="true" selection-start-line="737" selection-end-line="737" />
+            <state relative-caret-position="80">
+              <caret line="761" column="37" selection-start-line="761" selection-start-column="37" selection-end-line="761" selection-end-column="37" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_task1.py" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa12116.20398/main_task1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-39">
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -313,7 +305,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,6 +320,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,17 +487,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50033534" side_tool="true" weight="0.371266" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32859176" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49966466" weight="0.43857142" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.43669987" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32859176" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992248" visible="true" weight="0.3782696" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992248" visible="true" weight="0.38363513" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32997987" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32871014" />
@@ -523,25 +514,25 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.43669987" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5007752" side_tool="true" weight="0.11200537" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992248" weight="0.37309292" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32859176" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.43669987" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32614943" />
       <window_info anchor="right" id="Database" order="3" weight="0.32997987" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32859176" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50033534" side_tool="true" weight="0.371266" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32859176" />
       <window_info anchor="right" id="SciView" order="4" weight="0.32871014" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.3997155" />
-      <window_info id="Favorites" order="2" sideWeight="0.5007752" side_tool="true" weight="0.11200537" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,13 +575,7 @@
     <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/exercise 15.1.py" />
     <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/exercise 15.3.py" />
     <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/exercise 15.23.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa68336.32318/Jiexi_Tan_Assignment6.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa68336.32318/Jiexi_Tan_Assignment6.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa146264.37306/Pan_Zhyi_Assignment 6.py" />
     <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Location.py" />
     <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Triangle.py" />
@@ -662,21 +647,13 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa66744.23964/finalPreQuestion-2.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa66744.25248/finalPreQuestion-3.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa66744.27137/finalPreQuestion-4.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa12116.20398/main_task1.py" />
     <entry file="file://$PROJECT_DIR$/backtest_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="737" lean-forward="true" selection-start-line="737" selection-end-line="737" />
+        <state relative-caret-position="80">
+          <caret line="761" column="37" selection-start-line="761" selection-start-column="37" selection-end-line="761" selection-end-column="37" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa12116.20398/main_task1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39">
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
