@@ -728,11 +728,8 @@ class backtest():
 
 
 
-
-
 # Implementation (Set i to the max number of strategies)
 ##########################################################
-
 
 
 
