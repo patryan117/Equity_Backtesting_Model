@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="" />
+    <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/backtest_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backtest_model.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,8 +132,8 @@
       <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backtest_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="726" lean-forward="true" selection-start-line="726" selection-end-line="726" />
+            <state relative-caret-position="510">
+              <caret line="725" lean-forward="true" selection-start-line="725" selection-end-line="725" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -247,7 +249,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1905" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
@@ -603,8 +605,8 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa12116.20398/main_task1.py" />
     <entry file="file://$PROJECT_DIR$/backtest_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="726" lean-forward="true" selection-start-line="726" selection-end-line="726" />
+        <state relative-caret-position="510">
+          <caret line="725" lean-forward="true" selection-start-line="725" selection-end-line="725" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
