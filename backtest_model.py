@@ -75,15 +75,17 @@ class backtest():
             yaxis=dict(
                 title='Stock Name'
             ),
-
-
-
-
-                           )
+                )
 
         plotly.offline.plot({"data": data, "layout": layout})
         time.sleep(1)
 
+        
+        
+########################################################################################################3        
+        
+    
+        
     def plot_top_average_stock_returns(self, n=15):
 
         return_dict = self.stock_return_dict
