@@ -12,7 +12,6 @@ import os
 
 
 
-
 class backtest():
 
     def __init__ (self, strategy=1, index_name="XBI"):
