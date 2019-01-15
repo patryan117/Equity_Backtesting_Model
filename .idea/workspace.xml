@@ -132,8 +132,8 @@
       <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backtest_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="204">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="e#2#33#0" expanded="true" />
               </folding>
@@ -249,7 +249,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1905" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
@@ -605,8 +605,8 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa12116.20398/main_task1.py" />
     <entry file="file://$PROJECT_DIR$/backtest_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="204">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="e#2#33#0" expanded="true" />
           </folding>

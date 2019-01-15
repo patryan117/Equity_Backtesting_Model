@@ -52,6 +52,7 @@ class backtest():
         print(self.index_df)
 
 
+
     def get_empty_stock_dict(self):
         dict = {}
         for x in self.micro_cap_list:
