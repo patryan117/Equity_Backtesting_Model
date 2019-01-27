@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dea70d9-8364-4d44-ba6b-8b4ce0a259dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/backtest_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backtest_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -132,7 +132,7 @@
       <file leaf-file-name="backtest_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backtest_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="-1513">
               <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="e#2#33#0" expanded="true" />
@@ -451,7 +451,7 @@
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
       <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49966466" weight="0.43669987" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32859176" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992248" visible="true" weight="0.19114688" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992248" visible="true" weight="0.0952381" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32997987" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32871014" />
@@ -470,24 +470,24 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5007752" side_tool="true" weight="0.11200537" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992248" weight="0.37309292" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32859176" />
       <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49966466" visible="true" weight="0.43669987" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32614943" />
       <window_info anchor="right" id="Database" order="3" weight="0.32997987" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32859176" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50033534" side_tool="true" weight="0.371266" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32859176" />
       <window_info anchor="right" id="SciView" order="4" weight="0.32871014" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.3997155" />
-      <window_info id="Favorites" order="2" sideWeight="0.5007752" side_tool="true" weight="0.11200537" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32859176" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,20 +502,8 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise12-1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise12-2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise12-1.py" />
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise12-2.py" />
     <entry file="file://$PROJECT_DIR$/backtest_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -563,41 +551,11 @@
     <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Problem_15.1.py" />
     <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Problem_15.3.py" />
     <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Problem_15.23.py" />
-    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise12-1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise12-2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise12-3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise15-1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise15-3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise12-1.py" />
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise12-2.py" />
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise12-3.py" />
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise15-1.py" />
+    <entry file="file://$PROJECT_DIR$/../../../Desktop/CS521/Excersise15-3.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa66744.13418/finalPreQuestion-1.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa66744.23964/finalPreQuestion-2.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa66744.25248/finalPreQuestion-3.py" />
@@ -605,7 +563,7 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa12116.20398/main_task1.py" />
     <entry file="file://$PROJECT_DIR$/backtest_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="-1513">
           <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="e#2#33#0" expanded="true" />
